@@ -1,0 +1,112 @@
+<svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="860" height="520" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="430" y="38" text-anchor="middle" font-size="16" font-weight="700" fill="#F9FAFB">Flujo de datos — React Hook Form en React Native</text>
+
+  <!-- ── Row 1: useForm ── -->
+  <!-- useForm box -->
+  <rect x="330" y="60" width="200" height="56" rx="8" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="430" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#93C5FD">useForm&lt;FormData&gt;()</text>
+  <text x="430" y="103" text-anchor="middle" font-size="11" fill="#60A5FA">resolver · defaultValues</text>
+
+  <!-- Arrow down from useForm -->
+  <line x1="430" y1="116" x2="430" y2="148" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="445" y="137" font-size="10" fill="#9CA3AF">control, handleSubmit</text>
+  <text x="445" y="149" font-size="10" fill="#9CA3AF">errors, isSubmitting</text>
+
+  <!-- ── Row 2: Controller ── -->
+  <rect x="100" y="156" width="200" height="56" rx="8" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="200" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#93C5FD">&lt;Controller&gt;</text>
+  <text x="200" y="199" text-anchor="middle" font-size="11" fill="#60A5FA">control · name · render</text>
+
+  <!-- Arrows: useForm → Controller (left) -->
+  <path d="M330 88 L200 156" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <!-- Arrow down from Controller to TextInput -->
+  <line x1="200" y1="212" x2="200" y2="258" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="215" y="240" font-size="10" fill="#9CA3AF">onChange · onBlur · value</text>
+
+  <!-- ── Row 3: TextInput ── -->
+  <rect x="100" y="264" width="200" height="56" rx="8" fill="#14532D" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="200" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#86EFAC">TextInput (RN)</text>
+  <text x="200" y="307" text-anchor="middle" font-size="11" fill="#4ADE80">onChangeText · onBlur · value</text>
+
+  <!-- Error text below TextInput -->
+  <rect x="100" y="336" width="200" height="34" rx="6" fill="#1C1917" stroke="#EF4444" stroke-width="1"/>
+  <text x="200" y="358" text-anchor="middle" font-size="11" fill="#FCA5A5">{errors.campo?.message}</text>
+
+  <!-- ── Row 2 right: handleSubmit ── -->
+  <rect x="560" y="156" width="200" height="56" rx="8" fill="#3B1F5F" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="660" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#D8B4FE">handleSubmit(onSubmit)</text>
+  <text x="660" y="199" text-anchor="middle" font-size="11" fill="#C084FC">solo si el form es válido</text>
+
+  <!-- Arrows: useForm → handleSubmit (right) -->
+  <path d="M530 88 L660 156" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowPurple)"/>
+
+  <!-- Arrow down from handleSubmit to onSubmit -->
+  <line x1="660" y1="212" x2="660" y2="258" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="675" y="240" font-size="10" fill="#9CA3AF">FormData tipado</text>
+
+  <!-- ── Row 3 right: onSubmit ── -->
+  <rect x="560" y="264" width="200" height="56" rx="8" fill="#1C3A1A" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="660" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#86EFAC">onSubmit(data)</text>
+  <text x="660" y="307" text-anchor="middle" font-size="11" fill="#4ADE80">apiClient.post · mutate()</text>
+
+  <!-- isSubmitting badge -->
+  <rect x="560" y="336" width="200" height="34" rx="6" fill="#422006" stroke="#F59E0B" stroke-width="1"/>
+  <text x="660" y="358" text-anchor="middle" font-size="11" fill="#FCD34D">isSubmitting → disable button</text>
+
+  <!-- Central zodResolver box -->
+  <rect x="330" y="156" width="200" height="56" rx="8" fill="#2D1B4E" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="430" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#C4B5FD">zodResolver(schema)</text>
+  <text x="430" y="199" text-anchor="middle" font-size="11" fill="#A78BFA">valida antes de onSubmit</text>
+
+  <!-- Arrow: useForm → zodResolver -->
+  <line x1="430" y1="116" x2="430" y2="156" stroke="#8B5CF6" stroke-width="1.5" marker-end="url(#arrowViolet)"/>
+
+  <!-- Arrow: zodResolver → errors -->
+  <line x1="330" y1="184" x2="300" y2="184" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <text x="260" y="179" text-anchor="middle" font-size="10" fill="#FCA5A5">errors</text>
+
+  <!-- Arrow: zodResolver → handleSubmit -->
+  <line x1="530" y1="184" x2="560" y2="184" stroke="#22C55E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <text x="600" y="179" text-anchor="middle" font-size="10" fill="#4ADE80">✓ válido</text>
+
+  <!-- ── Section label: Component ── -->
+  <rect x="30" y="240" width="52" height="100" rx="6" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  <text x="56" y="282" text-anchor="middle" font-size="10" fill="#9CA3AF" transform="rotate(-90,56,295)">COMPONENT</text>
+
+  <!-- ── Legend ── -->
+  <rect x="320" y="420" width="220" height="80" rx="6" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  <text x="430" y="440" text-anchor="middle" font-size="11" font-weight="700" fill="#D1D5DB">Leyenda</text>
+  <line x1="340" y1="455" x2="370" y2="455" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="380" y="459" font-size="10" fill="#9CA3AF">datos del hook</text>
+  <line x1="340" y1="472" x2="370" y2="472" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="380" y="476" font-size="10" fill="#9CA3AF">validación</text>
+  <line x1="340" y1="489" x2="370" y2="489" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="380" y="493" font-size="10" fill="#9CA3AF">error path</text>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#A855F7"/>
+    </marker>
+    <marker id="arrowViolet" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8B5CF6"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#EF4444"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22C55E"/>
+    </marker>
+  </defs>
+</svg>

@@ -4,53 +4,64 @@
 
 ## 🎯 Objetivos de aprendizaje
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
-
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- Construir formularios controlados con `useForm` y `Controller` de React Hook Form
+- Definir esquemas de validación tipados con Zod (`z.object`, `z.string`, `z.number`)
+- Conectar Zod y React Hook Form con `zodResolver`
+- Mostrar mensajes de error inline bajo cada campo del formulario
+- Implementar formularios de edición con `defaultValues` cargados desde la API
+- Crear un componente reutilizable `FormField` que encapsula `Controller` + `TextInput` + error
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
+- Semana 05 completada — manejo de TanStack Query (`useQuery`, `useMutation`)
+- Semana 03 completada — navegación con React Navigation (Stack)
 - Expo Go instalado y simulador configurado
 
 ## 🗂️ Estructura de la semana
 
-| Carpeta           | Contenido                    | Tiempo |
-| ----------------- | ---------------------------- | ------ |
-| `1-teoria/`       | Material teórico             | 2h     |
-| `2-practicas/`    | Ejercicios guiados           | 4h     |
-| `3-proyecto/`     | Proyecto integrador          | 2h     |
+| Carpeta | Contenido | Tiempo |
+|---------|-----------|--------|
+| `1-teoria/` | React Hook Form + Zod | 2h |
+| `2-practicas/` | 2 ejercicios guiados | 3h |
+| `3-proyecto/` | Proyecto integrador | 3h |
 
 ## 📝 Contenidos
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+| Archivo | Tema |
+|---------|------|
+| [01-react-hook-form.md](1-teoria/01-react-hook-form.md) | `useForm`, `Controller`, `handleSubmit`, `formState` |
+| [02-validacion-zod.md](1-teoria/02-validacion-zod.md) | `z.object`, `zodResolver`, manejo de errores, `z.infer` |
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+| Ejercicio | Tema |
+|-----------|------|
+| [ejercicio-01-useform-controller](2-practicas/ejercicio-01-useform-controller/README.md) | Formulario básico con `Controller` y `TextInput` |
+| [ejercicio-02-zod-resolver](2-practicas/ejercicio-02-zod-resolver/README.md) | Validación completa con Zod y mensajes de error |
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+[3-proyecto/README.md](3-proyecto/README.md) — App con formularios Create + Edit conectados a API
 
 ## ⏱️ Distribución del tiempo (8 horas)
 
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
+| Actividad | Tiempo | Descripción |
+|-----------|--------|-------------|
+| Teoría 01 | 1h | React Hook Form — conceptos y Controller |
+| Teoría 02 | 1h | Zod — schemas, validación y zodResolver |
+| Ejercicio 01 | 1.5h | Formulario básico con Controller |
+| Ejercicio 02 | 1.5h | Validación con Zod + errores inline |
+| Proyecto | 3h | Formularios Create + Edit con API |
 
 ## 📌 Entregables
 
-- [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
+- [ ] Ejercicio 01: formulario básico con states de carga y validación nativa
+- [ ] Ejercicio 02: validación Zod con mensajes de error en español
+- [ ] Proyecto: formularios Create y Edit adaptados al dominio asignado
 - [ ] App corriendo en simulador iOS y/o Android
 
 ## 🔗 Navegación

@@ -1,0 +1,132 @@
+<svg viewBox="0 0 860 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="860" height="500" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="430" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#F9FAFB">Esquema Zod — Definición y flujo de validación</text>
+
+  <!-- === LEFT COLUMN: SCHEMA DEFINITION === -->
+  <rect x="30" y="56" width="380" height="290" rx="10" fill="#1A2744" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="220" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#93C5FD">src/schemas/itemSchema.ts</text>
+
+  <!-- Code block -->
+  <rect x="46" y="88" width="348" height="244" rx="6" fill="#0F172A"/>
+  <text x="62" y="110" font-size="10.5" fill="#60A5FA">import</text>
+  <text x="102" y="110" font-size="10.5" fill="#F9FAFB">{'{ z }'}</text>
+  <text x="142" y="110" font-size="10.5" fill="#60A5FA">from</text>
+  <text x="170" y="110" font-size="10.5" fill="#86EFAC">'zod'</text>
+
+  <text x="62" y="132" font-size="10.5" fill="#60A5FA">export const</text>
+  <text x="152" y="132" font-size="10.5" fill="#FCD34D">itemSchema</text>
+  <text x="222" y="132" font-size="10.5" fill="#F9FAFB">= z.object({'{'}</text>
+
+  <text x="78" y="152" font-size="10.5" fill="#F9FAFB">title:</text>
+  <text x="116" y="152" font-size="10.5" fill="#A78BFA">z.string()</text>
+  <text x="186" y="152" font-size="10.5" fill="#F9FAFB">.min(1,</text>
+  <text x="230" y="152" font-size="10.5" fill="#86EFAC">'Requerido'</text>
+  <text x="315" y="152" font-size="10.5" fill="#F9FAFB">),</text>
+
+  <text x="78" y="170" font-size="10.5" fill="#F9FAFB">email:</text>
+  <text x="117" y="170" font-size="10.5" fill="#A78BFA">z.string()</text>
+  <text x="187" y="170" font-size="10.5" fill="#F9FAFB">.email(</text>
+  <text x="226" y="170" font-size="10.5" fill="#86EFAC">'Email inválido'</text>
+  <text x="342" y="170" font-size="10.5" fill="#F9FAFB">),</text>
+
+  <text x="78" y="188" font-size="10.5" fill="#F9FAFB">price:</text>
+  <text x="116" y="188" font-size="10.5" fill="#A78BFA">z.coerce.number()</text>
+  <text x="236" y="188" font-size="10.5" fill="#F9FAFB">.positive(</text>
+  <text x="300" y="188" font-size="10.5" fill="#86EFAC">'{'> 0'}</text>
+  <text x="340" y="188" font-size="10.5" fill="#F9FAFB">),</text>
+
+  <text x="78" y="206" font-size="10.5" fill="#F9FAFB">notes:</text>
+  <text x="118" y="206" font-size="10.5" fill="#A78BFA">z.string()</text>
+  <text x="186" y="206" font-size="10.5" fill="#F9FAFB">.optional(),</text>
+
+  <text x="62" y="224" font-size="10.5" fill="#F9FAFB">{'}'}</text>
+  <text x="76" y="224" font-size="10.5" fill="#F9FAFB">)</text>
+
+  <text x="62" y="250" font-size="10.5" fill="#60A5FA">export type</text>
+  <text x="138" y="250" font-size="10.5" fill="#FCD34D">ItemFormData</text>
+  <text x="220" y="250" font-size="10.5" fill="#F9FAFB">=</text>
+  <text x="230" y="250" font-size="10.5" fill="#A78BFA">z.infer</text>
+  <text x="272" y="250" font-size="10.5" fill="#F9FAFB">&lt;typeof</text>
+  <text x="328" y="250" font-size="10.5" fill="#FCD34D">itemSchema</text>
+  <text x="372" y="250" font-size="10.5" fill="#F9FAFB">&gt;</text>
+
+  <!-- Type note -->
+  <rect x="62" y="263" width="320" height="24" rx="4" fill="#1E3A1A"/>
+  <text x="222" y="280" text-anchor="middle" font-size="10" fill="#86EFAC">// ↑ tipo generado automáticamente — sin interfaz duplicada</text>
+
+  <!-- === RIGHT COLUMN: USAGE === -->
+  <rect x="450" y="56" width="380" height="290" rx="10" fill="#1A1A2E" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="640" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#C4B5FD">CreateScreen.tsx</text>
+
+  <rect x="466" y="88" width="348" height="244" rx="6" fill="#0F172A"/>
+  <text x="482" y="110" font-size="10.5" fill="#60A5FA">import</text>
+  <text x="522" y="110" font-size="10.5" fill="#F9FAFB">{'{ zodResolver }'}</text>
+  <text x="640" y="110" font-size="10.5" fill="#60A5FA">from</text>
+  <text x="670" y="110" font-size="10.5" fill="#86EFAC">'@hookform/resolvers/zod'</text>
+
+  <text x="482" y="130" font-size="10.5" fill="#60A5FA">import</text>
+  <text x="522" y="130" font-size="10.5" fill="#F9FAFB">{'{ itemSchema, type ItemFormData }'}</text>
+
+  <text x="482" y="154" font-size="10.5" fill="#60A5FA">const</text>
+  <text x="510" y="154" font-size="10.5" fill="#F9FAFB">{'{ control, handleSubmit,'}</text>
+  <text x="510" y="170" font-size="10.5" fill="#F9FAFB">{'  formState: { errors, isSubmitting }'}</text>
+  <text x="510" y="186" font-size="10.5" fill="#F9FAFB">{'}'}</text>
+  <text x="520" y="186" font-size="10.5" fill="#F9FAFB">= </text>
+  <text x="534" y="186" font-size="10.5" fill="#FCD34D">useForm</text>
+  <text x="578" y="186" font-size="10.5" fill="#F9FAFB">&lt;</text>
+  <text x="582" y="186" font-size="10.5" fill="#FCD34D">ItemFormData</text>
+  <text x="654" y="186" font-size="10.5" fill="#F9FAFB">&gt;({'{}'})</text>
+
+  <text x="660" y="186" font-size="10.5" fill="#F9FAFB">({'{}'})</text>
+
+  <text x="482" y="206" font-size="10.5" fill="#60A5FA">resolver:</text>
+  <text x="540" y="206" font-size="10.5" fill="#A78BFA">zodResolver</text>
+  <text x="606" y="206" font-size="10.5" fill="#F9FAFB">(</text>
+  <text x="614" y="206" font-size="10.5" fill="#FCD34D">itemSchema</text>
+  <text x="674" y="206" font-size="10.5" fill="#F9FAFB">)</text>
+
+  <text x="482" y="232" font-size="10.5" fill="#F9FAFB">{'// errors.title?.message → string | undefined'}</text>
+
+  <!-- Error example -->
+  <rect x="482" y="242" width="316" height="38" rx="4" fill="#1C1917"/>
+  <text x="640" y="258" text-anchor="middle" font-size="10.5" fill="#FCA5A5">{'errors.title && ('}</text>
+  <text x="640" y="272" text-anchor="middle" font-size="10.5" fill="#FCA5A5">{'  <Text>{errors.title.message}</Text>'}</text>
+
+  <!-- Arrow connecting schema to screen -->
+  <path d="M410 210 L450 210" stroke="#8B5CF6" stroke-width="2" marker-end="url(#arrowV)"/>
+  <text x="430" y="204" text-anchor="middle" font-size="9" fill="#A78BFA">import</text>
+
+  <!-- === BOTTOM: Validation flow cards === -->
+  <!-- Valid path -->
+  <rect x="30" y="368" width="240" height="112" rx="8" fill="#14532D" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="150" y="390" text-anchor="middle" font-size="12" font-weight="700" fill="#86EFAC">✓ Validación exitosa</text>
+  <text x="150" y="410" text-anchor="middle" font-size="10.5" fill="#4ADE80">handleSubmit llama onSubmit(data)</text>
+  <text x="150" y="428" text-anchor="middle" font-size="10.5" fill="#4ADE80">data está tipado como ItemFormData</text>
+  <text x="150" y="446" text-anchor="middle" font-size="10.5" fill="#4ADE80">price ya es un number (no string)</text>
+  <text x="150" y="464" text-anchor="middle" font-size="10.5" fill="#4ADE80">gracias a z.coerce.number()</text>
+
+  <!-- Invalid path -->
+  <rect x="310" y="368" width="240" height="112" rx="8" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="430" y="390" text-anchor="middle" font-size="12" font-weight="700" fill="#FCA5A5">✗ Validación fallida</text>
+  <text x="430" y="410" text-anchor="middle" font-size="10.5" fill="#F87171">handleSubmit NO llama onSubmit</text>
+  <text x="430" y="428" text-anchor="middle" font-size="10.5" fill="#F87171">errors.campo.message poblado</text>
+  <text x="430" y="446" text-anchor="middle" font-size="10.5" fill="#F87171">TextInput muestra inputError style</text>
+  <text x="430" y="464" text-anchor="middle" font-size="10.5" fill="#F87171">Mensaje visible bajo el campo</text>
+
+  <!-- z.coerce note -->
+  <rect x="590" y="368" width="240" height="112" rx="8" fill="#1C1917" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="710" y="390" text-anchor="middle" font-size="12" font-weight="700" fill="#FCD34D">z.coerce.number()</text>
+  <text x="710" y="410" text-anchor="middle" font-size="10.5" fill="#FDE68A">TextInput → siempre string</text>
+  <text x="710" y="428" text-anchor="middle" font-size="10.5" fill="#FDE68A">z.coerce convierte antes</text>
+  <text x="710" y="446" text-anchor="middle" font-size="10.5" fill="#FDE68A">de validar el valor</text>
+  <text x="710" y="464" text-anchor="middle" font-size="10.5" fill="#FDE68A">sin coerce → TypeScript error</text>
+
+  <defs>
+    <marker id="arrowV" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8B5CF6"/>
+    </marker>
+  </defs>
+</svg>
