@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <title>Zustand vs Context API</title>
+  <desc>Comparativa entre Context API y Zustand para manejo de estado global en React Native. Context provoca re-renders en todo el árbol; Zustand solo re-renderiza los componentes que usan el estado cambiado.</desc>
+
+  <!-- Background -->
+  <rect width="860" height="500" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="430" y="36" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" text-anchor="middle">Zustand vs Context API</text>
+
+  <!-- ===================== LEFT COLUMN: Context API ===================== -->
+  <rect x="30" y="55" width="390" height="410" rx="12" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="225" y="84" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#f85149" text-anchor="middle">❌ Context API</text>
+
+  <!-- Provider box -->
+  <rect x="80" y="100" width="290" height="44" rx="8" fill="#21262d" stroke="#f85149" stroke-width="1.5"/>
+  <text x="225" y="119" font-family="system-ui, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">&lt;CartContext.Provider value={{...}}&gt;</text>
+  <text x="225" y="136" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Debe envolver toda la app — un cambio re-renderiza TODO</text>
+
+  <!-- Tree line from provider -->
+  <line x1="225" y1="144" x2="225" y2="165" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- App component -->
+  <rect x="155" y="165" width="140" height="36" rx="6" fill="#f85149" fill-opacity="0.15" stroke="#f85149" stroke-width="1"/>
+  <text x="225" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">App</text>
+
+  <!-- Lines from App -->
+  <line x1="155" y1="183" x2="115" y2="220" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="295" y1="183" x2="335" y2="220" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- HomeScreen -->
+  <rect x="60" y="220" width="110" height="36" rx="6" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="115" y="243" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">HomeScreen</text>
+
+  <!-- CartScreen -->
+  <rect x="280" y="220" width="110" height="36" rx="6" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="335" y="243" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">CartScreen</text>
+
+  <!-- Lines HomeScreen -->
+  <line x1="115" y1="256" x2="85" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="115" y1="256" x2="145" y2="292" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Child components HomeScreen -->
+  <rect x="46" y="292" width="80" height="32" rx="6" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="86" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">ProductCard</text>
+  <rect x="110" y="292" width="80" height="32" rx="6" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="150" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">SearchBar</text>
+
+  <!-- Lines CartScreen children -->
+  <line x1="335" y1="256" x2="305" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="335" y1="256" x2="365" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="266" y="292" width="80" height="32" rx="6" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="306" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">CartItem</text>
+  <rect x="326" y="292" width="80" height="32" rx="6" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="366" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">CartTotal</text>
+
+  <!-- Warning label -->
+  <rect x="60" y="348" width="310" height="50" rx="6" fill="#f85149" fill-opacity="0.1" stroke="#f85149" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="215" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f85149" text-anchor="middle">Un cambio en el context</text>
+  <text x="215" y="385" font-family="system-ui, sans-serif" font-size="11" fill="#f85149" text-anchor="middle">re-renderiza TODO el árbol 🔴</text>
+
+  <!-- Code snippet -->
+  <rect x="60" y="406" width="310" height="40" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="70" y="423" font-family="system-ui, monospace" font-size="10" fill="#8b949e">const { cart } = useContext(CartContext);</text>
+  <text x="70" y="439" font-family="system-ui, monospace" font-size="10" fill="#f85149">// Lee TODO el objeto → re-render siempre</text>
+
+  <!-- ===================== RIGHT COLUMN: Zustand ===================== -->
+  <rect x="440" y="55" width="390" height="410" rx="12" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="635" y="84" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#3fb950" text-anchor="middle">✅ Zustand</text>
+
+  <!-- Store box (floating, not a Provider) -->
+  <rect x="525" y="95" width="220" height="54" rx="8" fill="#21262d" stroke="#61DAFB" stroke-width="1.5"/>
+  <text x="635" y="116" font-family="system-ui, monospace" font-size="11" fill="#61DAFB" text-anchor="middle">useCartStore (store)</text>
+  <text x="635" y="132" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">No necesita Provider — existe fuera del árbol</text>
+
+  <!-- Dotted lines to each component (no tree hierarchy) -->
+  <line x1="635" y1="149" x2="635" y2="165" stroke="#61DAFB" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- App component (neutral) -->
+  <rect x="565" y="165" width="140" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="635" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">App</text>
+
+  <!-- Lines from App (normal tree) -->
+  <line x1="565" y1="183" x2="525" y2="220" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="705" y1="183" x2="745" y2="220" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- HomeScreen: not subscribed → neutral -->
+  <rect x="470" y="220" width="110" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="525" y="243" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">HomeScreen</text>
+
+  <!-- CartScreen: subscribed to count → highlighted -->
+  <rect x="690" y="220" width="110" height="36" rx="6" fill="#3fb950" fill-opacity="0.2" stroke="#3fb950" stroke-width="1"/>
+  <text x="745" y="243" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">CartScreen</text>
+
+  <!-- Lines HomeScreen children -->
+  <line x1="525" y1="256" x2="498" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="525" y1="256" x2="558" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="458" y="292" width="80" height="32" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="498" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">ProductCard</text>
+  <!-- ProductCard subscribed to items -->
+  <line x1="538" y1="292" x2="538" y2="308" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="518" y="292" width="80" height="32" rx="6" fill="#3fb950" fill-opacity="0.2" stroke="#3fb950" stroke-width="1"/>
+  <text x="558" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">SearchBar</text>
+
+  <!-- CartScreen children -->
+  <line x1="745" y1="256" x2="715" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="745" y1="256" x2="775" y2="292" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="676" y="292" width="80" height="32" rx="6" fill="#3fb950" fill-opacity="0.2" stroke="#3fb950" stroke-width="1"/>
+  <text x="716" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">CartItem</text>
+  <rect x="736" y="292" width="80" height="32" rx="6" fill="#3fb950" fill-opacity="0.2" stroke="#3fb950" stroke-width="1"/>
+  <text x="776" y="312" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">CartTotal</text>
+
+  <!-- Selector arrows from store to subscribed components -->
+  <path d="M635,149 Q480,160 498,292" fill="none" stroke="#61DAFB" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M635,149 Q665,165 745,220" fill="none" stroke="#61DAFB" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M635,149 Q596,180 558,292" fill="none" stroke="#61DAFB" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Success label -->
+  <rect x="470" y="348" width="310" height="50" rx="6" fill="#3fb950" fill-opacity="0.1" stroke="#3fb950" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="625" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#3fb950" text-anchor="middle">Solo los componentes con ese</text>
+  <text x="625" y="385" font-family="system-ui, sans-serif" font-size="11" fill="#3fb950" text-anchor="middle">selector re-renderizan 🟢</text>
+
+  <!-- Code snippet -->
+  <rect x="470" y="406" width="310" height="40" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="480" y="423" font-family="system-ui, monospace" font-size="10" fill="#8b949e">const count = useCartStore(s =&gt; s.count);</text>
+  <text x="480" y="439" font-family="system-ui, monospace" font-size="10" fill="#3fb950">// Solo lee count → re-render si count cambia</text>
+
+  <!-- ===================== BOTTOM LEGEND ===================== -->
+  <rect x="192" y="474" width="24" height="12" rx="3" fill="#f85149" fill-opacity="0.3" stroke="#f85149" stroke-width="1"/>
+  <text x="222" y="485" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">Re-render innecesario</text>
+  <rect x="410" y="474" width="24" height="12" rx="3" fill="#3fb950" fill-opacity="0.2" stroke="#3fb950" stroke-width="1"/>
+  <text x="440" y="485" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">Re-render por selector</text>
+  <rect x="618" y="474" width="24" height="12" rx="3" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="648" y="485" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">Sin re-render</text>
+</svg>

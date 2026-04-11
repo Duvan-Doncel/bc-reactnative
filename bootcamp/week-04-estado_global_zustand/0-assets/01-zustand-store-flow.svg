@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520">
+  <title>Zustand Store Flow</title>
+  <desc>Diagrama de flujo de datos entre componentes React Native y un store Zustand: los componentes leen estado mediante selectores y disparan acciones que actualizan el store.</desc>
+
+  <!-- Background -->
+  <rect width="860" height="520" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="430" y="36" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" text-anchor="middle">Flujo de Datos con Zustand</text>
+
+  <!-- ===================== ZUSTAND STORE (center) ===================== -->
+  <rect x="300" y="170" width="260" height="200" rx="12" fill="#161b22" stroke="#61DAFB" stroke-width="2"/>
+  <text x="430" y="197" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#61DAFB" text-anchor="middle">Zustand Store</text>
+
+  <!-- State section -->
+  <rect x="316" y="208" width="228" height="68" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="323" y="225" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#8b949e">STATE</text>
+  <text x="323" y="243" font-family="system-ui, monospace" font-size="11" fill="#e6edf3">items: Item[]</text>
+  <text x="323" y="259" font-family="system-ui, monospace" font-size="11" fill="#e6edf3">count: number</text>
+  <text x="323" y="275" font-family="system-ui, monospace" font-size="11" fill="#6e7681">theme: string</text>
+
+  <!-- Actions section -->
+  <rect x="316" y="286" width="228" height="68" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="323" y="303" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#8b949e">ACTIONS</text>
+  <text x="323" y="321" font-family="system-ui, monospace" font-size="11" fill="#3fb950">addItem(item)</text>
+  <text x="323" y="337" font-family="system-ui, monospace" font-size="11" fill="#3fb950">removeItem(id)</text>
+  <text x="323" y="353" font-family="system-ui, monospace" font-size="11" fill="#3fb950">clearCart()</text>
+
+  <!-- ===================== COMPONENT A (top left) ===================== -->
+  <rect x="50" y="65" width="200" height="110" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="150" y="88" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#e6edf3" text-anchor="middle">HomeScreen</text>
+  <rect x="64" y="98" width="172" height="20" rx="4" fill="#0d1117"/>
+  <text x="70" y="112" font-family="system-ui, monospace" font-size="10" fill="#61DAFB">useStore(s =&gt; s.items)</text>
+  <rect x="64" y="124" width="172" height="20" rx="4" fill="#0d1117"/>
+  <text x="70" y="138" font-family="system-ui, monospace" font-size="10" fill="#3fb950">addItem(newItem)</text>
+  <text x="150" y="165" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">lista de productos</text>
+
+  <!-- ===================== COMPONENT B (left) ===================== -->
+  <rect x="50" y="230" width="200" height="110" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="150" y="253" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#e6edf3" text-anchor="middle">CartScreen</text>
+  <rect x="64" y="263" width="172" height="20" rx="4" fill="#0d1117"/>
+  <text x="70" y="277" font-family="system-ui, monospace" font-size="10" fill="#61DAFB">useStore(s =&gt; s.count)</text>
+  <rect x="64" y="289" width="172" height="20" rx="4" fill="#0d1117"/>
+  <text x="70" y="303" font-family="system-ui, monospace" font-size="10" fill="#3fb950">removeItem(id)</text>
+  <text x="150" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">carrito de compras</text>
+
+  <!-- ===================== COMPONENT C (bottom left) ===================== -->
+  <rect x="50" y="390" width="200" height="90" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="150" y="413" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#e6edf3" text-anchor="middle">TabBar Badge</text>
+  <rect x="64" y="423" width="172" height="20" rx="4" fill="#0d1117"/>
+  <text x="70" y="437" font-family="system-ui, monospace" font-size="10" fill="#61DAFB">useStore(s =&gt; s.count)</text>
+  <text x="150" y="468" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">badge numérico en tab</text>
+
+  <!-- ===================== ARROWS: Components → Store (read selectors) ===================== -->
+  <!-- HomeScreen selector read arrow -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f0883e"/>
+    </marker>
+  </defs>
+
+  <!-- HomeScreen → Store (reads) -->
+  <path d="M250,108 Q276,108 300,220" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="258" y="160" font-family="system-ui, sans-serif" font-size="10" fill="#61DAFB" transform="rotate(-20,258,160)">selector</text>
+
+  <!-- CartScreen → Store (reads) -->
+  <path d="M250,275 L300,275" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="255" y="268" font-family="system-ui, sans-serif" font-size="10" fill="#61DAFB">selector</text>
+
+  <!-- TabBar → Store (reads) -->
+  <path d="M250,420 Q276,420 300,340" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="253" y="388" font-family="system-ui, sans-serif" font-size="10" fill="#61DAFB" transform="rotate(20,253,388)">selector</text>
+
+  <!-- ===================== ARROWS: Components → Store (actions) ===================== -->
+  <!-- HomeScreen action call -->
+  <path d="M300,290 Q276,200 250,138" fill="none" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <text x="262" y="228" font-family="system-ui, sans-serif" font-size="10" fill="#3fb950" transform="rotate(-30,262,228)">action</text>
+
+  <!-- CartScreen action call -->
+  <path d="M300,320 L250,310" fill="none" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <text x="255" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#3fb950">action</text>
+
+  <!-- ===================== STORE UPDATE LOOP ===================== -->
+  <!-- set() triggers re-render -->
+  <path d="M560,270 Q660,270 660,120 Q660,60 580,60 Q500,60 430,65" fill="none" stroke="#f0883e" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <text x="600" y="60" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f0883e">set() → re-render</text>
+  <text x="600" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">(solo el selector que</text>
+  <text x="600" y="90" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">cambió su valor)</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <rect x="50" y="494" width="760" height="16" rx="4" fill="#161b22"/>
+  <line x1="60" y1="502" x2="90" y2="502" stroke="#61DAFB" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="96" y="506" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">Selector (lectura)</text>
+  <line x1="200" y1="502" x2="230" y2="502" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="236" y="506" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">Acción (escritura)</text>
+  <line x1="340" y1="502" x2="370" y2="502" stroke="#f0883e" stroke-width="1.5"/>
+  <text x="376" y="506" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">set() re-render selectivo</text>
+  <text x="600" y="506" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681">No necesita Provider — importación directa</text>
+</svg>
