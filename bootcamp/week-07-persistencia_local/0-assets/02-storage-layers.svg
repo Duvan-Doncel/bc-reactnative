@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480">
+  <!-- Background -->
+  <rect width="860" height="480" fill="#0f172a" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="36" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f8fafc" text-anchor="middle">Capas de Storage — React Native App</text>
+
+  <!-- ─────────────────────  LAYER: React Components  ───────────────────── -->
+  <rect x="30" y="60" width="800" height="60" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="430" y="86" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#94a3b8" text-anchor="middle">CAPA UI — React Components / Screens</text>
+  <text x="430" y="105" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">useState · useEffect · custom hooks de storage</text>
+
+  <!-- Arrows layer 1 → 2 -->
+  <line x1="220" y1="120" x2="220" y2="148" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+  <line x1="430" y1="120" x2="430" y2="148" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+  <line x1="640" y1="120" x2="640" y2="148" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+  <!-- ─────────────────────  LAYER: Storage APIs  ───────────────────── -->
+  <!-- MMKV box -->
+  <rect x="50" y="150" width="240" height="90" rx="8" fill="#1e1040" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="170" y="174" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#c084fc" text-anchor="middle">MMKV</text>
+  <text x="170" y="193" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#d8b4fe" text-anchor="middle">react-native-mmkv</text>
+  <text x="170" y="212" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Síncrono · JSI/Nitro</text>
+  <text x="170" y="229" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">set/getString/delete</text>
+
+  <!-- AsyncStorage box -->
+  <rect x="310" y="150" width="240" height="90" rx="8" fill="#0f2540" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="430" y="174" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">AsyncStorage</text>
+  <text x="430" y="193" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">@react-native-async-storage</text>
+  <text x="430" y="212" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Asíncrono · Promise</text>
+  <text x="430" y="229" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">setItem/getItem/removeItem</text>
+
+  <!-- SecureStore box -->
+  <rect x="570" y="150" width="240" height="90" rx="8" fill="#0a2818" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="690" y="174" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#4ade80" text-anchor="middle">SecureStore</text>
+  <text x="690" y="193" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#86efac" text-anchor="middle">expo-secure-store</text>
+  <text x="690" y="212" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Asíncrono · Cifrado AES</text>
+  <text x="690" y="229" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">setItemAsync/getItemAsync</text>
+
+  <!-- Arrows layer 2 → 3 -->
+  <line x1="170" y1="240" x2="170" y2="268" stroke="#475569" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="430" y1="240" x2="430" y2="268" stroke="#475569" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="690" y1="240" x2="690" y2="268" stroke="#475569" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- ─────────────────────  LAYER: Native Storage  ───────────────────── -->
+  <!-- MMKV native -->
+  <rect x="50" y="270" width="240" height="60" rx="8" fill="#130d2b" stroke="#6d28d9" stroke-width="1"/>
+  <text x="170" y="295" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#a78bfa" text-anchor="middle">Archivo MMKV (.mmkv)</text>
+  <text x="170" y="315" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">App sandbox · Sin cifrado</text>
+
+  <!-- AsyncStorage native -->
+  <rect x="310" y="270" width="240" height="60" rx="8" fill="#0a1929" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="430" y="295" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">SQLite / RocksDB</text>
+  <text x="430" y="315" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">App sandbox · Sin cifrado</text>
+
+  <!-- SecureStore native -->
+  <rect x="570" y="270" width="240" height="60" rx="8" fill="#052010" stroke="#15803d" stroke-width="1"/>
+  <text x="690" y="292" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">iOS: Keychain Services</text>
+  <text x="690" y="309" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Android: Keystore System</text>
+  <text x="690" y="324" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Cifrado AES por el SO</text>
+
+  <!-- ─────────────────────  USAGE ROW  ───────────────────── -->
+  <text x="430" y="364" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#475569" text-anchor="middle">─────  Casos de uso recomendados  ─────</text>
+
+  <rect x="50" y="375" width="240" height="50" rx="6" fill="#1a1235" stroke="#6d28d9" stroke-width="1"/>
+  <text x="170" y="397" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">Settings · Tema · Ordenación</text>
+  <text x="170" y="414" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Preferencias de usuario</text>
+
+  <rect x="310" y="375" width="240" height="50" rx="6" fill="#0a1929" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="430" y="397" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">Listas offline · Caché API</text>
+  <text x="430" y="414" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Datos moderados (~KB - MB)</text>
+
+  <rect x="570" y="375" width="240" height="50" rx="6" fill="#052010" stroke="#15803d" stroke-width="1"/>
+  <text x="690" y="397" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Tokens JWT · PINs</text>
+  <text x="690" y="414" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Datos sensibles (~&lt; 2KB/clave)</text>
+
+  <!-- Layer labels on left -->
+  <text x="22" y="100" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#475569" text-anchor="middle" transform="rotate(-90,22,90)">UI</text>
+  <text x="22" y="205" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#475569" text-anchor="middle" transform="rotate(-90,22,205)">API</text>
+  <text x="22" y="305" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#475569" text-anchor="middle" transform="rotate(-90,22,305)">OS</text>
+
+  <!-- Vertical tier lines on left -->
+  <line x1="34" y1="60" x2="34" y2="120" stroke="#374151" stroke-width="1"/>
+  <line x1="34" y1="150" x2="34" y2="240" stroke="#374151" stroke-width="1"/>
+  <line x1="34" y1="270" x2="34" y2="330" stroke="#374151" stroke-width="1"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

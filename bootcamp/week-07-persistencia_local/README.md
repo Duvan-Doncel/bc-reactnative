@@ -4,54 +4,67 @@
 
 ## 🎯 Objetivos de aprendizaje
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
-
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- [ ] Distinguir cuándo usar MMKV, AsyncStorage y Expo SecureStore
+- [ ] Almacenar y recuperar preferencias de usuario de forma sincrónica con MMKV
+- [ ] Persistir datos de lista (caché offline) con AsyncStorage
+- [ ] Guardar datos sensibles cifrados con Expo SecureStore
+- [ ] Crear custom hooks que encapsulen la lógica de almacenamiento
+- [ ] Implementar un patrón offline-first básico con TanStack Query + AsyncStorage
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
-- Expo Go instalado y simulador configurado
+- Semanas 01-06 completadas
+- React Navigation, Zustand y TanStack Query dominados (semanas 03-05)
+- React Hook Form + Zod conocidos (semana 06)
+- Para MMKV: build nativo (`npx expo run:ios` o `npx expo run:android`) — **no compatible con Expo Go**
 
 ## 🗂️ Estructura de la semana
 
-| Carpeta           | Contenido                    | Tiempo |
-| ----------------- | ---------------------------- | ------ |
-| `1-teoria/`       | Material teórico             | 2h     |
-| `2-practicas/`    | Ejercicios guiados           | 4h     |
-| `3-proyecto/`     | Proyecto integrador          | 2h     |
+| Carpeta        | Contenido                                               | Tiempo |
+|----------------|---------------------------------------------------------|--------|
+| `1-teoria/`    | Comparativa de opciones, patrones MMKV y SecureStore    | 2h     |
+| `2-practicas/` | Ejercicio AsyncStorage + Ejercicio MMKV y SecureStore   | 3h     |
+| `3-proyecto/`  | App con preferencias (MMKV), caché offline y SecureStore | 3h    |
 
 ## 📝 Contenidos
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+| Archivo | Tema |
+|---------|------|
+| [01-storage-overview.md](1-teoria/01-storage-overview.md) | Comparativa de los 3 storages y cuándo usar cada uno |
+| [02-mmkv-y-securestore.md](1-teoria/02-mmkv-y-securestore.md) | Patrones avanzados: MMKV hooks y SecureStore con cifrado |
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+| Ejercicio | Tema | Compatibilidad |
+|-----------|------|----------------|
+| [ejercicio-01-asyncstorage](2-practicas/ejercicio-01-asyncstorage/README.md) | Guardar preferencias y listas con AsyncStorage | Expo Go ✅ |
+| [ejercicio-02-mmkv-securestore](2-practicas/ejercicio-02-mmkv-securestore/README.md) | MMKV sincrónico y SecureStore cifrado | Build nativo 🔧 |
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+[3-proyecto/README.md](3-proyecto/README.md) — App con caché offline + preferencias persistentes + datos sensibles
 
 ## ⏱️ Distribución del tiempo (8 horas)
 
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
+| Actividad | Tiempo | Descripción |
+|-----------|--------|-------------|
+| Teoría 01 — Storage Overview | 1h | Comparativa, casos de uso, decisión |
+| Teoría 02 — MMKV y SecureStore | 1h | Patrones avanzados, custom hooks |
+| Ejercicio 01 — AsyncStorage | 1.5h | Guardar/recuperar datos, listas offline |
+| Ejercicio 02 — MMKV + SecureStore | 1.5h | MMKV sincrónico, SecureStore cifrado |
+| Proyecto integrador | 3h | Implementar los 3 storages en tu dominio |
 
 ## 📌 Entregables
 
-- [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
+- [ ] Ejercicio 01: preferencias guardadas con AsyncStorage (funciona en Expo Go)
+- [ ] Ejercicio 02: MMKV sincrónico y SecureStore (build nativo)
+- [ ] Proyecto: app con los 3 patrones aplicados al dominio asignado
 - [ ] App corriendo en simulador iOS y/o Android
+- [ ] TypeScript sin errores de compilación
 
 ## 🔗 Navegación
 

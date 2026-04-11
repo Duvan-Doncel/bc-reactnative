@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" width="860" height="540">
+  <!-- Background -->
+  <rect width="860" height="540" fill="#0f172a" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="38" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc" text-anchor="middle">Árbol de Decisión — Elegir Storage en React Native</text>
+
+  <!-- START node -->
+  <rect x="330" y="60" width="200" height="48" rx="24" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <text x="430" y="90" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">¿Qué dato necesito guardar?</text>
+
+  <!-- Arrow down -->
+  <line x1="430" y1="108" x2="430" y2="138" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Diamond 1 — Sensible? -->
+  <polygon points="430,140 520,183 430,226 340,183" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="178" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">¿Es un dato</text>
+  <text x="430" y="194" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">sensible/secreto?</text>
+
+  <!-- SÍ → SecureStore -->
+  <line x1="520" y1="183" x2="660" y2="183" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="593" y="175" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">SÍ</text>
+
+  <rect x="660" y="155" width="170" height="60" rx="10" fill="#166534" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="745" y="179" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#4ade80" text-anchor="middle">SecureStore</text>
+  <text x="745" y="198" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#86efac" text-anchor="middle">Tokens · PINs · Passwords</text>
+  <text x="745" y="213" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">Cifrado OS (Keychain/Keystore)</text>
+
+  <!-- NO → Arrow down -->
+  <line x1="430" y1="226" x2="430" y2="268" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="445" y="252" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">NO</text>
+
+  <!-- Diamond 2 — Large data? -->
+  <polygon points="430,270 530,315 430,360 330,315" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="310" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">¿Son listas o datos</text>
+  <text x="430" y="326" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">grandes (&gt;10 KB)?</text>
+
+  <!-- SÍ → AsyncStorage -->
+  <line x1="530" y1="315" x2="660" y2="315" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="598" y="307" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">SÍ</text>
+
+  <rect x="660" y="287" width="170" height="60" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="745" y="311" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">AsyncStorage</text>
+  <text x="745" y="330" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Listas offline · Caché de API</text>
+  <text x="745" y="345" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">Async · Sin cifrado · ~6 MB</text>
+
+  <!-- NO → Arrow down -->
+  <line x1="430" y1="360" x2="430" y2="400" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="445" y="385" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">NO</text>
+
+  <!-- Diamond 3 — Needs native? -->
+  <polygon points="430,402 520,440 430,478 340,440" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="435" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">¿Puedes hacer</text>
+  <text x="430" y="451" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">build nativo?</text>
+
+  <!-- SÍ → MMKV -->
+  <line x1="520" y1="440" x2="660" y2="440" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="593" y="432" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">SÍ</text>
+
+  <rect x="660" y="412" width="170" height="60" rx="10" fill="#3b1f6e" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="745" y="436" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#c084fc" text-anchor="middle">MMKV</text>
+  <text x="745" y="455" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#d8b4fe" text-anchor="middle">Preferencias · Settings · Tema</text>
+  <text x="745" y="470" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">Síncrono · JSI/Nitro · Ultra rápido</text>
+
+  <!-- NO → AsyncStorage fallback -->
+  <line x1="340" y1="440" x2="200" y2="440" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="275" y="432" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">NO</text>
+
+  <rect x="30" y="412" width="170" height="60" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="115" y="436" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">AsyncStorage</text>
+  <text x="115" y="455" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Fallback compatible</text>
+  <text x="115" y="470" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">con Expo Go</text>
+
+  <!-- Legend -->
+  <rect x="30" y="500" width="12" height="12" rx="2" fill="#22c55e"/>
+  <text x="50" y="511" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">Cifrado (seguro)</text>
+  <rect x="180" y="500" width="12" height="12" rx="2" fill="#3b82f6"/>
+  <text x="200" y="511" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">Async · Sin cifrado</text>
+  <rect x="360" y="500" width="12" height="12" rx="2" fill="#a855f7"/>
+  <text x="380" y="511" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">Síncrono · Requiere build nativo</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
