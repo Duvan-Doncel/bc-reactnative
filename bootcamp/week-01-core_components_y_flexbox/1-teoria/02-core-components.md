@@ -8,7 +8,7 @@
 
 ---
 
-![Core Components: HTML vs React Native](../0-assets/core-components-web-vs-rn.svg)
+![Core Components: HTML vs React Native](../0-assets/01-core-components-web-vs-rn.svg)
 
 ---
 

@@ -12,7 +12,7 @@
 
 React Native usa **Flexbox** como único sistema de layout (no existe CSS Grid ni float). Todas las `View` son flex containers por defecto.
 
-![Ejes Flexbox en React Native](../0-assets/flexbox-axes.svg)
+![Ejes Flexbox en React Native](../0-assets/02-flexbox-axes.svg)
 
 ### La diferencia más importante con el web
 
