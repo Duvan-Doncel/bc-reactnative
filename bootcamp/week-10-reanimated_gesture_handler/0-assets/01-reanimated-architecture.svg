@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <rect width="900" height="480" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="34" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f1f5f9" text-anchor="middle">Arquitectura Reanimated 3 — Hilo JS vs Hilo UI</text>
+
+  <!-- ─── LEFT: Old Animated API ─── -->
+  <rect x="20" y="52" width="400" height="200" rx="10" fill="#1e293b"/>
+  <text x="220" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f87171" text-anchor="middle">Animated API clásico (semana 09)</text>
+
+  <!-- JS Thread box -->
+  <rect x="36" y="90" width="150" height="148" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="111" y="114" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#f87171" text-anchor="middle">JS Thread</text>
+  <rect x="48" y="122" width="126" height="20" rx="4" fill="#1e293b"/>
+  <text x="111" y="136" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Animated.timing()</text>
+  <rect x="48" y="148" width="126" height="20" rx="4" fill="#1e293b"/>
+  <text x="111" y="162" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">calc. duration/easing</text>
+  <rect x="48" y="174" width="126" height="20" rx="4" fill="#1e293b"/>
+  <text x="111" y="188" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">cada frame update</text>
+  <text x="111" y="228" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#ef4444" text-anchor="middle">⚠️ ocupado = drops</text>
+
+  <!-- Bridge arrow -->
+  <line x1="186" y1="164" x2="218" y2="164" stroke="#6b7280" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr-gray)"/>
+  <text x="202" y="155" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">bridge</text>
+  <text x="202" y="178" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">asíncrono</text>
+
+  <!-- UI Thread box -->
+  <rect x="220" y="90" width="180" height="148" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="310" y="114" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#f87171" text-anchor="middle">UI Thread</text>
+  <text x="310" y="140" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">solo dibuja</text>
+  <text x="310" y="160" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">(ejecuta instrucciones</text>
+  <text x="310" y="175" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">del JS cuando llegan)</text>
+  <text x="310" y="215" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#ef4444" text-anchor="middle">No decide, solo ejecuta</text>
+
+  <!-- ─── RIGHT: Reanimated 3 ─── -->
+  <rect x="460" y="52" width="420" height="200" rx="10" fill="#1e293b"/>
+  <text x="670" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#4ade80" text-anchor="middle">Reanimated 3 (semana 10)</text>
+
+  <!-- JS Thread box (green) -->
+  <rect x="476" y="90" width="140" height="148" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="546" y="114" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">JS Thread</text>
+  <rect x="488" y="122" width="116" height="20" rx="4" fill="#1e293b"/>
+  <text x="546" y="136" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">useSharedValue(0)</text>
+  <rect x="488" y="148" width="116" height="20" rx="4" fill="#1e293b"/>
+  <text x="546" y="162" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">setState / Zustand</text>
+  <rect x="488" y="174" width="116" height="20" rx="4" fill="#1e293b"/>
+  <text x="546" y="188" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">runOnJS() calls</text>
+  <text x="546" y="228" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">estado, no animación</text>
+
+  <!-- SharedValue sync arrows -->
+  <line x1="616" y1="150" x2="648" y2="150" stroke="#61DAFB" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="648" y1="170" x2="616" y2="170" stroke="#61DAFB" stroke-width="2" marker-end="url(#arr-blue2)"/>
+  <text x="632" y="143" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#61DAFB" text-anchor="middle">SharedValue</text>
+  <text x="632" y="183" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#61DAFB" text-anchor="middle">sync</text>
+
+  <!-- UI Thread box (green) -->
+  <rect x="650" y="90" width="214" height="148" rx="8" fill="#052e16" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="757" y="114" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#4ade80" text-anchor="middle">UI Thread — Worklet</text>
+  <rect x="662" y="122" width="190" height="20" rx="4" fill="#0f172a"/>
+  <text x="757" y="136" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">useAnimatedStyle(() =&gt; {})</text>
+  <rect x="662" y="148" width="190" height="20" rx="4" fill="#0f172a"/>
+  <text x="757" y="162" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">withTiming / withSpring</text>
+  <rect x="662" y="174" width="190" height="20" rx="4" fill="#0f172a"/>
+  <text x="757" y="188" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">Gesture callbacks</text>
+  <text x="757" y="228" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">✅ 60fps garantizado</text>
+
+  <!-- ─── BOTTOM: API comparison table ─── -->
+  <text x="450" y="278" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#61DAFB" text-anchor="middle">Equivalencias clave</text>
+
+  <!-- Table headers -->
+  <rect x="20" y="288" width="260" height="22" rx="4" fill="#1e3a5f"/>
+  <text x="150" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#61DAFB" text-anchor="middle">Animated API (w09)</text>
+  <rect x="286" y="288" width="320" height="22" rx="4" fill="#052e16"/>
+  <text x="446" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#4ade80" text-anchor="middle">Reanimated 3 (w10)</text>
+  <rect x="612" y="288" width="268" height="22" rx="4" fill="#1e293b"/>
+  <text x="746" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">Notas</text>
+
+  <!-- Rows -->
+  <rect x="20" y="314" width="860" height="22" rx="0" fill="#1e293b"/>
+  <text x="150" y="329" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">new Animated.Value(0)</text>
+  <text x="446" y="329" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">useSharedValue(0)</text>
+  <text x="746" y="329" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">acceso con .value</text>
+
+  <rect x="20" y="338" width="860" height="22" rx="0" fill="#0f172a"/>
+  <text x="150" y="353" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">style={{ opacity: anim }}</text>
+  <text x="446" y="353" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">useAnimatedStyle(() =&gt; ({...}))</text>
+  <text x="746" y="353" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">worklet en UI thread</text>
+
+  <rect x="20" y="362" width="860" height="22" rx="0" fill="#1e293b"/>
+  <text x="150" y="377" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Animated.timing(v,cfg).start()</text>
+  <text x="446" y="377" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">v.value = withTiming(target, cfg)</text>
+  <text x="746" y="377" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">asignación directa</text>
+
+  <rect x="20" y="386" width="860" height="22" rx="0" fill="#0f172a"/>
+  <text x="150" y="401" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Animated.loop(anim)</text>
+  <text x="446" y="401" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">withRepeat(withTiming(...), -1)</text>
+  <text x="746" y="401" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">-1 = infinito</text>
+
+  <rect x="20" y="410" width="860" height="22" rx="0" fill="#1e293b"/>
+  <text x="150" y="425" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Animated.sequence([a, b])</text>
+  <text x="446" y="425" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">withSequence(a, b)</text>
+  <text x="746" y="425" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">sin .start()</text>
+
+  <rect x="20" y="434" width="860" height="22" rx="0" fill="#0f172a"/>
+  <text x="150" y="449" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">extrapolate: 'clamp'</text>
+  <text x="446" y="449" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">Extrapolation.CLAMP</text>
+  <text x="746" y="449" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">importado de reanimated</text>
+
+  <!-- Column dividers -->
+  <line x1="280" y1="288" x2="280" y2="458" stroke="#334155" stroke-width="1"/>
+  <line x1="606" y1="288" x2="606" y2="458" stroke="#334155" stroke-width="1"/>
+
+  <!-- Defs -->
+  <defs>
+    <marker id="arr-gray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#61DAFB"/>
+    </marker>
+    <marker id="arr-blue2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#61DAFB"/>
+    </marker>
+  </defs>
+</svg>

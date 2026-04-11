@@ -1,0 +1,23 @@
+{
+  "name": "ejercicio-02-gesture-drag",
+  "version": "1.0.0",
+  "main": "App.tsx",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios"
+  },
+  "dependencies": {
+    "expo": "53.0.0",
+    "expo-status-bar": "2.2.3",
+    "react": "19.0.0",
+    "react-native": "0.79.2",
+    "react-native-gesture-handler": "2.21.2",
+    "react-native-reanimated": "3.17.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.27.1",
+    "@types/react": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}
