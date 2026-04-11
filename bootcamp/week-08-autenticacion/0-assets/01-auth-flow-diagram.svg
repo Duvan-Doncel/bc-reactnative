@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580">
+  <rect width="900" height="580" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="38" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f1f5f9" text-anchor="middle">Flujo de Autenticación JWT</text>
+
+  <!-- Actors: App, Backend API, SecureStore, Zustand -->
+  <!-- App column -->
+  <rect x="40" y="60" width="120" height="40" rx="6" fill="#1e3a5f"/>
+  <text x="100" y="85" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#61DAFB" text-anchor="middle">📱 App</text>
+  <line x1="100" y1="100" x2="100" y2="550" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Backend column -->
+  <rect x="270" y="60" width="140" height="40" rx="6" fill="#1e3a5f"/>
+  <text x="340" y="85" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#61DAFB" text-anchor="middle">🖥️ Backend API</text>
+  <line x1="340" y1="100" x2="340" y2="550" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- SecureStore column -->
+  <rect x="510" y="60" width="130" height="40" rx="6" fill="#1e3a5f"/>
+  <text x="575" y="85" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#4ade80" text-anchor="middle">🔐 SecureStore</text>
+  <line x1="575" y1="100" x2="575" y2="550" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Zustand column -->
+  <rect x="730" y="60" width="130" height="40" rx="6" fill="#1e3a5f"/>
+  <text x="795" y="85" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#f59e0b" text-anchor="middle">🐻 Zustand</text>
+  <line x1="795" y1="100" x2="795" y2="550" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Step 1: Login -->
+  <text x="30" y="140" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">1</text>
+  <line x1="100" y1="145" x2="330" y2="145" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <rect x="130" y="128" width="170" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="143" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">POST /auth/login { username, password }</text>
+
+  <!-- Step 2: Response -->
+  <text x="30" y="178" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">2</text>
+  <line x1="330" y1="178" x2="110" y2="178" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <rect x="130" y="162" width="170" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="177" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">{ accessToken, refreshToken, user }</text>
+
+  <!-- Step 3: SecureStore.setItemAsync -->
+  <text x="30" y="216" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">3</text>
+  <line x1="100" y1="216" x2="565" y2="216" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <rect x="250" y="200" width="180" height="22" rx="3" fill="#0f172a"/>
+  <text x="340" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">SecureStore.setItemAsync(tokens)</text>
+
+  <!-- Step 4: set user + isAuthenticated -->
+  <text x="30" y="254" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">4</text>
+  <line x1="100" y1="254" x2="785" y2="254" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+  <rect x="380" y="238" width="220" height="22" rx="3" fill="#0f172a"/>
+  <text x="490" y="253" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">set({ user, isAuthenticated: true })</text>
+
+  <!-- Step 5: Protected API call -->
+  <text x="30" y="300" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">5</text>
+  <line x1="100" y1="300" x2="330" y2="300" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="284" width="210" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">GET /items Authorization: Bearer ...</text>
+
+  <!-- Step 5b: 401 Unauthorized -->
+  <text x="30" y="336" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">6</text>
+  <line x1="330" y1="336" x2="110" y2="336" stroke="#f87171" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-red)"/>
+  <rect x="130" y="320" width="170" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="335" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#f87171" text-anchor="middle">401 Unauthorized (token expirado)</text>
+
+  <!-- Step 7: Read refresh token -->
+  <text x="30" y="372" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">7</text>
+  <line x1="100" y1="372" x2="565" y2="372" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <rect x="250" y="356" width="200" height="22" rx="3" fill="#0f172a"/>
+  <text x="350" y="371" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">SecureStore.getItemAsync(refreshToken)</text>
+
+  <!-- Step 8: POST /auth/refresh -->
+  <text x="30" y="408" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">8</text>
+  <line x1="100" y1="408" x2="330" y2="408" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="392" width="200" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="407" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">POST /auth/refresh { refreshToken }</text>
+
+  <!-- Step 9: new accessToken -->
+  <text x="30" y="444" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">9</text>
+  <line x1="330" y1="444" x2="110" y2="444" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <rect x="130" y="428" width="170" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="443" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">{ accessToken } — nuevo token</text>
+
+  <!-- Step 10: Retry original request -->
+  <text x="30" y="480" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">10</text>
+  <line x1="100" y1="480" x2="330" y2="480" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="464" width="200" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="479" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">GET /items con nuevo Bearer token</text>
+
+  <!-- Step 11: 200 OK -->
+  <text x="30" y="516" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8">11</text>
+  <line x1="330" y1="516" x2="110" y2="516" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <rect x="130" y="500" width="170" height="22" rx="3" fill="#0f172a"/>
+  <text x="215" y="515" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">200 OK { items: [...] }</text>
+
+  <!-- Legend -->
+  <rect x="580" y="310" width="290" height="160" rx="6" fill="#1e293b"/>
+  <text x="600" y="332" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">Leyenda</text>
+  <line x1="600" y1="352" x2="640" y2="352" stroke="#61DAFB" stroke-width="2"/>
+  <text x="650" y="356" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0">Petición al servidor</text>
+  <line x1="600" y1="376" x2="640" y2="376" stroke="#4ade80" stroke-width="2"/>
+  <text x="650" y="380" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0">Respuesta / SecureStore</text>
+  <line x1="600" y1="400" x2="640" y2="400" stroke="#f87171" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="650" y="404" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0">Error del servidor</text>
+  <line x1="600" y1="424" x2="640" y2="424" stroke="#f59e0b" stroke-width="2"/>
+  <text x="650" y="428" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e2e8f0">Zustand store update</text>
+  <text x="600" y="452" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b">Interceptor (pasos 6-10) es automático</text>
+
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>
