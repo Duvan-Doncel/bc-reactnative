@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">Ejes Flexbox en React Native</title>
+  <desc id="desc">Diagrama que muestra el eje principal (column por defecto) y el eje cruzado en React Native, comparado con el comportamiento por defecto en CSS.</desc>
+
+  <!-- Fondo -->
+  <rect width="800" height="500" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="400" y="42" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Flexbox en React Native vs CSS (web)</text>
+
+  <!-- ======== LADO IZQUIERDO: React Native (column por defecto) ======== -->
+  <text x="200" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#61DAFB">React Native</text>
+  <text x="200" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e">flexDirection: 'column' (default)</text>
+
+  <!-- Contenedor RN -->
+  <rect x="60" y="125" width="280" height="300" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Eje principal (↓ vertical) -->
+  <line x1="200" y1="135" x2="200" y2="415" stroke="#61DAFB" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="200,420 195,408 205,408" fill="#61DAFB"/>
+  <text x="215" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#61DAFB" transform="rotate(90, 215, 290)">eje principal →</text>
+
+  <!-- Eje cruzado (→ horizontal) -->
+  <line x1="70" y1="275" x2="330" y2="275" stroke="#f1f0ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <polygon points="335,275 323,270 323,280" fill="#f1f0ff" opacity="0.4"/>
+  <text x="200" y="268" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#f1f0ff" opacity="0.5">eje cruzado</text>
+
+  <!-- Cajas hijos RN -->
+  <rect x="90" y="145" width="220" height="64" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="200" y="181" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ffffff">Hijo 1</text>
+
+  <rect x="90" y="221" width="220" height="64" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="200" y="257" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ffffff">Hijo 2</text>
+
+  <rect x="90" y="297" width="220" height="64" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="200" y="333" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ffffff">Hijo 3</text>
+
+  <!-- Label código RN -->
+  <rect x="68" y="377" width="264" height="40" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="200" y="393" text-anchor="middle" font-family="monospace" font-size="11" fill="#8b949e">flexDirection:</text>
+  <text x="200" y="409" text-anchor="middle" font-family="monospace" font-size="11" fill="#61DAFB">'column'  ← DEFAULT en RN</text>
+
+  <!-- ======== LADO DERECHO: CSS web (row por defecto) ======== -->
+  <text x="600" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#f97316">CSS (web)</text>
+  <text x="600" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e">flex-direction: row (default)</text>
+
+  <!-- Contenedor CSS -->
+  <rect x="460" y="125" width="280" height="300" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Eje principal (→ horizontal) -->
+  <line x1="470" y1="275" x2="730" y2="275" stroke="#f97316" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="735,275 723,270 723,280" fill="#f97316"/>
+  <text x="600" y="268" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#f97316">eje principal →</text>
+
+  <!-- Eje cruzado (↓ vertical) -->
+  <line x1="600" y1="135" x2="600" y2="415" stroke="#f1f0ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <polygon points="600,420 595,408 605,408" fill="#f1f0ff" opacity="0.4"/>
+  <text x="613" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#f1f0ff" opacity="0.5" transform="rotate(90, 613, 290)">eje cruzado</text>
+
+  <!-- Cajas hijos CSS (en fila) -->
+  <rect x="478" y="220" width="74" height="110" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="515" y="279" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ffffff">Hijo 1</text>
+
+  <rect x="563" y="220" width="74" height="110" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="600" y="279" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ffffff">Hijo 2</text>
+
+  <rect x="648" y="220" width="74" height="110" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="685" y="279" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ffffff">Hijo 3</text>
+
+  <!-- Label código CSS -->
+  <rect x="468" y="377" width="264" height="40" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="600" y="393" text-anchor="middle" font-family="monospace" font-size="11" fill="#8b949e">flex-direction:</text>
+  <text x="600" y="409" text-anchor="middle" font-family="monospace" font-size="11" fill="#f97316">row  ← DEFAULT en CSS web</text>
+
+  <!-- Separador central -->
+  <line x1="400" y1="80" x2="400" y2="460" stroke="#30363d" stroke-width="1" stroke-dasharray="4,6"/>
+
+  <!-- Nota inferior -->
+  <rect x="60" y="455" width="680" height="32" rx="6" fill="#161b22"/>
+  <text x="400" y="473" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e">⚠️  En React Native </text>
+  <text x="430" y="473" font-family="monospace" font-size="12" fill="#61DAFB">flexDirection</text>
+  <text x="560" y="473" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e"> es </text>
+  <text x="578" y="473" font-family="monospace" font-size="12" fill="#61DAFB">'column'</text>
+  <text x="643" y="473" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e"> por defecto, no </text>
+  <text x="755" y="473" font-family="monospace" font-size="12" fill="#f97316">'row'</text>
+</svg>
