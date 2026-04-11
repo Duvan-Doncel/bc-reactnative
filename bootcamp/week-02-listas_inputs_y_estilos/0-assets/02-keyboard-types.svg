@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" role="img" aria-labelledby="title desc">
+  <title id="title">TextInput Keyboard Types</title>
+  <desc id="desc">Tabla de tipos de teclado disponibles en TextInput para React Native, con ejemplos visuales del aspecto en iOS y Android.</desc>
+
+  <!-- Background -->
+  <rect width="820" height="480" fill="#0d1117" rx="12"/>
+
+  <!-- Title -->
+  <text x="410" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" text-anchor="middle">TextInput — Tipos de Teclado</text>
+  <text x="410" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Prop: keyboardType</text>
+
+  <!-- Table header -->
+  <rect x="30" y="70" width="760" height="36" fill="#21262d" rx="6"/>
+  <text x="130" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#61DAFB" text-anchor="middle">keyboardType</text>
+  <text x="340" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle">Ejemplo de uso</text>
+  <text x="540" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle">Teclas especiales</text>
+  <text x="720" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle">Plataforma</text>
+
+  <!-- Divider lines -->
+  <line x1="240" y1="70" x2="240" y2="460" stroke="#30363d" stroke-width="1"/>
+  <line x1="440" y1="70" x2="440" y2="460" stroke="#30363d" stroke-width="1"/>
+  <line x1="640" y1="70" x2="640" y2="460" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Row 1: default -->
+  <rect x="30" y="106" width="760" height="50" fill="#161b22" rx="0"/>
+  <rect x="34" y="110" width="8" height="42" fill="#61DAFB" rx="2"/>
+  <text x="130" y="128" font-family="monospace, Courier New" font-size="13" fill="#61DAFB" text-anchor="middle">"default"</text>
+  <text x="130" y="146" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">valor por defecto</text>
+  <text x="340" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle">Nombre, descripción, comentarios</text>
+  <text x="540" y="135" font-family="monospace, Courier New" font-size="12" fill="#8b949e" text-anchor="middle">QWERTY completo</text>
+  <text x="720" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">iOS + Android</text>
+
+  <!-- Row 2: numeric -->
+  <line x1="30" y1="156" x2="790" y2="156" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="156" width="760" height="50" fill="#0d1117" rx="0"/>
+  <rect x="34" y="160" width="8" height="42" fill="#d29922" rx="2"/>
+  <text x="130" y="178" font-family="monospace, Courier New" font-size="13" fill="#61DAFB" text-anchor="middle">"numeric"</text>
+  <text x="130" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">solo dígitos</text>
+  <text x="340" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle">Cantidad, año, código PIN</text>
+  <text x="540" y="185" font-family="monospace, Courier New" font-size="12" fill="#8b949e" text-anchor="middle">0-9 (sin punto decimal)</text>
+  <text x="720" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">iOS + Android</text>
+
+  <!-- Row 3: decimal-pad -->
+  <line x1="30" y1="206" x2="790" y2="206" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="206" width="760" height="50" fill="#161b22" rx="0"/>
+  <rect x="34" y="210" width="8" height="42" fill="#d29922" rx="2"/>
+  <text x="130" y="228" font-family="monospace, Courier New" font-size="13" fill="#61DAFB" text-anchor="middle">"decimal-pad"</text>
+  <text x="130" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">números con decimal</text>
+  <text x="340" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle">Precio, distancia, peso</text>
+  <text x="540" y="235" font-family="monospace, Courier New" font-size="12" fill="#8b949e" text-anchor="middle">0-9 + punto decimal</text>
+  <text x="720" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">iOS + Android</text>
+
+  <!-- Row 4: email-address -->
+  <line x1="30" y1="256" x2="790" y2="256" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="256" width="760" height="50" fill="#0d1117" rx="0"/>
+  <rect x="34" y="260" width="8" height="42" fill="#61DAFB" rx="2"/>
+  <text x="130" y="278" font-family="monospace, Courier New" font-size="13" fill="#61DAFB" text-anchor="middle">"email-address"</text>
+  <text x="130" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">correo electrónico</text>
+  <text x="340" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle">Campos de login, registro</text>
+  <text x="540" y="285" font-family="monospace, Courier New" font-size="12" fill="#8b949e" text-anchor="middle">QWERTY + @ y . destacados</text>
+  <text x="720" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">iOS + Android</text>
+
+  <!-- Row 5: phone-pad -->
+  <line x1="30" y1="306" x2="790" y2="306" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="306" width="760" height="50" fill="#161b22" rx="0"/>
+  <rect x="34" y="310" width="8" height="42" fill="#388bfd" rx="2"/>
+  <text x="130" y="328" font-family="monospace, Courier New" font-size="13" fill="#61DAFB" text-anchor="middle">"phone-pad"</text>
+  <text x="130" y="346" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">teléfono</text>
+  <text x="340" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle">Campo de número telefónico</text>
+  <text x="540" y="335" font-family="monospace, Courier New" font-size="12" fill="#8b949e" text-anchor="middle">Numpad + # y * (iOS: + y ,)</text>
+  <text x="720" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">iOS + Android</text>
+
+  <!-- Row 6: url -->
+  <line x1="30" y1="356" x2="790" y2="356" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="356" width="760" height="50" fill="#0d1117" rx="0"/>
+  <rect x="34" y="360" width="8" height="42" fill="#388bfd" rx="2"/>
+  <text x="130" y="378" font-family="monospace, Courier New" font-size="13" fill="#61DAFB" text-anchor="middle">"url"</text>
+  <text x="130" y="396" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">URLs web</text>
+  <text x="340" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle">Campo de dirección web o API</text>
+  <text x="540" y="385" font-family="monospace, Courier New" font-size="12" fill="#8b949e" text-anchor="middle">QWERTY + / y . destacados</text>
+  <text x="720" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">iOS + Android</text>
+
+  <!-- Bottom border -->
+  <line x1="30" y1="406" x2="790" y2="406" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="406" width="760" height="36" fill="#21262d" rx="0" style="border-radius: 0 0 6px 6px"/>
+
+  <!-- Tip row -->
+  <text x="410" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Tip: combina con  </text>
+  <text x="500" y="430" font-family="monospace, Courier New" font-size="12" fill="#61DAFB">autoCapitalize="none"</text>
+  <text x="660" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e"> para evitar mayúscula inicial</text>
+
+  <!-- Footer -->
+  <text x="410" y="463" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#484f58" text-anchor="middle">React Native 0.79 — Expo SDK 53</text>
+</svg>

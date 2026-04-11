@@ -4,54 +4,96 @@
 
 ## 🎯 Objetivos de aprendizaje
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
-
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- ✅ Renderizar listas eficientes con `FlatList` y `SectionList`
+- ✅ Entender la virtualización y por qué usar `FlatList` en lugar de `ScrollView` para datos dinámicos
+- ✅ Capturar texto del usuario con `TextInput` y sus variantes de teclado
+- ✅ Gestionar el teclado virtual con `KeyboardAvoidingView` y `Keyboard.dismiss()`
+- ✅ Aplicar estilos dinámicos con arrays de estilos y condiciones
+- ✅ Crear un sistema de theming básico con constantes reutilizables
+
+---
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
-- Expo Go instalado y simulador configurado
+- ✅ Semana 01 completada (Core Components, Flexbox, StyleSheet)
+- ✅ Expo Go instalado o simulador configurado
+- ✅ Conocimiento de `useState` y `useCallback` en React
+
+---
 
 ## 🗂️ Estructura de la semana
 
-| Carpeta           | Contenido                    | Tiempo |
-| ----------------- | ---------------------------- | ------ |
-| `1-teoria/`       | Material teórico             | 2h     |
-| `2-practicas/`    | Ejercicios guiados           | 4h     |
-| `3-proyecto/`     | Proyecto integrador          | 2h     |
+```
+week-02-listas_inputs_y_estilos/
+├── README.md                          ← Este archivo
+├── rubrica-evaluacion.md              ← Criterios de evaluación
+├── 0-assets/
+│   ├── 01-flatlist-virtualization.svg ← Diagrama: virtualización de listas
+│   └── 02-keyboard-types.svg         ← Tipos de teclado iOS vs Android
+├── 1-teoria/
+│   ├── 01-flatlist-sectionlist.md    ← FlatList, SectionList, keyExtractor
+│   ├── 02-textinput-teclado.md       ← TextInput, KeyboardAvoidingView
+│   └── 03-estilos-dinamicos.md       ← Estilos condicionales, theming
+├── 2-practicas/
+│   ├── ejercicio-01-flatlist-basica/ ← FlatList con datos mock y pull-to-refresh
+│   └── ejercicio-02-busqueda-input/  ← TextInput + FlatList con filtrado
+├── 3-proyecto/
+│   ├── README.md
+│   └── starter/
+├── 4-recursos/
+│   ├── ebooks-free/
+│   ├── videografia/
+│   └── webgrafia/
+└── 5-glosario/
+    └── README.md
+```
+
+---
 
 ## 📝 Contenidos
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+| Archivo | Tema | Tiempo |
+|---------|------|--------|
+| [01-flatlist-sectionlist.md](1-teoria/01-flatlist-sectionlist.md) | FlatList, SectionList y virtualización | 45 min |
+| [02-textinput-teclado.md](1-teoria/02-textinput-teclado.md) | TextInput, KeyboardAvoidingView | 30 min |
+| [03-estilos-dinamicos.md](1-teoria/03-estilos-dinamicos.md) | Estilos dinámicos y theming básico | 30 min |
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+| Ejercicio | Descripción | Tiempo |
+|-----------|-------------|--------|
+| [ejercicio-01-flatlist-basica](2-practicas/ejercicio-01-flatlist-basica/) | FlatList con datos mock, pull-to-refresh y separadores | 1h 30 min |
+| [ejercicio-02-busqueda-input](2-practicas/ejercicio-02-busqueda-input/) | TextInput con búsqueda en tiempo real sobre FlatList | 1h 30 min |
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+[App de búsqueda con lista filtrable](3-proyecto/README.md) — Construir una pantalla con `TextInput` de búsqueda y `FlatList` con los elementos del dominio asignado.
+
+---
 
 ## ⏱️ Distribución del tiempo (8 horas)
 
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
+| Actividad | Tiempo | Descripción |
+|-----------|--------|-------------|
+| Teoría | 2h | Lectura de los 3 archivos teóricos |
+| Ejercicio 01 | 1h 30 min | FlatList básica con pull-to-refresh |
+| Ejercicio 02 | 1h 30 min | Búsqueda en tiempo real con TextInput |
+| Proyecto | 3h | App filtrable adaptada al dominio asignado |
+
+---
 
 ## 📌 Entregables
 
-- [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
-- [ ] App corriendo en simulador iOS y/o Android
+- [ ] `ejercicio-01`: FlatList con al menos 10 items, separadores y pull-to-refresh funcionando
+- [ ] `ejercicio-02`: Búsqueda en tiempo real sobre lista de al menos 10 items
+- [ ] `3-proyecto`: App con `TextInput` + `FlatList` adaptada al dominio asignado
+- [ ] App corriendo en simulador iOS y/o Android sin errores
+
+---
 
 ## 🔗 Navegación
 
