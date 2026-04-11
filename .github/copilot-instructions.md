@@ -197,57 +197,132 @@ const renderItem = ({ item }: { item: Item }) => {
 - Código inicial en `starter/`
 - Carpeta `solution/` oculta (en `.gitignore`) solo para instructores
 - Criterios de evaluación específicos
+- **Política de Dominios Únicos**: Cada aprendiz trabaja sobre un dominio diferente
+
+#### 🏛️ Política de Dominios Únicos (Anticopia)
+
+**Cada aprendiz recibe un dominio único asignado por el instructor:**
+
+- 📖 Biblioteca
+- 💊 Farmacia
+- 🏋️ Gimnasio
+- 🏫 Escuela
+- 🏬 Tienda de mascotas
+- 🍽️ Restaurante
+- 🏦 Banco
+- 🚕 Agencia de taxis
+- 🏥 Hospital
+- 🎥 Cine
+- 🏞️ Hotel
+- ✈️ Agencia de viajes
+- 🏎️ Concesionario de autos
+- 👗 Tienda de ropa
+- 🛠️ Taller mecánico
+- Y otros dominios únicos según cantidad de aprendices
+
+**Objetivo:**
+
+- Prevenir copia entre estudiantes
+- Fomentar implementaciones originales
+- Aplicar conceptos generales a contextos específicos
+- Desarrollar capacidad de abstracción y adaptación
+
+**El instructor debe:**
+
+1. Asignar un dominio único a cada aprendiz al inicio del bootcamp
+2. Mantener un registro de dominios asignados
+3. No repetir dominios en el mismo grupo
+4. Validar que las implementaciones sean coherentes con el dominio
 
 #### 📋 Formato de Proyecto (con TODOs)
 
-A diferencia de los ejercicios, el proyecto SÍ usa TODOs para que el estudiante implemente desde cero:
+A diferencia de los ejercicios, el proyecto SÍ usa TODOs para que el estudiante implemente desde cero. **Las instrucciones del proyecto deben ser genéricas y adaptables a cualquier dominio.**
 
 **starter/src/screens/HomeScreen.tsx:**
 
 ```tsx
 // ============================================
 // SCREEN: HomeScreen
-// Lista de productos con pull-to-refresh
+// Lista de elementos del dominio con pull-to-refresh
 // ============================================
+
+// NOTA PARA EL APRENDIZ:
+// Adapta esta pantalla a tu dominio asignado.
+// Ejemplos:
+// - Biblioteca: lista de libros
+// - Farmacia: lista de medicamentos
+// - Gimnasio: lista de miembros
 
 import React from "react";
 import { FlatList, View } from "react-native";
 
-interface Product {
+interface Item {
   id: string;
   name: string;
-  price: number;
+  // TODO: Agregar propiedades específicas de tu dominio
+  // Ejemplo (Biblioteca): author: string; isbn: string;
+  // Ejemplo (Farmacia): price: number; stock: number;
 }
 
 export function HomeScreen(): React.JSX.Element {
   /**
-   * Obtiene la lista de productos del servidor.
+   * Obtiene la lista de elementos del dominio desde el servidor.
    * Debe usar TanStack Query con useQuery.
    *
-   * Returns: { data: Product[], isLoading, refetch }
+   * Returns: { data: Item[], isLoading, refetch }
    */
-  // TODO: Implementar useQuery para obtener productos
+  // TODO: Implementar useQuery para obtener elementos
 
   /**
    * Renderiza cada item de la lista.
-   * Debe mostrar nombre y precio del producto.
+   * Debe mostrar la información relevante del dominio.
    */
   // TODO: Implementar función renderItem
 
-  return <View>{/* TODO: Renderizar FlatList con los productos */}</View>;
+  return <View>{/* TODO: Renderizar FlatList con los elementos */}</View>;
 }
 ```
 
-> 📁 **Estructura del proyecto:**
->
-> ```
-> 3-proyecto/
-> ├── README.md          # Instrucciones del proyecto
-> ├── starter/           # Código inicial para el estudiante
-> └── solution/          # ⚠️ OCULTA - Solo para instructores
-> ```
->
-> La carpeta `solution/` está en `.gitignore` y NO se sube al repositorio público.
+**El README.md del proyecto debe incluir:**
+
+```markdown
+## 📱 Proyecto Semanal: [Título Genérico]
+
+### 🎯 Objetivo
+
+Implementar [concepto aprendido] aplicado a tu dominio asignado.
+
+### 📋 Tu Dominio Asignado
+
+**Dominio**: [El instructor te asignará tu dominio]
+
+### ✅ Requisitos Funcionales (Adaptables a tu dominio)
+
+1. Crear pantalla para listar elementos
+2. Implementar búsqueda/filtrado
+3. Agregar navegación al detalle
+4. etc.
+
+### 💡 Ejemplos de Adaptación por Dominio
+
+- **Biblioteca**: Gestionar libros, autores, préstamos
+- **Farmacia**: Gestionar medicamentos, ventas, inventario
+- **Gimnasio**: Gestionar miembros, rutinas, asistencias
+- **Restaurante**: Gestionar platillos, mesas, pedidos
+
+### 🛠️ Entregables
+
+1. App funcional en simulador iOS y/o Android
+2. Código adaptado a tu dominio
+3. README con descripción de tu implementación
+```
+
+El estudiante debe:
+
+1. Leer las instrucciones en README.md
+2. Adaptar los conceptos genéricos a su dominio específico
+3. Completar cada TODO con implementación contextualizada
+4. Usar lo aprendido en teoría y prácticas guiadas
 
 ### 4. **Recursos** (4-recursos/)
 
@@ -531,6 +606,8 @@ Cada semana incluye **tres tipos de evidencias**:
 - Entrega puntual de proyectos
 - App funcional en simulador iOS y/o Android
 - Tests pasando (cuando aplique)
+- **Implementación coherente con el dominio asignado**
+- **Originalidad**: Sin copia de implementaciones de otros aprendices
 
 ---
 
@@ -539,6 +616,7 @@ Cada semana incluye **tres tipos de evidencias**:
 ### Estrategias Didácticas
 
 - **Aprendizaje Basado en Proyectos (ABP)**: Proyectos semanales integradores
+- **Dominios Únicos**: Cada aprendiz aplica conceptos a su dominio asignado (anticopia)
 - **Práctica Deliberada**: Ejercicios incrementales con feedback inmediato
 - **Mobile-First Thinking**: Siempre pensar en experiencia táctil y plataforma
 - **Code Review**: Revisión de código entre estudiantes
