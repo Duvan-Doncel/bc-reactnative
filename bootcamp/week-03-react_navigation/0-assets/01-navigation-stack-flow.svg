@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">Stack Navigator — Historial de Navegación</title>
+  <desc id="desc">Diagrama que muestra cómo el Stack Navigator apila y desapila pantallas. Izquierda: stack inicial con Screen A. Centro: navegar agrega Screen B encima. Derecha: goBack elimina Screen B y vuelve a Screen A.</desc>
+
+  <!-- Fondo -->
+  <rect width="860" height="520" fill="#0d1117"/>
+
+  <!-- Título principal -->
+  <text x="430" y="42" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Stack Navigator — Historial de Navegación</text>
+  <text x="430" y="66" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#8b949e">navigate() apila · goBack() desapila · replace() reemplaza sin apilar</text>
+
+  <!-- ═══════════════════════════════ ESTADO 1 ═══════════════════════════════ -->
+  <text x="143" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#58a6ff">Estado inicial</text>
+
+  <!-- Teléfono 1 -->
+  <rect x="68" y="108" width="150" height="280" rx="18" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <!-- Notch -->
+  <rect x="101" y="108" width="84" height="14" rx="6" fill="#0d1117"/>
+  <!-- Header -->
+  <rect x="68" y="122" width="150" height="40" rx="0" fill="#1f2937"/>
+  <text x="143" y="147" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Home</text>
+  <!-- Screen A -->
+  <rect x="78" y="164" width="130" height="200" rx="6" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
+  <text x="143" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#3fb950">Screen A</text>
+  <text x="143" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">HomeScreen</text>
+  <!-- Stack indicator -->
+  <rect x="68" y="366" width="150" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="143" y="381" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">stack: [ A ]</text>
+
+  <!-- ═══════════════════════════════ FLECHA 1 ═══════════════════════════════ -->
+  <text x="280" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#61DAFB">navigate('Detail',</text>
+  <text x="280" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#61DAFB">{ id: '42' })</text>
+  <!-- Línea flecha -->
+  <line x1="220" y1="258" x2="330" y2="258" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f85149"/>
+    </marker>
+  </defs>
+
+  <!-- ═══════════════════════════════ ESTADO 2 ═══════════════════════════════ -->
+  <text x="430" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#61DAFB">navigate() → apila Screen B</text>
+
+  <!-- Teléfono 2 -->
+  <rect x="355" y="108" width="150" height="280" rx="18" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <!-- Notch -->
+  <rect x="388" y="108" width="84" height="14" rx="6" fill="#0d1117"/>
+  <!-- Header con back button -->
+  <rect x="355" y="122" width="150" height="40" rx="0" fill="#1f2937"/>
+  <text x="375" y="147" font-family="system-ui, sans-serif" font-size="14" fill="#61DAFB">‹</text>
+  <text x="430" y="147" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Detalle</text>
+
+  <!-- Screen A (debajo, atenuada) -->
+  <rect x="365" y="164" width="130" height="200" rx="6" fill="#161b22" stroke="#21262d" stroke-width="1" opacity="0.5"/>
+  <text x="430" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#6e7681">Screen A</text>
+
+  <!-- Screen B (encima, activa) — desplazada visualmente -->
+  <rect x="365" y="155" width="130" height="200" rx="6" fill="#0d1117" stroke="#61DAFB" stroke-width="1.5"/>
+  <text x="430" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#61DAFB">Screen B</text>
+  <text x="430" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">DetailScreen</text>
+  <text x="430" y="287" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">params.id = '42'</text>
+
+  <!-- Stack indicator -->
+  <rect x="355" y="366" width="150" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="430" y="381" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">stack: [ A, B ] ← activo</text>
+
+  <!-- ═══════════════════════════════ FLECHA 2 ═══════════════════════════════ -->
+  <text x="573" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f85149">navigation</text>
+  <text x="573" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f85149">.goBack()</text>
+  <line x1="507" y1="258" x2="617" y2="258" stroke="#f85149" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+  <!-- ═══════════════════════════════ ESTADO 3 ═══════════════════════════════ -->
+  <text x="717" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#3fb950">goBack() → desapila Screen B</text>
+
+  <!-- Teléfono 3 -->
+  <rect x="642" y="108" width="150" height="280" rx="18" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <!-- Notch -->
+  <rect x="675" y="108" width="84" height="14" rx="6" fill="#0d1117"/>
+  <!-- Header -->
+  <rect x="642" y="122" width="150" height="40" rx="0" fill="#1f2937"/>
+  <text x="717" y="147" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Home</text>
+  <!-- Screen A (activa de nuevo) -->
+  <rect x="652" y="164" width="130" height="200" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="717" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#3fb950">Screen A</text>
+  <text x="717" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">HomeScreen</text>
+  <!-- Stack indicator -->
+  <rect x="642" y="366" width="150" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="717" y="381" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">stack: [ A ] ← activo</text>
+
+  <!-- ═══════════════════════════════ LEYENDA ═══════════════════════════════ -->
+  <rect x="100" y="415" width="660" height="82" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="430" y="436" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#e6edf3">Métodos de navegación</text>
+
+  <!-- Col 1 -->
+  <circle cx="130" cy="455" r="4" fill="#61DAFB"/>
+  <text x="140" y="459" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3">navigate('X', params)</text>
+  <text x="140" y="473" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">reutiliza si X existe en stack</text>
+
+  <!-- Col 2 -->
+  <circle cx="310" cy="455" r="4" fill="#f0883e"/>
+  <text x="320" y="459" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3">push('X', params)</text>
+  <text x="320" y="473" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">siempre apila nueva instancia</text>
+
+  <!-- Col 3 -->
+  <circle cx="490" cy="455" r="4" fill="#f85149"/>
+  <text x="500" y="459" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3">goBack()</text>
+  <text x="500" y="473" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">desapila pantalla actual</text>
+
+  <!-- Col 4 -->
+  <circle cx="640" cy="455" r="4" fill="#a5d6ff"/>
+  <text x="650" y="459" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3">replace('X', params)</text>
+  <text x="650" y="473" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">reemplaza sin añadir al historial</text>
+
+  <!-- Footer -->
+  <text x="430" y="508" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#6e7681">React Navigation 7 · @react-navigation/native-stack · Bootcamp RN Zero to Hero</text>
+</svg>

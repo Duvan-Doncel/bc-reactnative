@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">Comparativa de Tipos de Navigator</title>
+  <desc id="desc2">Tabla comparativa de Stack Navigator, Bottom Tab Navigator y Drawer Navigator: cuándo usar cada uno, patrón de interacción, y apps de referencia.</desc>
+
+  <!-- Fondo -->
+  <rect width="860" height="500" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="430" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Tipos de Navigator en React Navigation 7</text>
+  <text x="430" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#8b949e">Elige el navigator adecuado según el patrón de interacción del usuario</text>
+
+  <!-- ═══════════════════ STACK NAVIGATOR ═══════════════════ -->
+  <rect x="30" y="80" width="250" height="370" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Badge -->
+  <rect x="65" y="95" width="180" height="28" rx="14" fill="#21262d"/>
+  <text x="155" y="114" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#61DAFB">Stack Navigator</text>
+
+  <!-- Diagrama mini phone Stack -->
+  <rect x="105" y="132" width="100" height="160" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="105" y="146" width="100" height="28" fill="#1f2937" rx="0"/>
+  <text x="118" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#61DAFB">‹</text>
+  <text x="155" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#e6edf3">Detalle</text>
+  <!-- Contenido pantalla B activa -->
+  <rect x="113" y="178" width="84" height="100" rx="4" fill="#161b22" stroke="#61DAFB" stroke-width="1"/>
+  <text x="155" y="234" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#61DAFB">Screen B</text>
+  <!-- Borde pantalla A debajo -->
+  <rect x="117" y="182" width="84" height="100" rx="4" fill="none" stroke="#30363d" stroke-width="1" opacity="0.5"/>
+
+  <!-- Textos explicativos -->
+  <text x="155" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Navegación lineal</text>
+  <text x="155" y="324" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">Pantallas apiladas</text>
+  <text x="155" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">con historial</text>
+
+  <line x1="50" y1="354" x2="260" y2="354" stroke="#21262d" stroke-width="1"/>
+  <text x="155" y="372" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#8b949e">Usar para:</text>
+  <text x="155" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">lista → detalle → editar</text>
+  <text x="155" y="406" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">flujo de auth (login → home)</text>
+  <text x="155" y="422" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">onboarding y wizards</text>
+  <text x="155" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-style="italic" fill="#6e7681">Ej: Instagram → perfil → seguidor</text>
+
+  <!-- ═══════════════════ BOTTOM TABS ═══════════════════ -->
+  <rect x="305" y="80" width="250" height="370" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+
+  <rect x="340" y="95" width="180" height="28" rx="14" fill="#21262d"/>
+  <text x="430" y="114" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#f0883e">Bottom Tab Navigator</text>
+
+  <!-- Mini phone Tabs -->
+  <rect x="380" y="132" width="100" height="160" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Header tab -->
+  <rect x="380" y="146" width="100" height="24" fill="#1f2937" rx="0"/>
+  <text x="430" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3">Favoritos</text>
+  <!-- Contenido -->
+  <rect x="388" y="174" width="84" height="90" rx="4" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="430" y="224" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">contenido tab</text>
+  <!-- Tab bar -->
+  <rect x="380" y="268" width="100" height="24" rx="0" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <!-- Íconos tab bar -->
+  <text x="402" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#8b949e">⌂</text>
+  <text x="430" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#f0883e">♥</text>
+  <text x="458" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#8b949e">☰</text>
+
+  <text x="430" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Secciones paralelas</text>
+  <text x="430" y="324" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">Cada tab mantiene</text>
+  <text x="430" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">su propio historial</text>
+
+  <line x1="325" y1="354" x2="535" y2="354" stroke="#21262d" stroke-width="1"/>
+  <text x="430" y="372" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#8b949e">Usar para:</text>
+  <text x="430" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">2-5 secciones principales</text>
+  <text x="430" y="406" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">acceso rápido frecuente</text>
+  <text x="430" y="422" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">app con navegación plana</text>
+  <text x="430" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-style="italic" fill="#6e7681">Ej: Twitter, Spotify, Instagram</text>
+
+  <!-- ═══════════════════ DRAWER NAVIGATOR ═══════════════════ -->
+  <rect x="580" y="80" width="250" height="370" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+
+  <rect x="615" y="95" width="180" height="28" rx="14" fill="#21262d"/>
+  <text x="705" y="114" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#3fb950">Drawer Navigator</text>
+
+  <!-- Mini phone Drawer -->
+  <rect x="655" y="132" width="100" height="160" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Header with hamburger -->
+  <rect x="655" y="146" width="100" height="24" fill="#1f2937" rx="0"/>
+  <text x="670" y="163" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3">≡</text>
+  <text x="705" y="163" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#e6edf3">Inicio</text>
+  <!-- Drawer panel abierto -->
+  <rect x="655" y="170" width="55" height="110" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="682" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#e6edf3">Menú</text>
+  <text x="682" y="207" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3fb950">● Inicio</text>
+  <text x="682" y="222" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#8b949e">  Config</text>
+  <text x="682" y="237" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#8b949e">  Perfil</text>
+  <!-- Contenido detrás -->
+  <rect x="713" y="173" width="35" height="104" rx="2" fill="#0d1117" stroke="#21262d" stroke-width="1" opacity="0.7"/>
+
+  <text x="705" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Menú lateral</text>
+  <text x="705" y="324" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">Acceso a secciones</text>
+  <text x="705" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">secundarias / globales</text>
+
+  <line x1="600" y1="354" x2="810" y2="354" stroke="#21262d" stroke-width="1"/>
+  <text x="705" y="372" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#8b949e">Usar para:</text>
+  <text x="705" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">muchas secciones (6+)</text>
+  <text x="705" y="406" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">configuración / ajustes</text>
+  <text x="705" y="422" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">acceso menos frecuente</text>
+  <text x="705" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-style="italic" fill="#6e7681">Ej: Gmail, Google Maps</text>
+
+  <!-- Footer -->
+  <text x="430" y="488" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#6e7681">React Navigation 7 · Bootcamp RN Zero to Hero</text>
+</svg>
