@@ -2,57 +2,70 @@
 
 > **Fase 3 — Avanzado** | Semana 9 de 18 | ⏱️ 8 horas
 
-## 🎯 Objetivos de aprendizaje
+Primera semana de la Fase Avanzada. Hasta aquí construiste la estructura completa de una app (navegación, estado, red, formularios, persistencia y auth). Ahora la haces sentir viva con animaciones.
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
+## 🎯 Objetivos de aprendizaje
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- [ ] Comprender el modelo de `Animated.Value` y por qué las animaciones corren en el hilo de UI nativo
+- [ ] Implementar `Animated.timing`, `Animated.spring` y `Animated.decay` para diferentes sensaciones
+- [ ] Combinar animaciones con `Animated.parallel`, `Animated.sequence` y `Animated.stagger`
+- [ ] Interpolar valores (`interpolate`) para animar propiedades no numéricas (colores, rotaciones, escalas)
+- [ ] Usar `LayoutAnimation` para animar cambios de layout de forma declarativa
+- [ ] Construir animaciones de entrada/salida, feedback de tap, loaders y barras de progreso
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
+- Semanas 01–08 completadas (especialmente w04 Zustand y w06 RHF)
 - Expo Go instalado y simulador configurado
 
 ## 🗂️ Estructura de la semana
 
-| Carpeta           | Contenido                    | Tiempo |
-| ----------------- | ---------------------------- | ------ |
-| `1-teoria/`       | Material teórico             | 2h     |
-| `2-practicas/`    | Ejercicios guiados           | 4h     |
-| `3-proyecto/`     | Proyecto integrador          | 2h     |
+| Carpeta | Contenido | Tiempo |
+|---------|-----------|--------|
+| `1-teoria/` | `01-animated-api.md`, `02-layout-animation.md` | 2h |
+| `2-practicas/` | `ejercicio-01-timing-spring`, `ejercicio-02-interpolation` | 3h |
+| `3-proyecto/` | Animaciones integradas en app de dominio | 3h |
 
 ## 📝 Contenidos
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+| Archivo | Tema |
+|---------|------|
+| [01-animated-api.md](1-teoria/01-animated-api.md) | Animated.Value, timing, spring, decay, parallel, sequence, stagger |
+| [02-layout-animation.md](1-teoria/02-layout-animation.md) | LayoutAnimation, preset configs, UIManager en Android |
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+| Ejercicio | Tema | Expo Go |
+|-----------|------|---------|
+| [ejercicio-01-timing-spring](2-practicas/ejercicio-01-timing-spring/) | `Animated.timing`, `Animated.spring`, fade in/out, scale feedback | ✅ |
+| [ejercicio-02-interpolation](2-practicas/ejercicio-02-interpolation/) | `interpolate`, rotaciones, colores, barra de progreso animada | ✅ |
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+Ver [3-proyecto/README.md](3-proyecto/README.md) — añadir animaciones de entrada, feedback de tap y transiciones a la app del dominio asignado.
 
 ## ⏱️ Distribución del tiempo (8 horas)
 
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
+| Actividad | Tiempo | Descripción |
+|-----------|--------|-------------|
+| Teoría | 1h | Leer `01-animated-api.md` |
+| Teoría | 1h | Leer `02-layout-animation.md` |
+| Práctica 01 | 1.5h | timing + spring — animar cards y botones |
+| Práctica 02 | 1.5h | interpolate — barra de progreso + rotación |
+| Proyecto | 3h | Integrar animaciones en app del dominio |
 
 ## 📌 Entregables
 
 - [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
+- [ ] Proyecto con mínimo 3 animaciones distintas usando `Animated` API
+- [ ] Al menos 1 `LayoutAnimation` en el proyecto
 - [ ] App corriendo en simulador iOS y/o Android
 
 ## 🔗 Navegación
+
 
 [← Semana 08 — Autenticación Completa](../week-08-autenticacion/README.md) | [Semana 10 — Reanimated 3 y Gesture Handler →](../week-10-reanimated_gesture_handler/README.md)

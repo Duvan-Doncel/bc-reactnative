@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <rect width="900" height="500" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="34" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f1f5f9" text-anchor="middle">Animated API — Tipos y Combinadores</text>
+
+  <!-- ─── Section: Animated Types ─── -->
+  <text x="30" y="68" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#61DAFB">TIPOS DE ANIMACIÓN</text>
+
+  <!-- timing box -->
+  <rect x="30" y="78" width="240" height="110" rx="8" fill="#1e293b"/>
+  <text x="150" y="100" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">Animated.timing</text>
+  <text x="150" y="118" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Velocidad constante o easing</text>
+  <rect x="46" y="126" width="208" height="30" rx="4" fill="#0f172a"/>
+  <text x="150" y="145" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#7dd3fc" text-anchor="middle" font-family="monospace">duration: 400ms | easing: Easing.ease</text>
+  <text x="150" y="174" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Fade in/out · Deslizamientos · Transiciones</text>
+
+  <!-- spring box -->
+  <rect x="290" y="78" width="240" height="110" rx="8" fill="#1e293b"/>
+  <text x="410" y="100" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#a78bfa" text-anchor="middle">Animated.spring</text>
+  <text x="410" y="118" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Física de resorte — rebote natural</text>
+  <rect x="306" y="126" width="208" height="30" rx="4" fill="#0f172a"/>
+  <text x="410" y="145" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle" font-family="monospace">tension: 300 | friction: 10</text>
+  <text x="410" y="174" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Tap feedback · Cards · Botones interactivos</text>
+
+  <!-- decay box -->
+  <rect x="550" y="78" width="240" height="110" rx="8" fill="#1e293b"/>
+  <text x="670" y="100" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">Animated.decay</text>
+  <text x="670" y="118" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Inercia — desaceleración gradual</text>
+  <rect x="566" y="126" width="208" height="30" rx="4" fill="#0f172a"/>
+  <text x="670" y="145" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle" font-family="monospace">velocity: 0.5 | deceleration: 0.997</text>
+  <text x="670" y="174" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Swipe · Scroll momentum · Lanzar objetos</text>
+
+  <!-- ─── Section: Combinators ─── -->
+  <text x="30" y="222" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#61DAFB">COMBINADORES</text>
+
+  <!-- parallel -->
+  <rect x="30" y="232" width="205" height="90" rx="8" fill="#1e293b"/>
+  <text x="132" y="252" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">parallel</text>
+  <!-- Bars for parallel (simultaneous) -->
+  <rect x="46" y="260" width="173" height="8" rx="3" fill="#1d4ed8"/>
+  <rect x="46" y="274" width="173" height="8" rx="3" fill="#7c3aed"/>
+  <rect x="46" y="288" width="173" height="8" rx="3" fill="#065f46"/>
+  <text x="132" y="312" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Todas inician al mismo tiempo</text>
+
+  <!-- sequence -->
+  <rect x="250" y="232" width="205" height="90" rx="8" fill="#1e293b"/>
+  <text x="352" y="252" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">sequence</text>
+  <!-- Bars for sequence (one after another) -->
+  <rect x="266" y="260" width="58" height="8" rx="3" fill="#1d4ed8"/>
+  <rect x="330" y="274" width="58" height="8" rx="3" fill="#7c3aed"/>
+  <rect x="394" y="288" width="45" height="8" rx="3" fill="#065f46"/>
+  <text x="352" y="312" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Una termina → inicia la siguiente</text>
+
+  <!-- stagger -->
+  <rect x="470" y="232" width="205" height="90" rx="8" fill="#1e293b"/>
+  <text x="572" y="252" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">stagger</text>
+  <!-- Bars for stagger (offset delay) -->
+  <rect x="486" y="260" width="130" height="8" rx="3" fill="#1d4ed8"/>
+  <rect x="506" y="274" width="130" height="8" rx="3" fill="#7c3aed"/>
+  <rect x="526" y="288" width="130" height="8" rx="3" fill="#065f46"/>
+  <text x="572" y="312" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Delay escalonado entre cada anim.</text>
+
+  <!-- ─── Section: useNativeDriver ─── -->
+  <rect x="30" y="346" width="840" height="60" rx="8" fill="#1e293b"/>
+  <text x="450" y="366" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9" text-anchor="middle">⚡ useNativeDriver</text>
+  <text x="200" y="385" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">✅ true → opacity · transform (scale, rotate, translate)</text>
+  <text x="650" y="385" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#f87171" text-anchor="middle">⚠️ false → width · height · backgroundColor · padding</text>
+
+  <!-- ─── Section: Animated Components ─── -->
+  <rect x="30" y="430" width="840" height="52" rx="8" fill="#1e293b"/>
+  <text x="450" y="450" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9" text-anchor="middle">Componentes Animados — deben ser Animated.* para conectar estilos animados</text>
+  <text x="450" y="470" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Animated.View · Animated.Text · Animated.Image · Animated.ScrollView · Animated.FlatList</text>
+
+  <!-- loop badge -->
+  <rect x="690" y="232" width="180" height="90" rx="8" fill="#1e293b"/>
+  <text x="780" y="252" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">loop</text>
+  <text x="780" y="272" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Repite indefinidamente</text>
+  <text x="780" y="292" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle" font-family="monospace">Animated.loop(timing)</text>
+  <text x="780" y="310" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Loaders · Pulsos · Spinners</text>
+</svg>

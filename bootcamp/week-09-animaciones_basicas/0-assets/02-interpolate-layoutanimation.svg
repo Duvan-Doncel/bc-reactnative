@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <rect width="900" height="480" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="34" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f1f5f9" text-anchor="middle">interpolate + LayoutAnimation</text>
+
+  <!-- ─── Interpolate Section ─── -->
+  <text x="30" y="64" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#61DAFB">INTERPOLATE — un valor, múltiples propiedades</text>
+
+  <!-- Single Animated.Value arrow -->
+  <rect x="30" y="74" width="170" height="40" rx="8" fill="#1e3a5f"/>
+  <text x="115" y="99" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#61DAFB" text-anchor="middle">Animated.Value(0)</text>
+
+  <!-- Arrow right -->
+  <line x1="200" y1="94" x2="248" y2="94" stroke="#475569" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <text x="224" y="88" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">.interpolate()</text>
+
+  <!-- Output boxes -->
+  <rect x="250" y="74" width="158" height="32" rx="6" fill="#1e293b"/>
+  <text x="329" y="95" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">rotate: '0deg' → '360deg'</text>
+
+  <rect x="420" y="74" width="158" height="32" rx="6" fill="#1e293b"/>
+  <text x="499" y="95" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">opacity: 0 → 1</text>
+
+  <rect x="590" y="74" width="200" height="32" rx="6" fill="#1e293b"/>
+  <text x="690" y="95" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#fb923c" text-anchor="middle">color: '#ef4444' → '#22c55e'</text>
+
+  <!-- Code snippet: interpolate -->
+  <rect x="30" y="124" width="400" height="110" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="46" y="143" font-family="monospace" font-size="11" fill="#94a3b8">const progress = </text>
+  <text x="178" y="143" font-family="monospace" font-size="11" fill="#61DAFB">useRef</text>
+  <text x="220" y="143" font-family="monospace" font-size="11" fill="#94a3b8">(new Animated.Value(0)).current;</text>
+  <text x="46" y="162" font-family="monospace" font-size="11" fill="#94a3b8">const spin = progress.</text>
+  <text x="195" y="162" font-family="monospace" font-size="11" fill="#fbbf24">interpolate</text>
+  <text x="265" y="162" font-family="monospace" font-size="11" fill="#94a3b8">({</text>
+  <text x="60" y="181" font-family="monospace" font-size="11" fill="#94a3b8">  inputRange:  [0, 1],</text>
+  <text x="60" y="200" font-family="monospace" font-size="11" fill="#94a3b8">  outputRange: [</text>
+  <text x="183" y="200" font-family="monospace" font-size="11" fill="#4ade80">'0deg'</text>
+  <text x="230" y="200" font-family="monospace" font-size="11" fill="#94a3b8">, </text>
+  <text x="246" y="200" font-family="monospace" font-size="11" fill="#4ade80">'360deg'</text>
+  <text x="310" y="200" font-family="monospace" font-size="11" fill="#94a3b8">],</text>
+  <text x="60" y="219" font-family="monospace" font-size="11" fill="#94a3b8">  extrapolate: </text>
+  <text x="163" y="219" font-family="monospace" font-size="11" fill="#a78bfa">'clamp'</text>
+  <text x="208" y="219" font-family="monospace" font-size="11" fill="#94a3b8">,</text>
+
+  <!-- Progress bar diagram -->
+  <rect x="450" y="124" width="420" height="110" rx="6" fill="#1e293b"/>
+  <text x="660" y="145" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#f1f5f9" text-anchor="middle">Barra de progreso con color</text>
+  <!-- Progress track -->
+  <rect x="470" y="158" width="380" height="18" rx="9" fill="#0f172a"/>
+  <!-- Animated fill segments showing gradient (static representation) -->
+  <rect x="470" y="158" width="127" height="18" rx="9" fill="#ef4444"/>
+  <rect x="597" y="158" width="126" height="18" fill="#facc15"/>
+  <rect x="723" y="158" width="127" height="18" rx="9" fill="#22c55e"/>
+  <!-- Labels -->
+  <text x="534" y="192" font-family="monospace" font-size="9" fill="#f87171" text-anchor="middle">0% → #ef4444</text>
+  <text x="660" y="192" font-family="monospace" font-size="9" fill="#facc15" text-anchor="middle">50% → #facc15</text>
+  <text x="786" y="192" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle">100% → #22c55e</text>
+  <text x="660" y="220" font-family="monospace" font-size="10" fill="#64748b" text-anchor="middle">useNativeDriver: false  (backgroundColor)</text>
+
+  <!-- ─── LayoutAnimation Section ─── -->
+  <text x="30" y="265" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#61DAFB">LAYOUTANIMATION — cambios de layout declarativos</text>
+
+  <!-- Before / After layout -->
+  <rect x="30" y="278" width="190" height="140" rx="8" fill="#1e293b"/>
+  <text x="125" y="298" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">ANTES setState()</text>
+  <rect x="46" y="308" width="158" height="24" rx="4" fill="#334155"/>
+  <text x="125" y="325" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#f1f5f9" text-anchor="middle">Card A</text>
+  <rect x="46" y="338" width="158" height="24" rx="4" fill="#334155"/>
+  <text x="125" y="355" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#f1f5f9" text-anchor="middle">Card B</text>
+  <rect x="46" y="368" width="158" height="24" rx="4" fill="#334155"/>
+  <text x="125" y="385" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#f1f5f9" text-anchor="middle">Card C</text>
+
+  <!-- Arrow -->
+  <text x="256" y="355" font-family="Inter, system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">→</text>
+  <text x="256" y="378" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">LayoutAnimation</text>
+  <text x="256" y="390" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">.configureNext()</text>
+
+  <rect x="282" y="278" width="190" height="180" rx="8" fill="#1e293b"/>
+  <text x="377" y="298" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#4ade80" text-anchor="middle">DESPUÉS setState() ✨</text>
+  <rect x="298" y="308" width="158" height="24" rx="4" fill="#334155"/>
+  <text x="377" y="325" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#f1f5f9" text-anchor="middle">Card A</text>
+  <rect x="298" y="338" width="158" height="24" rx="4" fill="#334155"/>
+  <text x="377" y="355" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#f1f5f9" text-anchor="middle">Card B</text>
+  <rect x="298" y="368" width="158" height="48" rx="4" fill="#1d4ed8"/>
+  <text x="377" y="385" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Card D</text>
+  <text x="377" y="400" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#93c5fd" text-anchor="middle">← nuevo, animado</text>
+  <text x="377" y="445" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">Card C se mueve suavemente ↓</text>
+
+  <!-- Presets -->
+  <rect x="500" y="278" width="370" height="180" rx="8" fill="#1e293b"/>
+  <text x="685" y="298" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#f1f5f9" text-anchor="middle">Presets disponibles</text>
+  <rect x="516" y="308" width="160" height="26" rx="4" fill="#0f172a"/>
+  <text x="596" y="326" font-family="monospace" font-size="10" fill="#61DAFB" text-anchor="middle">Presets.linear</text>
+  <text x="596" y="345" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Velocidad constante</text>
+  <rect x="516" y="354" width="160" height="26" rx="4" fill="#0f172a"/>
+  <text x="596" y="372" font-family="monospace" font-size="10" fill="#61DAFB" text-anchor="middle">Presets.easeInEaseOut</text>
+  <text x="596" y="391" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Suave y natural (más usada)</text>
+  <rect x="516" y="400" width="160" height="26" rx="4" fill="#0f172a"/>
+  <text x="596" y="418" font-family="monospace" font-size="10" fill="#61DAFB" text-anchor="middle">Presets.spring</text>
+  <text x="596" y="437" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Con rebote físico</text>
+
+  <!-- Android note -->
+  <rect x="692" y="308" width="162" height="118" rx="6" fill="#451a03" stroke="#f97316" stroke-width="1"/>
+  <text x="773" y="326" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#f97316" text-anchor="middle">⚠️ Android</text>
+  <text x="773" y="344" font-family="monospace" font-size="9" fill="#fed7aa" text-anchor="middle">UIManager</text>
+  <text x="773" y="358" font-family="monospace" font-size="9" fill="#fed7aa" text-anchor="middle">.setLayoutAnim</text>
+  <text x="773" y="372" font-family="monospace" font-size="9" fill="#fed7aa" text-anchor="middle">EnabledExp</text>
+  <text x="773" y="386" font-family="monospace" font-size="9" fill="#fed7aa" text-anchor="middle">erimental?.(true)</text>
+  <text x="773" y="406" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#f97316" text-anchor="middle">fuera del componente</text>
+
+  <!-- Arrows defs -->
+  <defs>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>
