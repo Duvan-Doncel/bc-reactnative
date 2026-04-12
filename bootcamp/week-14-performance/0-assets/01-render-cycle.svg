@@ -1,0 +1,96 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#F9FAFB">Ciclo de Re-render y Memoización</text>
+
+  <!-- === LEFT SIDE: SIN memo === -->
+  <text x="220" y="85" text-anchor="middle" font-size="14" font-weight="600" fill="#F87171">Sin React.memo — re-renders en cascada</text>
+
+  <!-- Parent box -->
+  <rect x="155" y="100" width="130" height="48" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+  <text x="220" y="120" text-anchor="middle" font-size="12" font-weight="600" fill="#F87171">HomeScreen</text>
+  <text x="220" y="138" text-anchor="middle" font-size="10" fill="#94A3B8">setState → render 🔴</text>
+
+  <!-- Arrow down-left -->
+  <line x1="200" y1="148" x2="150" y2="195" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Arrow down-right -->
+  <line x1="240" y1="148" x2="290" y2="195" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Child 1 box -->
+  <rect x="90" y="195" width="120" height="48" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+  <text x="150" y="215" text-anchor="middle" font-size="12" font-weight="600" fill="#F87171">ProductCard</text>
+  <text x="150" y="233" text-anchor="middle" font-size="10" fill="#94A3B8">re-renderiza 🔴</text>
+
+  <!-- Child 2 box -->
+  <rect x="220" y="195" width="120" height="48" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+  <text x="280" y="215" text-anchor="middle" font-size="12" font-weight="600" fill="#F87171">SearchBar</text>
+  <text x="280" y="233" text-anchor="middle" font-size="10" fill="#94A3B8">re-renderiza 🔴</text>
+
+  <!-- Grandchild -->
+  <line x1="150" y1="243" x2="150" y2="290" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="90" y="290" width="120" height="48" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+  <text x="150" y="310" text-anchor="middle" font-size="12" font-weight="600" fill="#F87171">PriceTag</text>
+  <text x="150" y="328" text-anchor="middle" font-size="10" fill="#94A3B8">re-renderiza 🔴</text>
+
+  <!-- Cost label -->
+  <rect x="90" y="360" width="250" height="34" rx="6" fill="#7F1D1D"/>
+  <text x="215" y="382" text-anchor="middle" font-size="12" fill="#FCA5A5">💸 Costo: todos los hijos renderizan</text>
+
+  <!-- === DIVIDER === -->
+  <line x1="450" y1="75" x2="450" y2="470" stroke="#374151" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- === RIGHT SIDE: CON memo === -->
+  <text x="680" y="85" text-anchor="middle" font-size="14" font-weight="600" fill="#34D399">Con React.memo + useCallback — optimizado</text>
+
+  <!-- Parent box -->
+  <rect x="615" y="100" width="130" height="48" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+  <text x="680" y="120" text-anchor="middle" font-size="12" font-weight="600" fill="#F87171">HomeScreen</text>
+  <text x="680" y="138" text-anchor="middle" font-size="10" fill="#94A3B8">setState → render 🔴</text>
+
+  <!-- Arrow down-left — green (blocked) -->
+  <line x1="660" y1="148" x2="610" y2="195" stroke="#10B981" stroke-width="2"/>
+  <!-- Arrow down-right — green (blocked) -->
+  <line x1="700" y1="148" x2="750" y2="195" stroke="#10B981" stroke-width="2"/>
+
+  <!-- Block symbol left -->
+  <circle cx="635" cy="171" r="10" fill="#064E3B"/>
+  <text x="635" y="176" text-anchor="middle" font-size="12" fill="#34D399">✓</text>
+
+  <!-- Block symbol right -->
+  <circle cx="725" cy="171" r="10" fill="#064E3B"/>
+  <text x="725" y="176" text-anchor="middle" font-size="12" fill="#34D399">✓</text>
+
+  <!-- Child 1 box — green (no re-render) -->
+  <rect x="550" y="195" width="120" height="48" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+  <text x="610" y="215" text-anchor="middle" font-size="12" font-weight="600" fill="#34D399">ProductCard</text>
+  <text x="610" y="233" text-anchor="middle" font-size="10" fill="#94A3B8">memo — omite 🟢</text>
+
+  <!-- Child 2 box — green -->
+  <rect x="680" y="195" width="120" height="48" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+  <text x="740" y="215" text-anchor="middle" font-size="12" font-weight="600" fill="#34D399">SearchBar</text>
+  <text x="740" y="233" text-anchor="middle" font-size="10" fill="#94A3B8">memo — omite 🟢</text>
+
+  <!-- Grandchild — green -->
+  <line x1="610" y1="243" x2="610" y2="290" stroke="#10B981" stroke-width="2"/>
+  <rect x="550" y="290" width="120" height="48" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+  <text x="610" y="310" text-anchor="middle" font-size="12" font-weight="600" fill="#34D399">PriceTag</text>
+  <text x="610" y="328" text-anchor="middle" font-size="10" fill="#94A3B8">memo — omite 🟢</text>
+
+  <!-- Savings label -->
+  <rect x="550" y="360" width="250" height="34" rx="6" fill="#064E3B"/>
+  <text x="675" y="382" text-anchor="middle" font-size="12" fill="#6EE7B7">✅ Solo re-renderiza lo que cambió</text>
+
+  <!-- === BOTTOM LEGEND === -->
+  <rect x="60" y="430" width="780" height="70" rx="10" fill="#1E293B"/>
+  <text x="450" y="454" text-anchor="middle" font-size="13" font-weight="700" fill="#F9FAFB">Herramientas de memoización</text>
+
+  <!-- React.memo -->
+  <rect x="90" y="463" width="14" height="14" rx="3" fill="#10B981"/>
+  <text x="112" y="474" font-size="11" fill="#D1FAE5">React.memo — evita re-render si props no cambiaron (componente)</text>
+
+  <!-- useCallback -->
+  <rect x="90" y="483" width="14" height="14" rx="3" fill="#60A5FA"/>
+  <text x="112" y="494" font-size="11" fill="#BFDBFE">useCallback — memoiza función (evita nueva referencia cada render)</text>
+</svg>

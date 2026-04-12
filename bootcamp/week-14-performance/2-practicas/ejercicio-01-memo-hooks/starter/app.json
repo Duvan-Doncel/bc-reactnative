@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "ejercicio-01-memo-hooks",
+    "slug": "ejercicio-01-memo-hooks",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "platforms": ["ios", "android"],
+    "ios": { "supportsTablet": false },
+    "android": { "adaptiveIcon": { "backgroundColor": "#111827" } }
+  }
+}

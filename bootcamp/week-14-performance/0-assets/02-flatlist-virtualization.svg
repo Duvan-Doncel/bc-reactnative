@@ -1,0 +1,111 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#F9FAFB">FlatList — Virtualización y Props de Rendimiento</text>
+
+  <!-- === LEFT: Virtualization diagram === -->
+  <text x="200" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#94A3B8">Ventana de virtualización</text>
+
+  <!-- Phone frame -->
+  <rect x="130" y="90" width="140" height="280" rx="18" fill="none" stroke="#374151" stroke-width="3"/>
+  <!-- Screen area -->
+  <rect x="140" y="105" width="120" height="250" rx="6" fill="#0F172A"/>
+  <!-- Status bar -->
+  <rect x="140" y="105" width="120" height="18" rx="4" fill="#1E293B"/>
+
+  <!-- Items: above viewport (desmontados) -->
+  <rect x="142" y="123" width="116" height="26" rx="4" fill="#374151" opacity="0.4"/>
+  <text x="200" y="140" text-anchor="middle" font-size="9" fill="#6B7280">item 0 — desmontado</text>
+  <rect x="142" y="151" width="116" height="26" rx="4" fill="#374151" opacity="0.4"/>
+  <text x="200" y="168" text-anchor="middle" font-size="9" fill="#6B7280">item 1 — desmontado</text>
+
+  <!-- Viewport label -->
+  <rect x="130" y="179" width="10" height="100" rx="4" fill="#3B82F6" opacity="0.6"/>
+  <text x="80" y="232" text-anchor="middle" font-size="10" fill="#93C5FD">viewport</text>
+  <text x="80" y="245" text-anchor="middle" font-size="10" fill="#93C5FD">(pantalla)</text>
+  <line x1="120" y1="229" x2="131" y2="229" stroke="#3B82F6" stroke-width="1.5"/>
+
+  <!-- Items in viewport (montados, coloreados) -->
+  <rect x="142" y="181" width="116" height="28" rx="4" fill="#1D4ED8" opacity="0.9"/>
+  <text x="200" y="199" text-anchor="middle" font-size="9" font-weight="600" fill="#BFDBFE">item 2 — montado ✓</text>
+  <rect x="142" y="211" width="116" height="28" rx="4" fill="#1D4ED8" opacity="0.9"/>
+  <text x="200" y="229" text-anchor="middle" font-size="9" font-weight="600" fill="#BFDBFE">item 3 — montado ✓</text>
+  <rect x="142" y="241" width="116" height="28" rx="4" fill="#1D4ED8" opacity="0.9"/>
+  <text x="200" y="259" text-anchor="middle" font-size="9" font-weight="600" fill="#BFDBFE">item 4 — montado ✓</text>
+
+  <!-- Buffer below (montados, en buffer) -->
+  <rect x="142" y="271" width="116" height="26" rx="4" fill="#065F46" opacity="0.8"/>
+  <text x="200" y="287" text-anchor="middle" font-size="9" fill="#6EE7B7">item 5 — buffer ✓</text>
+  <rect x="142" y="299" width="116" height="26" rx="4" fill="#065F46" opacity="0.8"/>
+  <text x="200" y="315" text-anchor="middle" font-size="9" fill="#6EE7B7">item 6 — buffer ✓</text>
+
+  <!-- Items below buffer (desmontados) -->
+  <rect x="142" y="327" width="116" height="20" rx="4" fill="#374151" opacity="0.4"/>
+  <text x="200" y="340" text-anchor="middle" font-size="9" fill="#6B7280">item 7… — desmontado</text>
+
+  <!-- windowSize label -->
+  <rect x="272" y="181" width="10" height="144" rx="4" fill="#10B981" opacity="0.5"/>
+  <text x="310" y="250" text-anchor="middle" font-size="10" fill="#6EE7B7">windowSize</text>
+  <text x="310" y="263" text-anchor="middle" font-size="10" fill="#6EE7B7">= 5</text>
+  <line x1="282" y1="254" x2="298" y2="254" stroke="#10B981" stroke-width="1.5"/>
+
+  <!-- === RIGHT: Key props table === -->
+  <text x="620" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#94A3B8">Props clave de rendimiento</text>
+
+  <!-- Table header -->
+  <rect x="400" y="88" width="460" height="34" rx="8" fill="#1E3A5F"/>
+  <text x="480" y="110" font-size="12" font-weight="700" fill="#93C5FD">Prop</text>
+  <text x="630" y="110" font-size="12" font-weight="700" fill="#93C5FD">Por qué importa</text>
+
+  <!-- Row 1 -->
+  <rect x="400" y="122" width="460" height="36" rx="0" fill="#1E293B"/>
+  <rect x="400" y="122" width="460" height="36" rx="0" fill="#1E293B" opacity="0.6"/>
+  <text x="410" y="145" font-size="11" font-weight="600" fill="#60A5FA">keyExtractor</text>
+  <text x="560" y="145" font-size="11" fill="#CBD5E1">Identidad stable → evita desmontar</text>
+
+  <!-- Row 2 -->
+  <rect x="400" y="158" width="460" height="36" rx="0" fill="#111827"/>
+  <text x="410" y="181" font-size="11" font-weight="600" fill="#60A5FA">React.memo + useCallback</text>
+  <text x="560" y="181" font-size="11" fill="#CBD5E1">Evita re-render de cada fila</text>
+
+  <!-- Row 3 -->
+  <rect x="400" y="194" width="460" height="36" rx="0" fill="#1E293B"/>
+  <text x="410" y="217" font-size="11" font-weight="600" fill="#60A5FA">getItemLayout</text>
+  <text x="560" y="217" font-size="11" fill="#CBD5E1">Calcula offsets sin medir → más rápido</text>
+
+  <!-- Row 4 -->
+  <rect x="400" y="230" width="460" height="36" rx="0" fill="#111827"/>
+  <text x="410" y="253" font-size="11" font-weight="600" fill="#60A5FA">initialNumToRender</text>
+  <text x="560" y="253" font-size="11" fill="#CBD5E1">Items en primer paint (default 10)</text>
+
+  <!-- Row 5 -->
+  <rect x="400" y="266" width="460" height="36" rx="0" fill="#1E293B"/>
+  <text x="410" y="289" font-size="11" font-weight="600" fill="#60A5FA">windowSize</text>
+  <text x="560" y="289" font-size="11" fill="#CBD5E1">Ventana activa en viewports (default 21)</text>
+
+  <!-- Row 6 -->
+  <rect x="400" y="302" width="460" height="36" rx="0" fill="#111827"/>
+  <text x="410" y="325" font-size="11" font-weight="600" fill="#60A5FA">maxToRenderPerBatch</text>
+  <text x="560" y="325" font-size="11" fill="#CBD5E1">Items por lote (default 10)</text>
+
+  <!-- Row 7 -->
+  <rect x="400" y="338" width="460" height="36" rx="0" fill="#1E293B"/>
+  <text x="410" y="361" font-size="11" font-weight="600" fill="#60A5FA">removeClippedSubviews</text>
+  <text x="560" y="361" font-size="11" fill="#CBD5E1">Desmontar nodos nativos fuera de pantalla</text>
+
+  <!-- === Bottom legend === -->
+  <rect x="60" y="415" width="780" height="90" rx="10" fill="#1E293B"/>
+  <text x="450" y="440" text-anchor="middle" font-size="13" font-weight="700" fill="#F9FAFB">Recomendaciones por tamaño de lista</text>
+
+  <!-- Small list -->
+  <circle cx="95" cy="463" r="7" fill="#10B981"/>
+  <text x="110" y="467" font-size="11" font-weight="600" fill="#34D399">Lista corta (&lt;100 items):</text>
+  <text x="260" y="467" font-size="11" fill="#94A3B8">keyExtractor + memo son suficientes. Evitar optimización prematura.</text>
+
+  <!-- Large list -->
+  <circle cx="95" cy="487" r="7" fill="#F59E0B"/>
+  <text x="110" y="491" font-size="11" font-weight="600" fill="#FCD34D">Lista larga (&gt;500 items):</text>
+  <text x="260" y="491" font-size="11" fill="#94A3B8">getItemLayout + windowSize=5 + removeClippedSubviews=true + memo.</text>
+</svg>

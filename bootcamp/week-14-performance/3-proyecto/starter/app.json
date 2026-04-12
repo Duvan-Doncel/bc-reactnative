@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "proyecto-semana-14",
+    "slug": "proyecto-semana-14",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "platforms": ["ios", "android"],
+    "ios": { "supportsTablet": false },
+    "android": { "adaptiveIcon": { "backgroundColor": "#111827" } }
+  }
+}
