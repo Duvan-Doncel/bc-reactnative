@@ -1,0 +1,49 @@
+{
+  "cli": {
+    "version": ">= 16.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": { "simulator": true },
+      "android": { "buildType": "apk" },
+      "env": {
+        "APP_ENV": "development",
+        "API_URL": "http://localhost:3000/api"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": { "simulator": false },
+      "android": { "buildType": "apk" },
+      "env": {
+        "APP_ENV": "staging",
+        "API_URL": "https://staging-api.miapp.com/api"
+      }
+    },
+    "production": {
+      "android": { "buildType": "app-bundle" },
+      "credentialsSource": "remote",
+      "env": {
+        "APP_ENV": "production",
+        "API_URL": "https://api.miapp.com/api"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "__paso2_campo1": "TODO: appleId — tu email de Apple Developer",
+        "__paso2_campo2": "TODO: ascAppId — ID numerico de la app en App Store Connect",
+        "__paso2_campo3": "OPCIONAL: ascApiKeyPath — ruta al archivo .p8",
+        "__paso2_campo4": "OPCIONAL: ascApiKeyId — Key ID del API key",
+        "__paso2_campo5": "OPCIONAL: ascApiKeyIssuerId — Issuer ID del API key"
+      },
+      "android": {
+        "__paso3_campo1": "TODO: serviceAccountKeyPath — ruta al JSON del service account",
+        "__paso3_campo2": "TODO: track — internal | alpha | beta | production"
+      }
+    }
+  }
+}

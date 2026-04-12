@@ -1,0 +1,47 @@
+{
+  "cli": {
+    "version": ">= 16.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": { "simulator": true },
+      "android": { "buildType": "apk" },
+      "env": {
+        "APP_ENV": "development",
+        "API_URL": "http://localhost:3000/api"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": { "simulator": false },
+      "android": { "buildType": "apk" },
+      "env": {
+        "APP_ENV": "staging",
+        "API_URL": "https://staging-api.miapp.com/api"
+      }
+    },
+    "production": {
+      "android": { "buildType": "app-bundle" },
+      "credentialsSource": "remote",
+      "env": {
+        "APP_ENV": "production",
+        "API_URL": "TODO: https://api.tuapp.com/api"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "__todo_1": "TODO: reemplazar por appleId con tu email de Apple Developer",
+        "__todo_2": "TODO: reemplazar por ascAppId con el ID numerico de App Store Connect",
+        "__hint": "OPCIONAL: agregar ascApiKeyPath, ascApiKeyId, ascApiKeyIssuerId para API key auth"
+      },
+      "android": {
+        "__todo_1": "TODO: reemplazar por serviceAccountKeyPath: ./secrets/service-account.json",
+        "__todo_2": "TODO: reemplazar por track: internal"
+      }
+    }
+  }
+}

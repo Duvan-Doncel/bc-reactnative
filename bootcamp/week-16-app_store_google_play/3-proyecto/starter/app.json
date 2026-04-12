@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "TODO: nombre visible en la tienda (= iOS Name, máx 30 chars)",
+    "slug": "TODO: slug-de-mi-app (sin espacios, en minúsculas)",
+    "version": "TODO: versión semver ej 1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#111827"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "TODO: com.tuapellido.tuapp (ej com.garcia.bibliotecaapp)",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "TODO: eliminar si no usas ubicación, o reemplazar con tu mensaje"
+      }
+    },
+    "android": {
+      "package": "TODO: com.tuapellido.tuapp (igual que bundleIdentifier iOS)",
+      "versionCode": 1,
+      "permissions": [],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#111827"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "TODO: UUID de EAS (se genera con eas init)"
+      }
+    }
+  }
+}

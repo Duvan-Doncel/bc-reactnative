@@ -1,0 +1,82 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#F9FAFB">Comparativa: App Store Connect vs Google Play Console</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="58" width="400" height="44" rx="10" fill="#111827" stroke="#3B82F6" stroke-width="2"/>
+  <text x="60" y="76" font-size="16" font-weight="700" fill="#93C5FD">🍎 App Store Connect</text>
+  <text x="60" y="93" font-size="12" fill="#60A5FA">appstoreconnect.apple.com</text>
+
+  <rect x="470" y="58" width="400" height="44" rx="10" fill="#111827" stroke="#34D399" stroke-width="2"/>
+  <text x="500" y="76" font-size="16" font-weight="700" fill="#6EE7B7">🤖 Google Play Console</text>
+  <text x="500" y="93" font-size="12" fill="#34D399">play.google.com/console</text>
+
+  <!-- ROW LABELS col -->
+  <text x="18" y="130" text-anchor="middle" font-size="10" fill="#64748B" transform="rotate(0,18,130)">Cuenta</text>
+  <text x="18" y="196" text-anchor="middle" font-size="10" fill="#64748B">Título</text>
+  <text x="18" y="256" text-anchor="middle" font-size="10" fill="#64748B">Desc.</text>
+  <text x="18" y="316" text-anchor="middle" font-size="10" fill="#64748B">Beta</text>
+  <text x="18" y="376" text-anchor="middle" font-size="10" fill="#64748B">Revisión</text>
+  <text x="18" y="436" text-anchor="middle" font-size="10" fill="#64748B">Submit</text>
+
+  <!-- === ROW 1: Account === -->
+  <rect x="30" y="110" width="400" height="52" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="50" y="131" font-size="13" font-weight="600" fill="#F1F5F9">Apple Developer Program</text>
+  <text x="50" y="149" font-size="12" fill="#94A3B8">99 USD / año (individuos y empresas)</text>
+
+  <rect x="470" y="110" width="400" height="52" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1"/>
+  <text x="490" y="131" font-size="13" font-weight="600" fill="#F1F5F9">Google Play Developer Account</text>
+  <text x="490" y="149" font-size="12" fill="#94A3B8">25 USD — pago único, para siempre</text>
+
+  <!-- === ROW 2: Title limit === -->
+  <rect x="30" y="170" width="400" height="52" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="50" y="191" font-size="13" font-weight="600" fill="#F1F5F9">Name: máx. 30 caracteres</text>
+  <text x="50" y="209" font-size="12" fill="#94A3B8">Subtitle: máx. 30 caracteres (propuesta de valor)</text>
+
+  <rect x="470" y="170" width="400" height="52" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1"/>
+  <text x="490" y="191" font-size="13" font-weight="600" fill="#F1F5F9">App name: máx. 30 caracteres</text>
+  <text x="490" y="209" font-size="12" fill="#94A3B8">Short description: máx. 80 caracteres</text>
+
+  <!-- === ROW 3: Description === -->
+  <rect x="30" y="230" width="400" height="52" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="50" y="251" font-size="13" font-weight="600" fill="#F1F5F9">Description: máx. 4000 chars</text>
+  <text x="50" y="269" font-size="12" fill="#94A3B8">Keywords: máx. 100 chars (separados por coma)</text>
+
+  <rect x="470" y="230" width="400" height="52" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1"/>
+  <text x="490" y="251" font-size="13" font-weight="600" fill="#F1F5F9">Full description: máx. 4000 chars</text>
+  <text x="490" y="269" font-size="12" fill="#94A3B8">Sin campo keywords — Google los extrae del texto</text>
+
+  <!-- === ROW 4: Beta === -->
+  <rect x="30" y="290" width="400" height="52" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="50" y="311" font-size="13" font-weight="600" fill="#F1F5F9">TestFlight</text>
+  <text x="50" y="329" font-size="12" fill="#94A3B8">Interno: 100 | Externo: 10,000 (gratis)</text>
+
+  <rect x="470" y="290" width="400" height="52" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1"/>
+  <text x="490" y="311" font-size="13" font-weight="600" fill="#F1F5F9">Tracks: internal → closed → open → production</text>
+  <text x="490" y="329" font-size="12" fill="#94A3B8">Internal: 100 testers sin revisión humana</text>
+
+  <!-- === ROW 5: Review time === -->
+  <rect x="30" y="350" width="400" height="52" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="50" y="371" font-size="13" font-weight="600" fill="#FCD34D">24 – 48 horas (primera vez)</text>
+  <text x="50" y="389" font-size="12" fill="#94A3B8">Actualizaciones: similar. Rechazo frecuente.</text>
+
+  <rect x="470" y="350" width="400" height="52" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1"/>
+  <text x="490" y="371" font-size="13" font-weight="600" fill="#FCD34D">3 – 7 días (primera vez)</text>
+  <text x="490" y="389" font-size="12" fill="#94A3B8">Actualizaciones: horas. Menos estricto que Apple.</text>
+
+  <!-- === ROW 6: Submit tool === -->
+  <rect x="30" y="410" width="400" height="52" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="50" y="431" font-size="13" font-weight="600" fill="#F1F5F9">eas submit --platform ios</text>
+  <text x="50" y="449" font-size="12" fill="#94A3B8">Requiere App Store Connect API Key (.p8)</text>
+
+  <rect x="470" y="410" width="400" height="52" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1"/>
+  <text x="490" y="431" font-size="13" font-weight="600" fill="#F1F5F9">eas submit --platform android</text>
+  <text x="490" y="449" font-size="12" fill="#94A3B8">Requiere Service Account JSON de Google Cloud</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="487" text-anchor="middle" font-size="12" fill="#F59E0B">⚠️ Ambas plataformas exigen URL de política de privacidad para publicar</text>
+  <text x="450" y="506" text-anchor="middle" font-size="11" fill="#64748B">Para el bootcamp: usar Notion, GitHub Pages o generador gratuito online</text>
+</svg>

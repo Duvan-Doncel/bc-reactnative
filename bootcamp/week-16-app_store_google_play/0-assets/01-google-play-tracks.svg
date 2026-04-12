@@ -1,0 +1,146 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#F9FAFB">Google Play — Sistema de Tracks de Distribución</text>
+
+  <!-- TRACK FLOW arrow base -->
+  <line x1="60" y1="230" x2="840" y2="230" stroke="#1E293B" stroke-width="3"/>
+
+  <!-- === TRACK 1: INTERNAL === -->
+  <rect x="40" y="90" width="175" height="220" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+  <rect x="40" y="90" width="175" height="44" rx="14" fill="#1E3A5F"/>
+  <rect x="40" y="118" width="175" height="16" fill="#1E3A5F"/>
+  <text x="127" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#93C5FD">Internal</text>
+  <text x="127" y="148" text-anchor="middle" font-size="11" fill="#60A5FA">Track</text>
+
+  <text x="127" y="178" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Testers</text>
+  <text x="127" y="194" text-anchor="middle" font-size="13" font-weight="700" fill="#22D3EE">Hasta 100</text>
+  <text x="127" y="212" text-anchor="middle" font-size="11" fill="#94A3B8">por email invitado</text>
+
+  <text x="127" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">En Play Store</text>
+  <text x="127" y="252" text-anchor="middle" font-size="12" fill="#F87171">No visible</text>
+
+  <text x="127" y="276" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Revisión</text>
+  <text x="127" y="292" text-anchor="middle" font-size="11" fill="#34D399">Automática</text>
+  <text x="127" y="307" text-anchor="middle" font-size="11" fill="#94A3B8">~minutos</text>
+
+  <!-- tag -->
+  <rect x="75" y="320" width="105" height="24" rx="6" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="127" y="336" text-anchor="middle" font-size="11" fill="#93C5FD">Recomendado primero</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M 218 230 L 255 230" stroke="#475569" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <text x="236" y="218" text-anchor="middle" font-size="10" fill="#64748B">promover</text>
+
+  <!-- === TRACK 2: CLOSED ALPHA === -->
+  <rect x="258" y="90" width="175" height="220" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="258" y="90" width="175" height="44" rx="14" fill="#451A03"/>
+  <rect x="258" y="118" width="175" height="16" fill="#451A03"/>
+  <text x="345" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#FCD34D">Closed (Alpha)</text>
+  <text x="345" y="148" text-anchor="middle" font-size="11" fill="#F59E0B">Track cerrado</text>
+
+  <text x="345" y="178" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Testers</text>
+  <text x="345" y="194" text-anchor="middle" font-size="13" font-weight="700" fill="#22D3EE">Hasta 2,000</text>
+  <text x="345" y="212" text-anchor="middle" font-size="11" fill="#94A3B8">por grupos o email</text>
+
+  <text x="345" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">En Play Store</text>
+  <text x="345" y="252" text-anchor="middle" font-size="12" fill="#F87171">No visible</text>
+
+  <text x="345" y="276" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Revisión</text>
+  <text x="345" y="292" text-anchor="middle" font-size="11" fill="#FCD34D">Manual breve</text>
+  <text x="345" y="307" text-anchor="middle" font-size="11" fill="#94A3B8">horas</text>
+
+  <rect x="287" y="320" width="115" height="24" rx="6" fill="#451A03" stroke="#F59E0B" stroke-width="1"/>
+  <text x="345" y="336" text-anchor="middle" font-size="11" fill="#FCD34D">Opcional</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M 436 230 L 473 230" stroke="#475569" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <text x="454" y="218" text-anchor="middle" font-size="10" fill="#64748B">promover</text>
+
+  <!-- === TRACK 3: OPEN BETA === -->
+  <rect x="476" y="90" width="175" height="220" rx="14" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+  <rect x="476" y="90" width="175" height="44" rx="14" fill="#2E1065"/>
+  <rect x="476" y="118" width="175" height="16" fill="#2E1065"/>
+  <text x="563" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#C4B5FD">Open (Beta)</text>
+  <text x="563" y="148" text-anchor="middle" font-size="11" fill="#8B5CF6">Track abierto</text>
+
+  <text x="563" y="178" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Testers</text>
+  <text x="563" y="194" text-anchor="middle" font-size="13" font-weight="700" fill="#22D3EE">Ilimitados</text>
+  <text x="563" y="212" text-anchor="middle" font-size="11" fill="#94A3B8">cualquier usuario</text>
+
+  <text x="563" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">En Play Store</text>
+  <text x="563" y="252" text-anchor="middle" font-size="12" fill="#FCD34D">Visible (badge beta)</text>
+
+  <text x="563" y="276" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Revisión</text>
+  <text x="563" y="292" text-anchor="middle" font-size="11" fill="#FCD34D">Manual</text>
+  <text x="563" y="307" text-anchor="middle" font-size="11" fill="#94A3B8">horas - 1 día</text>
+
+  <rect x="497" y="320" width="132" height="24" rx="6" fill="#2E1065" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="563" y="336" text-anchor="middle" font-size="11" fill="#C4B5FD">Recomendado</text>
+
+  <!-- Arrow 3→4 -->
+  <path d="M 654 230 L 691 230" stroke="#475569" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <text x="672" y="218" text-anchor="middle" font-size="10" fill="#64748B">promover</text>
+
+  <!-- === TRACK 4: PRODUCTION === -->
+  <rect x="694" y="90" width="175" height="220" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+  <rect x="694" y="90" width="175" height="44" rx="14" fill="#064E3B"/>
+  <rect x="694" y="118" width="175" height="16" fill="#064E3B"/>
+  <text x="781" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#6EE7B7">Production</text>
+  <text x="781" y="148" text-anchor="middle" font-size="11" fill="#10B981">Lanzamiento</text>
+
+  <text x="781" y="178" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Alcance</text>
+  <text x="781" y="194" text-anchor="middle" font-size="13" font-weight="700" fill="#22D3EE">Todos los usuarios</text>
+  <text x="781" y="212" text-anchor="middle" font-size="11" fill="#94A3B8">+ rollout gradual %</text>
+
+  <text x="781" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">En Play Store</text>
+  <text x="781" y="252" text-anchor="middle" font-size="12" fill="#34D399">Visible (público)</text>
+
+  <text x="781" y="276" text-anchor="middle" font-size="11" font-weight="600" fill="#F1F5F9">Revisión</text>
+  <text x="781" y="292" text-anchor="middle" font-size="11" fill="#FCD34D">Manual completa</text>
+  <text x="781" y="307" text-anchor="middle" font-size="11" fill="#94A3B8">1-7 días (1ª vez)</text>
+
+  <rect x="715" y="320" width="132" height="24" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="781" y="336" text-anchor="middle" font-size="11" fill="#6EE7B7">Meta final</text>
+
+  <!-- Bottom tip -->
+  <rect x="30" y="382" width="840" height="100" rx="10" fill="#1E293B"/>
+  <text x="450" y="405" text-anchor="middle" font-size="13" font-weight="700" fill="#F9FAFB">Flujo recomendado para el bootcamp</text>
+
+  <!-- flow steps -->
+  <rect x="60" y="416" width="110" height="30" rx="8" fill="#1E3A5F"/>
+  <text x="115" y="435" text-anchor="middle" font-size="11" fill="#93C5FD">1. eas build</text>
+  <text x="115" y="447" text-anchor="middle" font-size="10" fill="#64748B">generar AAB</text>
+
+  <line x1="172" y1="431" x2="195" y2="431" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="197" y="416" width="130" height="30" rx="8" fill="#1E3A5F"/>
+  <text x="262" y="435" text-anchor="middle" font-size="11" fill="#93C5FD">2. eas submit</text>
+  <text x="262" y="447" text-anchor="middle" font-size="10" fill="#64748B">track: internal</text>
+
+  <line x1="329" y1="431" x2="352" y2="431" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="354" y="416" width="140" height="30" rx="8" fill="#451A03"/>
+  <text x="424" y="435" text-anchor="middle" font-size="11" fill="#FCD34D">3. verificar en dispositivo</text>
+  <text x="424" y="447" text-anchor="middle" font-size="10" fill="#64748B">sin errores</text>
+
+  <line x1="496" y1="431" x2="519" y2="431" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="521" y="416" width="130" height="30" rx="8" fill="#2E1065"/>
+  <text x="586" y="435" text-anchor="middle" font-size="11" fill="#C4B5FD">4. promover a</text>
+  <text x="586" y="447" text-anchor="middle" font-size="10" fill="#64748B">open beta</text>
+
+  <line x1="653" y1="431" x2="676" y2="431" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="678" y="416" width="130" height="30" rx="8" fill="#064E3B"/>
+  <text x="743" y="435" text-anchor="middle" font-size="11" fill="#6EE7B7">5. promover a</text>
+  <text x="743" y="447" text-anchor="middle" font-size="10" fill="#64748B">production 🚀</text>
+
+  <defs>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>
