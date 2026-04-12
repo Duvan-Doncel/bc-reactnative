@@ -1,0 +1,28 @@
+{
+  "cli": {
+    "version": ">= 16.0.0"
+  },
+  "build": {
+    "development": {
+      "__todo": "TODO: Completar perfil development (ver ejercicio-01)",
+      "__hint_1": "developmentClient: true",
+      "__hint_2": "distribution: internal",
+      "__hint_3": "ios.simulator: true",
+      "__hint_4": "android.buildType: apk",
+      "__hint_env": "env con APP_ENV=development y API_URL=http://localhost:3000/api"
+    },
+    "preview": {
+      "__todo": "TODO: Completar perfil preview (ver ejercicio-01)",
+      "__hint_1": "distribution: internal",
+      "__hint_2": "ios.simulator: false",
+      "__hint_3": "android.buildType: apk",
+      "__hint_env": "env con APP_ENV=staging y API_URL=https://staging-api.tuapp.com/api"
+    },
+    "production": {
+      "__todo": "TODO: Completar perfil production (ver ejercicio-01)",
+      "__hint_1": "android.buildType: app-bundle",
+      "__hint_2": "credentialsSource: remote",
+      "__hint_env": "env con APP_ENV=production y API_URL=https://api.tuapp.com/api"
+    }
+  }
+}

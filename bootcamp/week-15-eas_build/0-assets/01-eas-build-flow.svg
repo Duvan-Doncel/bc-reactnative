@@ -1,0 +1,110 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#F9FAFB">EAS Build — Flujo de Código a Tienda</text>
+
+  <!-- === STEP 1: Developer -->
+  <rect x="30" y="80" width="130" height="80" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+  <text x="95" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#93C5FD">Developer</text>
+  <text x="95" y="130" text-anchor="middle" font-size="11" fill="#94A3B8">código fuente</text>
+  <text x="95" y="146" text-anchor="middle" font-size="11" fill="#94A3B8">app.json + eas.json</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="162" y1="120" x2="202" y2="120" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="182" y="113" text-anchor="middle" font-size="10" fill="#60A5FA">eas build</text>
+
+  <!-- === STEP 2: EAS Cloud -->
+  <rect x="204" y="80" width="150" height="80" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="279" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#C4B5FD">EAS Cloud</text>
+  <text x="279" y="128" text-anchor="middle" font-size="11" fill="#94A3B8">compila en macOS</text>
+  <text x="279" y="144" text-anchor="middle" font-size="11" fill="#94A3B8">o Linux (Expo)</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="356" y1="120" x2="396" y2="120" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="376" y="113" text-anchor="middle" font-size="10" fill="#60A5FA">firma</text>
+
+  <!-- === STEP 3: Credentials -->
+  <rect x="398" y="80" width="140" height="80" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+  <text x="468" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#6EE7B7">Credentials</text>
+  <text x="468" y="128" text-anchor="middle" font-size="11" fill="#94A3B8">Keystore (Android)</text>
+  <text x="468" y="144" text-anchor="middle" font-size="11" fill="#94A3B8">Certificate (iOS)</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="540" y1="120" x2="580" y2="120" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="560" y="113" text-anchor="middle" font-size="10" fill="#60A5FA">artifact</text>
+
+  <!-- === STEP 4: Artifacts (fork) -->
+  <rect x="582" y="80" width="120" height="80" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+  <text x="642" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#FCD34D">Artifact</text>
+  <text x="642" y="130" text-anchor="middle" font-size="11" fill="#94A3B8">.apk / .aab</text>
+  <text x="642" y="146" text-anchor="middle" font-size="11" fill="#94A3B8">.ipa</text>
+
+  <!-- Fork arrow down-left (Android) -->
+  <line x1="622" y1="162" x2="622" y2="205" stroke="#34D399" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="622" y1="205" x2="250" y2="205" stroke="#34D399" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="250" y1="205" x2="250" y2="245" stroke="#34D399" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Fork arrow down-right (iOS) -->
+  <line x1="662" y1="162" x2="662" y2="205" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="662" y1="205" x2="730" y2="205" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="730" y1="205" x2="730" y2="245" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+  <!-- === ANDROID path === -->
+  <text x="250" y="238" text-anchor="middle" font-size="11" font-weight="600" fill="#34D399">Android</text>
+  <rect x="140" y="248" width="220" height="70" rx="10" fill="#1E293B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="250" y="270" text-anchor="middle" font-size="12" font-weight="600" fill="#6EE7B7">Google Play Console</text>
+  <text x="250" y="288" text-anchor="middle" font-size="11" fill="#94A3B8">AAB → ABI splits por dispositivo</text>
+  <text x="250" y="304" text-anchor="middle" font-size="11" fill="#94A3B8">versionCode debe incrementar</text>
+
+  <!-- Arrow Android → publish -->
+  <line x1="250" y1="320" x2="250" y2="360" stroke="#34D399" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <rect x="160" y="362" width="180" height="44" rx="10" fill="#064E3B"/>
+  <text x="250" y="380" text-anchor="middle" font-size="12" font-weight="700" fill="#A7F3D0">🤖 Google Play</text>
+  <text x="250" y="397" text-anchor="middle" font-size="11" fill="#6EE7B7">Revisión: horas</text>
+
+  <!-- === iOS path === -->
+  <text x="730" y="238" text-anchor="middle" font-size="11" font-weight="600" fill="#A78BFA">iOS</text>
+  <rect x="615" y="248" width="230" height="70" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="730" y="270" text-anchor="middle" font-size="12" font-weight="600" fill="#C4B5FD">App Store Connect</text>
+  <text x="730" y="288" text-anchor="middle" font-size="11" fill="#94A3B8">IPA firmado con Dist. Certificate</text>
+  <text x="730" y="304" text-anchor="middle" font-size="11" fill="#94A3B8">buildNumber debe incrementar</text>
+
+  <!-- Arrow iOS → publish -->
+  <line x1="730" y1="320" x2="730" y2="360" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+  <rect x="640" y="362" width="180" height="44" rx="10" fill="#2E1065"/>
+  <text x="730" y="380" text-anchor="middle" font-size="12" font-weight="700" fill="#E9D5FF">🍎 App Store</text>
+  <text x="730" y="397" text-anchor="middle" font-size="11" fill="#C4B5FD">Revisión: 1-3 días</text>
+
+  <!-- === Bottom legend === -->
+  <rect x="30" y="430" width="840" height="76" rx="10" fill="#1E293B"/>
+  <text x="450" y="453" text-anchor="middle" font-size="13" font-weight="700" fill="#F9FAFB">Perfiles de build → destino</text>
+  <!-- development -->
+  <rect x="55" y="463" width="12" height="12" rx="3" fill="#3B82F6"/>
+  <text x="75" y="473" font-size="11" fill="#93C5FD" font-weight="600">development</text>
+  <text x="170" y="473" font-size="11" fill="#94A3B8"> → APK/simulador (no tienda)</text>
+  <!-- preview -->
+  <rect x="360" y="463" width="12" height="12" rx="3" fill="#F59E0B"/>
+  <text x="380" y="473" font-size="11" fill="#FCD34D" font-weight="600">preview</text>
+  <text x="438" y="473" font-size="11" fill="#94A3B8"> → APK (testers internos)</text>
+  <!-- production -->
+  <rect x="630" y="463" width="12" height="12" rx="3" fill="#10B981"/>
+  <text x="650" y="473" font-size="11" fill="#6EE7B7" font-weight="600">production</text>
+  <text x="720" y="473" font-size="11" fill="#94A3B8"> → AAB + IPA (tiendas)</text>
+
+  <text x="450" y="496" text-anchor="middle" font-size="11" fill="#64748B">⚠️ Nunca subir Keystore ni certificados al repositorio Git</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#60A5FA"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#A78BFA"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,121 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#F9FAFB">Perfiles EAS Build — Características y Uso</text>
+
+  <!-- === COLUMN HEADERS === -->
+  <!-- development -->
+  <rect x="40" y="60" width="240" height="46" rx="10" fill="#1E3A5F"/>
+  <text x="160" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#93C5FD">development</text>
+  <text x="160" y="98" text-anchor="middle" font-size="11" fill="#60A5FA">Para el desarrollador</text>
+
+  <!-- preview -->
+  <rect x="330" y="60" width="240" height="46" rx="10" fill="#451A03"/>
+  <text x="450" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#FCD34D">preview</text>
+  <text x="450" y="98" text-anchor="middle" font-size="11" fill="#F59E0B">Para testers internos</text>
+
+  <!-- production -->
+  <rect x="620" y="60" width="240" height="46" rx="10" fill="#064E3B"/>
+  <text x="740" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#6EE7B7">production</text>
+  <text x="740" y="98" text-anchor="middle" font-size="11" fill="#34D399">Para las tiendas</text>
+
+  <!-- === ROW LABELS === -->
+  <text x="18" y="148" text-anchor="middle" font-size="11" fill="#94A3B8" transform="rotate(-0)">Expo</text>
+  <text x="18" y="163" text-anchor="middle" font-size="11" fill="#94A3B8">devtools</text>
+
+  <text x="18" y="218" text-anchor="middle" font-size="11" fill="#94A3B8">Android</text>
+  <text x="18" y="233" text-anchor="middle" font-size="11" fill="#94A3B8">output</text>
+
+  <text x="18" y="288" text-anchor="middle" font-size="11" fill="#94A3B8">iOS</text>
+  <text x="18" y="303" text-anchor="middle" font-size="11" fill="#94A3B8">output</text>
+
+  <text x="18" y="358" text-anchor="middle" font-size="11" fill="#94A3B8">Certif.</text>
+  <text x="18" y="373" text-anchor="middle" font-size="11" fill="#94A3B8">origen</text>
+
+  <text x="18" y="428" text-anchor="middle" font-size="11" fill="#94A3B8">Env</text>
+  <text x="18" y="443" text-anchor="middle" font-size="11" fill="#94A3B8">API</text>
+
+  <!-- === DEVELOPMENT COLUMN === -->
+  <!-- Row 1: devtools -->
+  <rect x="40" y="118" width="240" height="50" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="160" y="140" text-anchor="middle" font-size="13" fill="#22D3EE">✅ developmentClient: true</text>
+  <text x="160" y="157" text-anchor="middle" font-size="11" fill="#94A3B8">Hot reload + debugger</text>
+
+  <!-- Row 2: Android -->
+  <rect x="40" y="178" width="240" height="50" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="160" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#93C5FD">APK</text>
+  <text x="160" y="217" text-anchor="middle" font-size="11" fill="#94A3B8">instalación directa</text>
+
+  <!-- Row 3: iOS -->
+  <rect x="40" y="238" width="240" height="50" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="160" y="260" text-anchor="middle" font-size="13" font-weight="600" fill="#93C5FD">Simulador iOS</text>
+  <text x="160" y="277" text-anchor="middle" font-size="11" fill="#94A3B8">sin certificados Apple</text>
+
+  <!-- Row 4: Certificates -->
+  <rect x="40" y="298" width="240" height="50" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="160" y="320" text-anchor="middle" font-size="13" fill="#34D399">managed</text>
+  <text x="160" y="337" text-anchor="middle" font-size="11" fill="#94A3B8">auto-generado por EAS</text>
+
+  <!-- Row 5: Env -->
+  <rect x="40" y="358" width="240" height="50" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="160" y="380" text-anchor="middle" font-size="12" font-weight="600" fill="#93C5FD">localhost:3000</text>
+  <text x="160" y="397" text-anchor="middle" font-size="11" fill="#94A3B8">APP_ENV=development</text>
+
+  <!-- === PREVIEW COLUMN === -->
+  <!-- Row 1: devtools -->
+  <rect x="330" y="118" width="240" height="50" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="450" y="140" text-anchor="middle" font-size="13" fill="#F87171">❌ sin devtools</text>
+  <text x="450" y="157" text-anchor="middle" font-size="11" fill="#94A3B8">como producción</text>
+
+  <!-- Row 2: Android -->
+  <rect x="330" y="178" width="240" height="50" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#FCD34D">APK</text>
+  <text x="450" y="217" text-anchor="middle" font-size="11" fill="#94A3B8">enviar por link a testers</text>
+
+  <!-- Row 3: iOS -->
+  <rect x="330" y="238" width="240" height="50" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="450" y="260" text-anchor="middle" font-size="13" font-weight="600" fill="#FCD34D">IPA (Ad Hoc)</text>
+  <text x="450" y="277" text-anchor="middle" font-size="11" fill="#94A3B8">dispositivos registrados</text>
+
+  <!-- Row 4: Certificates -->
+  <rect x="330" y="298" width="240" height="50" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="450" y="320" text-anchor="middle" font-size="13" fill="#34D399">managed</text>
+  <text x="450" y="337" text-anchor="middle" font-size="11" fill="#94A3B8">provisioning Ad Hoc</text>
+
+  <!-- Row 5: Env -->
+  <rect x="330" y="358" width="240" height="50" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="450" y="380" text-anchor="middle" font-size="12" font-weight="600" fill="#FCD34D">staging.miapi.com</text>
+  <text x="450" y="397" text-anchor="middle" font-size="11" fill="#94A3B8">APP_ENV=staging</text>
+
+  <!-- === PRODUCTION COLUMN === -->
+  <!-- Row 1: devtools -->
+  <rect x="620" y="118" width="240" height="50" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="740" y="140" text-anchor="middle" font-size="13" fill="#F87171">❌ sin devtools</text>
+  <text x="740" y="157" text-anchor="middle" font-size="11" fill="#94A3B8">bundle optimizado</text>
+
+  <!-- Row 2: Android -->
+  <rect x="620" y="178" width="240" height="50" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="740" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#6EE7B7">AAB</text>
+  <text x="740" y="217" text-anchor="middle" font-size="11" fill="#94A3B8">obligatorio Google Play</text>
+
+  <!-- Row 3: iOS -->
+  <rect x="620" y="238" width="240" height="50" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="740" y="260" text-anchor="middle" font-size="13" font-weight="600" fill="#6EE7B7">IPA (App Store)</text>
+  <text x="740" y="277" text-anchor="middle" font-size="11" fill="#94A3B8">subir a App Store Connect</text>
+
+  <!-- Row 4: Certificates -->
+  <rect x="620" y="298" width="240" height="50" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="740" y="320" text-anchor="middle" font-size="13" fill="#34D399">remote (EAS)</text>
+  <text x="740" y="337" text-anchor="middle" font-size="11" fill="#94A3B8">credentialsSource: remote</text>
+
+  <!-- Row 5: Env -->
+  <rect x="620" y="358" width="240" height="50" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="740" y="380" text-anchor="middle" font-size="12" font-weight="600" fill="#6EE7B7">api.miapp.com</text>
+  <text x="740" y="397" text-anchor="middle" font-size="11" fill="#94A3B8">APP_ENV=production</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="460" text-anchor="middle" font-size="12" fill="#64748B">Ejecutar con: eas build --platform [android|ios|all] --profile [development|preview|production]</text>
+  <text x="450" y="480" text-anchor="middle" font-size="11" fill="#475569">Plan gratuito EAS: 30 builds/mes en Android + 30 en iOS</text>
+</svg>

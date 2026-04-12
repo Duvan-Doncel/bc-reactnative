@@ -1,0 +1,28 @@
+{
+  "cli": {
+    "version": ">= 16.0.0"
+  },
+  "build": {
+    "development": {
+      "__comment_paso2": "Paso 2: completar este perfil para desarrollo con simulador",
+      "__todo_1": "Agregar developmentClient: true",
+      "__todo_2": "Agregar distribution: internal",
+      "__todo_3": "Agregar ios.simulator: true",
+      "__todo_4": "Agregar android.buildType: apk",
+      "__todo_env": "Agregar env con APP_ENV y API_URL para localhost"
+    },
+    "preview": {
+      "__comment_paso3": "Paso 3: completar este perfil para testers internos",
+      "__todo_1": "Agregar distribution: internal",
+      "__todo_2": "Agregar ios.simulator: false",
+      "__todo_3": "Agregar android.buildType: apk",
+      "__todo_env": "Agregar env con APP_ENV=staging y API_URL de staging"
+    },
+    "production": {
+      "__comment_paso4": "Paso 4: completar este perfil para las tiendas",
+      "__todo_1": "Agregar android.buildType: app-bundle",
+      "__todo_2": "Agregar credentialsSource: remote",
+      "__todo_env": "Agregar env con APP_ENV=production y API_URL de produccion"
+    }
+  }
+}

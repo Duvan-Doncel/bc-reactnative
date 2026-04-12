@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Build artifacts
+*.apk
+*.aab
+*.ipa
+
+# Android signing — NEVER commit to Git
+*.keystore
+*.jks
+
+# iOS signing — NEVER commit to Git
+*.p12
+*.cer
+*.mobileprovision
+*.provisionprofile
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# EAS local
+.eas/
+
+# OS
+.DS_Store
+*.log
