@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "week11-proyecto",
+    "slug": "week11-proyecto",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": { "backgroundColor": "#0f172a" },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.bootcamp.week11.proyecto",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos la cámara para fotografiar elementos de tu dominio.",
+        "NSPhotoLibraryUsageDescription": "Necesitamos acceso a la galería para seleccionar imágenes.",
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicación para mostrar elementos cercanos."
+      }
+    },
+    "android": {
+      "package": "com.bootcamp.week11.proyecto",
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    }
+  }
+}

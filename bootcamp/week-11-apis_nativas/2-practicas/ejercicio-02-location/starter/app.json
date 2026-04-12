@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "ejercicio-02-location",
+    "slug": "ejercicio-02-location",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": { "backgroundColor": "#0f172a" },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.bootcamp.week11.ejercicio02",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicación para el ejercicio de APIs de localización."
+      }
+    },
+    "android": {
+      "package": "com.bootcamp.week11.ejercicio02",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+    }
+  }
+}

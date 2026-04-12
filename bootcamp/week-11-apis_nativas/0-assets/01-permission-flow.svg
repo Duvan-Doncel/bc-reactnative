@@ -1,0 +1,114 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="900" height="500" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#61DAFB">Flujo de Solicitud de Permisos — Expo SDK 53</text>
+
+  <!-- COLUMN HEADERS -->
+  <text x="150" y="72" text-anchor="middle" font-size="12" fill="#94a3b8">APP</text>
+  <text x="450" y="72" text-anchor="middle" font-size="12" fill="#94a3b8">SISTEMA OPERATIVO</text>
+  <text x="750" y="72" text-anchor="middle" font-size="12" fill="#94a3b8">USUARIO</text>
+
+  <!-- divider lines -->
+  <line x1="300" y1="55" x2="300" y2="490" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="600" y1="55" x2="600" y2="490" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- STEP 1: Check current status -->
+  <rect x="60" y="90" width="180" height="44" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="108" text-anchor="middle" font-size="12" font-weight="600" fill="#60a5fa">getPermissionsAsync()</text>
+  <text x="150" y="124" text-anchor="middle" font-size="11" fill="#94a3b8">Verificar estado actual</text>
+
+  <!-- Arrow right to OS -->
+  <line x1="240" y1="112" x2="350" y2="112" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- OS decision box -->
+  <polygon points="450,88 560,112 450,136 340,112" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+  <text x="450" y="108" text-anchor="middle" font-size="11" fill="#cbd5e1">¿Estado</text>
+  <text x="450" y="122" text-anchor="middle" font-size="11" fill="#cbd5e1">actual?</text>
+
+  <!-- GRANTED path -->
+  <text x="640" y="92" text-anchor="middle" font-size="10" fill="#22c55e">GRANTED</text>
+  <line x1="560" y1="98" x2="660" y2="98" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrGreen)"/>
+  <rect x="660" y="82" width="120" height="32" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="720" y="102" text-anchor="middle" font-size="11" font-weight="600" fill="#22c55e">✅ Acceso directo</text>
+
+  <!-- DENIED path -->
+  <text x="640" y="138" text-anchor="middle" font-size="10" fill="#ef4444">DENIED</text>
+  <line x1="560" y1="126" x2="660" y2="148" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrRed)"/>
+  <rect x="660" y="138" width="120" height="32" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="720" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="#ef4444">⚙️ Ir a Ajustes</text>
+  <text x="720" y="163" text-anchor="middle" font-size="10" fill="#94a3b8">Linking.openSettings()</text>
+
+  <!-- UNDETERMINED path — arrow down -->
+  <text x="480" y="150" text-anchor="middle" font-size="10" fill="#f59e0b">UNDETERMINED</text>
+  <line x1="450" y1="136" x2="450" y2="180" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrYellow)"/>
+
+  <!-- STEP 2: Show rationale -->
+  <rect x="360" y="182" width="180" height="44" rx="8" fill="#422006" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="200" text-anchor="middle" font-size="12" font-weight="600" fill="#fbbf24">Mostrar justificación</text>
+  <text x="450" y="216" text-anchor="middle" font-size="11" fill="#94a3b8">"¿Por qué lo necesitamos?"</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="226" x2="450" y2="266" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- STEP 3: requestPermissionsAsync -->
+  <rect x="60" y="268" width="180" height="44" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#60a5fa">requestPermissionsAsync()</text>
+  <text x="150" y="302" text-anchor="middle" font-size="11" fill="#94a3b8">Solicitar al sistema</text>
+
+  <!-- Arrow: App → OS -->
+  <line x1="240" y1="290" x2="350" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- OS dialog box -->
+  <rect x="350" y="268" width="200" height="44" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="450" y="286" text-anchor="middle" font-size="11" fill="#cbd5e1">Diálogo nativo del SO</text>
+  <text x="450" y="302" text-anchor="middle" font-size="10" fill="#64748b">"[App] quiere acceder a..."</text>
+
+  <!-- Arrow: OS → User -->
+  <line x1="550" y1="290" x2="660" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- User decision -->
+  <polygon points="750,268 840,290 750,312 660,290" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+  <text x="750" y="286" text-anchor="middle" font-size="11" fill="#cbd5e1">Usuario</text>
+  <text x="750" y="300" text-anchor="middle" font-size="11" fill="#cbd5e1">decide</text>
+
+  <!-- Allow path -->
+  <line x1="750" y1="312" x2="750" y2="360" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrGreen)"/>
+  <text x="770" y="340" font-size="10" fill="#22c55e">Permitir</text>
+
+  <!-- Deny path: back to denied box -->
+  <line x1="840" y1="290" x2="840" y2="154" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="840" y1="154" x2="780" y2="154" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrRed)"/>
+  <text x="858" y="230" font-size="10" fill="#ef4444">Denegar</text>
+
+  <!-- STEP 4: Granted result -->
+  <rect x="60" y="362" width="180" height="44" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="150" y="380" text-anchor="middle" font-size="12" font-weight="600" fill="#22c55e">✅ status === 'granted'</text>
+  <text x="150" y="396" text-anchor="middle" font-size="11" fill="#94a3b8">Usar la API nativa</text>
+
+  <!-- Connecting arrow from user Allow back to App -->
+  <line x1="750" y1="360" x2="750" y2="390" stroke="#22c55e" stroke-width="1.5"/>
+  <line x1="750" y1="390" x2="240" y2="390" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrGreen)"/>
+
+  <!-- CODE ANNOTATION -->
+  <rect x="60" y="428" width="780" height="52" rx="8" fill="#0f2137" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="447" font-size="11" fill="#94a3b8">Expo SDK 53 — patrón moderno por módulo:</text>
+  <text x="80" y="463" font-size="11" fill="#60a5fa" font-family="monospace">useCameraPermissions() → [permission, requestPermission]</text>
+  <text x="480" y="463" font-size="11" fill="#34d399" font-family="monospace">requestForegroundPermissionsAsync() → { status }</text>
+
+  <!-- MARKERS -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrYellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

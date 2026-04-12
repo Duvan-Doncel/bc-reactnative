@@ -1,0 +1,23 @@
+{
+  "name": "ejercicio-01-camara-picker",
+  "version": "1.0.0",
+  "main": "App.tsx",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios"
+  },
+  "dependencies": {
+    "expo": "53.0.0",
+    "expo-camera": "16.0.18",
+    "expo-image-picker": "16.1.4",
+    "expo-status-bar": "2.2.3",
+    "react": "19.0.0",
+    "react-native": "0.79.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.27.1",
+    "@types/react": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}

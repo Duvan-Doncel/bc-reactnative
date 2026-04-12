@@ -1,0 +1,116 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="900" height="480" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#61DAFB">APIs Nativas — Expo SDK 53 — Semana 11</text>
+
+  <!-- ==================== CAMERA ==================== -->
+  <rect x="30" y="58" width="256" height="186" rx="10" fill="#0c1f38" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="158" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa">📷 expo-camera</text>
+
+  <!-- CameraView -->
+  <rect x="48" y="90" width="220" height="32" rx="6" fill="#1e3a5f"/>
+  <text x="82" y="102" font-size="11" font-weight="600" fill="#93c5fd">CameraView</text>
+  <text x="82" y="115" font-size="10" fill="#64748b">facing="back" | "front"</text>
+
+  <!-- useCameraPermissions -->
+  <rect x="48" y="128" width="220" height="32" rx="6" fill="#1e3a5f"/>
+  <text x="82" y="140" font-size="11" font-weight="600" fill="#93c5fd">useCameraPermissions()</text>
+  <text x="82" y="153" font-size="10" fill="#64748b">[permission, requestPermission]</text>
+
+  <!-- takePictureAsync -->
+  <rect x="48" y="166" width="220" height="32" rx="6" fill="#1e3a5f"/>
+  <text x="82" y="178" font-size="11" font-weight="600" fill="#93c5fd">takePictureAsync()</text>
+  <text x="82" y="191" font-size="10" fill="#64748b">→ { uri, width, height }</text>
+
+  <!-- Permission note -->
+  <rect x="48" y="204" width="220" height="30" rx="6" fill="#172033"/>
+  <text x="82" y="214" font-size="10" fill="#f59e0b">⚠️ iOS Simulator: sin hardware</text>
+  <text x="82" y="226" font-size="10" fill="#64748b">Usar ImagePicker como fallback</text>
+
+  <!-- ==================== IMAGE PICKER ==================== -->
+  <rect x="322" y="58" width="256" height="186" rx="10" fill="#0c1a2e" stroke="#8b5cf6" stroke-width="1.8"/>
+  <text x="450" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#a78bfa">🖼️ expo-image-picker</text>
+
+  <rect x="340" y="90" width="220" height="32" rx="6" fill="#2e1a5e"/>
+  <text x="374" y="102" font-size="11" font-weight="600" fill="#c4b5fd">launchImageLibraryAsync()</text>
+  <text x="374" y="115" font-size="10" fill="#64748b">Galería del dispositivo</text>
+
+  <rect x="340" y="128" width="220" height="32" rx="6" fill="#2e1a5e"/>
+  <text x="374" y="140" font-size="11" font-weight="600" fill="#c4b5fd">launchCameraAsync()</text>
+  <text x="374" y="153" font-size="10" fill="#64748b">Abre cámara con crop</text>
+
+  <rect x="340" y="166" width="220" height="32" rx="6" fill="#2e1a5e"/>
+  <text x="374" y="178" font-size="11" font-weight="600" fill="#c4b5fd">result.assets[0].uri</text>
+  <text x="374" y="191" font-size="10" fill="#64748b">result.canceled → boolean</text>
+
+  <rect x="340" y="204" width="220" height="30" rx="6" fill="#172033"/>
+  <text x="374" y="218" font-size="10" fill="#94a3b8">✅ Funciona en Expo Go</text>
+  <text x="374" y="228" font-size="10" fill="#64748b">iOS + Android + Simulador</text>
+
+  <!-- ==================== LOCATION ==================== -->
+  <rect x="614" y="58" width="256" height="186" rx="10" fill="#0b2018" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="742" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#4ade80">📍 expo-location</text>
+
+  <rect x="632" y="90" width="220" height="32" rx="6" fill="#14532d"/>
+  <text x="666" y="102" font-size="11" font-weight="600" fill="#86efac">requestForegroundPermissionsAsync()</text>
+  <text x="666" y="115" font-size="10" fill="#64748b">→ { status }</text>
+
+  <rect x="632" y="128" width="220" height="32" rx="6" fill="#14532d"/>
+  <text x="666" y="140" font-size="11" font-weight="600" fill="#86efac">getCurrentPositionAsync()</text>
+  <text x="666" y="153" font-size="10" fill="#64748b">→ { coords: { lat, lng, alt } }</text>
+
+  <rect x="632" y="166" width="220" height="32" rx="6" fill="#14532d"/>
+  <text x="666" y="178" font-size="11" font-weight="600" fill="#86efac">watchPositionAsync()</text>
+  <text x="666" y="191" font-size="10" fill="#64748b">→ subscription (cleanup!)</text>
+
+  <rect x="632" y="204" width="220" height="30" rx="6" fill="#172033"/>
+  <text x="666" y="218" font-size="10" fill="#f59e0b">reverseGeocodeAsync()</text>
+  <text x="666" y="228" font-size="10" fill="#64748b">coords → dirección textual</text>
+
+  <!-- ==================== app.json PERMISSIONS ==================== -->
+  <rect x="30" y="264" width="840" height="90" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="450" y="284" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5f9">app.json — Declarar permisos (obligatorio para builds)</text>
+
+  <!-- iOS column -->
+  <rect x="46" y="294" width="390" height="50" rx="6" fill="#0f172a"/>
+  <text x="66" y="308" font-size="10" font-weight="600" fill="#64748b">iOS — infoPlist</text>
+  <text x="66" y="322" font-size="10" font-family="monospace" fill="#93c5fd">"NSCameraUsageDescription": "..."</text>
+  <text x="66" y="335" font-size="10" font-family="monospace" fill="#93c5fd">"NSLocationWhenInUseUsageDescription": "..."</text>
+
+  <!-- Android column -->
+  <rect x="464" y="294" width="390" height="50" rx="6" fill="#0f172a"/>
+  <text x="484" y="308" font-size="10" font-weight="600" fill="#64748b">Android — permissions</text>
+  <text x="484" y="322" font-size="10" font-family="monospace" fill="#86efac">["CAMERA", "READ_MEDIA_IMAGES",</text>
+  <text x="484" y="335" font-size="10" font-family="monospace" fill="#86efac"> "ACCESS_FINE_LOCATION"]</text>
+
+  <!-- ==================== COMPARISON TABLE ==================== -->
+  <rect x="30" y="370" width="840" height="96" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+  <text x="450" y="390" text-anchor="middle" font-size="12" font-weight="700" fill="#f1f5f9">Cuándo usar cada API</text>
+
+  <!-- Header row -->
+  <rect x="46" y="398" width="200" height="20" rx="4" fill="#0f172a"/>
+  <rect x="254" y="398" width="190" height="20" rx="4" fill="#0f172a"/>
+  <rect x="452" y="398" width="190" height="20" rx="4" fill="#0f172a"/>
+  <rect x="650" y="398" width="200" height="20" rx="4" fill="#0f172a"/>
+  <text x="146" y="412" text-anchor="middle" font-size="10" font-weight="600" fill="#94a3b8">Caso</text>
+  <text x="349" y="412" text-anchor="middle" font-size="10" font-weight="600" fill="#60a5fa">expo-camera</text>
+  <text x="547" y="412" text-anchor="middle" font-size="10" font-weight="600" fill="#a78bfa">expo-image-picker</text>
+  <text x="750" y="412" text-anchor="middle" font-size="10" font-weight="600" fill="#4ade80">expo-location</text>
+
+  <!-- Rows -->
+  <text x="146" y="432" text-anchor="middle" font-size="10" fill="#cbd5e1">Tomar foto nueva</text>
+  <text x="349" y="432" text-anchor="middle" font-size="10" fill="#22c55e">✅ Preferido</text>
+  <text x="547" y="432" text-anchor="middle" font-size="10" fill="#f59e0b">⚠️ Alternativa</text>
+  <text x="750" y="432" text-anchor="middle" font-size="10" fill="#64748b">—</text>
+
+  <text x="146" y="450" text-anchor="middle" font-size="10" fill="#cbd5e1">Elegir de galería</text>
+  <text x="349" y="450" text-anchor="middle" font-size="10" fill="#64748b">—</text>
+  <text x="547" y="450" text-anchor="middle" font-size="10" fill="#22c55e">✅ Único</text>
+  <text x="750" y="450" text-anchor="middle" font-size="10" fill="#64748b">—</text>
+
+  <text x="146" y="468" text-anchor="middle" font-size="10" fill="#cbd5e1">Coordenadas GPS</text>
+  <text x="349" y="468" text-anchor="middle" font-size="10" fill="#64748b">—</text>
+  <text x="547" y="468" text-anchor="middle" font-size="10" fill="#64748b">—</text>
+  <text x="750" y="468" text-anchor="middle" font-size="10" fill="#22c55e">✅ Único</text>
+</svg>
