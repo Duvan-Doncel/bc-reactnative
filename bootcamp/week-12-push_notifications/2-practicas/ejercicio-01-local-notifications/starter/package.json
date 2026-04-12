@@ -1,0 +1,22 @@
+{
+  "name": "ejercicio-01-local-notifications",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios"
+  },
+  "dependencies": {
+    "expo": "53.0.0",
+    "expo-modules-core": "2.4.0",
+    "expo-notifications": "0.29.14",
+    "react": "18.3.2",
+    "react-native": "0.79.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.25.2",
+    "@types/react": "18.3.12",
+    "typescript": "5.8.3"
+  }
+}

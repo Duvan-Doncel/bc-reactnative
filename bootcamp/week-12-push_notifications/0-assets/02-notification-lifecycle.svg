@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" style="font-family: Inter, Roboto, sans-serif;">
+  <!-- Background -->
+  <rect width="900" height="480" fill="#111827"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" fill="#F9FAFB" font-size="17" font-weight="700">Estados de Vida de una Notificación — Expo Notifications</text>
+
+  <!-- === 3 State columns === -->
+
+  <!-- FOREGROUND column -->
+  <rect x="30" y="55" width="255" height="360" rx="10" fill="#1F2937" stroke="#61DAFB" stroke-width="1.5"/>
+  <text x="157" y="80" text-anchor="middle" fill="#61DAFB" font-size="13" font-weight="700">FOREGROUND</text>
+  <text x="157" y="96" text-anchor="middle" fill="#9CA3AF" font-size="10">App abierta y visible</text>
+
+  <!-- Foreground: step 1 -->
+  <rect x="48" y="108" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="157" y="128" text-anchor="middle" fill="#F59E0B" font-size="10" font-weight="700">setNotificationHandler</text>
+  <text x="157" y="144" text-anchor="middle" fill="#9CA3AF" font-size="9">shouldShowAlert: true/false</text>
+
+  <!-- Foreground: step 2 -->
+  <rect x="48" y="168" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="157" y="186" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">addNotificationReceived</text>
+  <text x="157" y="201" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">Listener</text>
+  <text x="157" y="215" text-anchor="middle" fill="#9CA3AF" font-size="9">Se dispara al llegar la notif.</text>
+
+  <!-- Foreground: step 3 -->
+  <rect x="48" y="228" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="157" y="248" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">addNotificationResponse</text>
+  <text x="157" y="263" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">ReceivedListener</text>
+  <text x="157" y="277" text-anchor="middle" fill="#9CA3AF" font-size="9">Se dispara al tapear bandera</text>
+
+  <!-- Foreground cleanup note -->
+  <rect x="48" y="288" width="219" height="40" rx="6" fill="#0F172A" stroke="#F87171" stroke-width="1"/>
+  <text x="157" y="306" text-anchor="middle" fill="#F87171" font-size="9" font-weight="700">⚠️ Cleanup obligatorio</text>
+  <text x="157" y="320" text-anchor="middle" fill="#9CA3AF" font-size="9">subscription.remove() en useEffect</text>
+
+  <!-- Foreground behavior note -->
+  <rect x="48" y="340" width="219" height="58" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="157" y="360" text-anchor="middle" fill="#9CA3AF" font-size="9">Sin setNotificationHandler,</text>
+  <text x="157" y="374" text-anchor="middle" fill="#9CA3AF" font-size="9">la notificación NO se muestra</text>
+  <text x="157" y="388" text-anchor="middle" fill="#9CA3AF" font-size="9">visualmente en foreground</text>
+
+  <!-- BACKGROUND column -->
+  <rect x="322" y="55" width="255" height="360" rx="10" fill="#1F2937" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="449" y="80" text-anchor="middle" fill="#F59E0B" font-size="13" font-weight="700">BACKGROUND</text>
+  <text x="449" y="96" text-anchor="middle" fill="#9CA3AF" font-size="10">App minimizada / segundo plano</text>
+
+  <!-- Background: system shows banner -->
+  <rect x="340" y="108" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="449" y="128" text-anchor="middle" fill="#6366F1" font-size="10" font-weight="700">Sistema operativo</text>
+  <text x="449" y="144" text-anchor="middle" fill="#9CA3AF" font-size="9">muestra el banner automáticamente</text>
+
+  <!-- Background: no received listener -->
+  <rect x="340" y="168" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="449" y="188" text-anchor="middle" fill="#9CA3AF" font-size="10">addNotificationReceived</text>
+  <text x="449" y="203" text-anchor="middle" fill="#9CA3AF" font-size="10">Listener → NO se dispara</text>
+
+  <!-- Background: response listener fires on tap -->
+  <rect x="340" y="228" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="449" y="248" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">addNotificationResponse</text>
+  <text x="449" y="263" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">ReceivedListener ✅</text>
+  <text x="449" y="278" text-anchor="middle" fill="#9CA3AF" font-size="9">Se dispara al tapear banner</text>
+
+  <!-- Background: lastNotificationResponse -->
+  <rect x="340" y="288" width="219" height="40" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="449" y="306" text-anchor="middle" fill="#F59E0B" font-size="9" font-weight="700">useLastNotificationResponse</text>
+  <text x="449" y="320" text-anchor="middle" fill="#9CA3AF" font-size="9">hook para leer el tap al reabrir</text>
+
+  <!-- Background note -->
+  <rect x="340" y="340" width="219" height="58" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="449" y="360" text-anchor="middle" fill="#9CA3AF" font-size="9">El SO maneja el banner.</text>
+  <text x="449" y="374" text-anchor="middle" fill="#9CA3AF" font-size="9">Tu app responde solo</text>
+  <text x="449" y="388" text-anchor="middle" fill="#9CA3AF" font-size="9">al interactuar el usuario.</text>
+
+  <!-- KILLED column -->
+  <rect x="614" y="55" width="255" height="360" rx="10" fill="#1F2937" stroke="#F87171" stroke-width="1.5"/>
+  <text x="741" y="80" text-anchor="middle" fill="#F87171" font-size="13" font-weight="700">KILLED / NO INICIADA</text>
+  <text x="741" y="96" text-anchor="middle" fill="#9CA3AF" font-size="10">App cerrada completamente</text>
+
+  <!-- Killed: system shows banner -->
+  <rect x="632" y="108" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="741" y="128" text-anchor="middle" fill="#6366F1" font-size="10" font-weight="700">Sistema operativo</text>
+  <text x="741" y="144" text-anchor="middle" fill="#9CA3AF" font-size="9">muestra el banner automáticamente</text>
+
+  <!-- Killed: user taps banner -->
+  <rect x="632" y="168" width="219" height="48" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="741" y="188" text-anchor="middle" fill="#9CA3AF" font-size="10">Usuario tapea la notificación</text>
+  <text x="741" y="203" text-anchor="middle" fill="#9CA3AF" font-size="10">→ App se inicia</text>
+
+  <!-- Killed: lastNotificationResponse -->
+  <rect x="632" y="228" width="219" height="50" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="741" y="248" text-anchor="middle" fill="#F59E0B" font-size="10" font-weight="700">getLastNotificationResponse</text>
+  <text x="741" y="262" text-anchor="middle" fill="#F59E0B" font-size="10" font-weight="700">Async()</text>
+  <text x="741" y="277" text-anchor="middle" fill="#9CA3AF" font-size="9">Recuperar la última respuesta al lanzar</text>
+
+  <!-- Killed: navigate from notification data -->
+  <rect x="632" y="290" width="219" height="48" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+  <text x="741" y="310" text-anchor="middle" fill="#10B981" font-size="10" font-weight="700">Navegar según data</text>
+  <text x="741" y="325" text-anchor="middle" fill="#9CA3AF" font-size="9">response.notification.request</text>
+  <text x="741" y="338" text-anchor="middle" fill="#9CA3AF" font-size="9">.content.data</text>
+
+  <!-- Bottom: key takeaway -->
+  <rect x="30" y="432" width="840" height="35" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="450" y="449" text-anchor="middle" fill="#9CA3AF" font-size="10" font-weight="700">Regla: </text>
+  <text x="480" y="449" fill="#9CA3AF" font-size="10">addNotificationReceivedListener solo funciona en FOREGROUND. Para BACKGROUND y KILLED usar el Response Listener.</text>
+
+</svg>
