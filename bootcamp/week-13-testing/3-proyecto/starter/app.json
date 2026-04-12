@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "proyecto-semana-13",
+    "slug": "proyecto-semana-13",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "proyecto13",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.bootcamp.proyecto13"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#222222"
+      },
+      "package": "com.bootcamp.proyecto13"
+    }
+  }
+}

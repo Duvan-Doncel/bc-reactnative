@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#222222"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="20" font-weight="700" fill="#61DAFB">Pirámide de Testing</text>
+  <text x="450" y="60" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#888888">Jest · React Native Testing Library · Maestro</text>
+
+  <!-- E2E layer (top) -->
+  <polygon points="450,90 300,195 600,195" fill="#ef4444" opacity="0.85"/>
+  <text x="450" y="152" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff">E2E</text>
+  <text x="450" y="172" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#fecaca">Maestro</text>
+
+  <!-- Integration layer (middle) -->
+  <polygon points="300,200 200,310 700,310" fill="#f59e0b" opacity="0.85"/>
+  <text x="450" y="263" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Integración / Componente</text>
+  <text x="450" y="283" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#fef3c7">React Native Testing Library (RNTL)</text>
+
+  <!-- Unit layer (bottom) -->
+  <polygon points="200,315 100,430 800,430" fill="#22c55e" opacity="0.85"/>
+  <text x="450" y="378" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Unitario</text>
+  <text x="450" y="398" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#dcfce7">Jest — funciones puras, hooks, utilidades</text>
+
+  <!-- Left labels -->
+  <text x="75" y="155" text-anchor="end" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#ef4444">Pocos</text>
+  <text x="75" y="265" text-anchor="end" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f59e0b">Moderados</text>
+  <text x="75" y="378" text-anchor="end" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#22c55e">Muchos</text>
+
+  <!-- Right labels -->
+  <text x="825" y="155" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#ef4444">Lentos</text>
+  <text x="825" y="265" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f59e0b">Medios</text>
+  <text x="825" y="378" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#22c55e">Rápidos</text>
+
+  <!-- Bottom legend -->
+  <rect x="100" y="450" width="680" height="55" rx="8" fill="#2a2a2a"/>
+
+  <rect x="120" y="467" width="14" height="14" rx="3" fill="#22c55e"/>
+  <text x="140" y="479" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Unit: funciones aisladas, sin UI</text>
+
+  <rect x="360" y="467" width="14" height="14" rx="3" fill="#f59e0b"/>
+  <text x="380" y="479" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Integración: componente + dependencias</text>
+
+  <rect x="120" y="487" width="14" height="14" rx="3" fill="#ef4444"/>
+  <text x="140" y="499" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">E2E: flujo completo en dispositivo real</text>
+
+  <text x="440" y="499" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#555555">Mínimo aprobatorio: 60% coverage en unit + integración</text>
+</svg>

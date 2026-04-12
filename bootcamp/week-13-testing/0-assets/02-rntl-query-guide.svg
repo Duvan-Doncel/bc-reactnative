@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#222222"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="20" font-weight="700" fill="#61DAFB">Guía de Queries — RNTL</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#888888">Usar en orden de prioridad: semántico primero, testID al último</text>
+
+  <!-- Priority arrow on left -->
+  <line x1="38" y1="90" x2="38" y2="440" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <defs>
+    <marker id="arrow-down" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto">
+      <path d="M1,1 L4,7 L7,1" stroke="#61DAFB" stroke-width="1.5" fill="none"/>
+    </marker>
+  </defs>
+  <text x="26" y="270" text-anchor="middle" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#61DAFB" transform="rotate(-90, 26, 270)">Prioridad (alta → baja)</text>
+
+  <!-- Row definitions: y, label, description, color, example -->
+
+  <!-- 1: getByRole -->
+  <rect x="55" y="82" width="790" height="52" rx="6" fill="#1a3a1a"/>
+  <rect x="55" y="82" width="5" height="52" rx="3" fill="#22c55e"/>
+  <text x="75" y="103" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#22c55e">1. getByRole</text>
+  <text x="75" y="121" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Más semántico — usa accessibilityRole. Preferido para botones, inputs, listas.</text>
+  <text x="650" y="103" font-family="monospace, Courier" font-size="11" fill="#86efac">getByRole('button', { name: 'Guardar' })</text>
+
+  <!-- 2: getByLabelText -->
+  <rect x="55" y="144" width="790" height="52" rx="6" fill="#1e2a1a"/>
+  <rect x="55" y="144" width="5" height="52" rx="3" fill="#4ade80"/>
+  <text x="75" y="165" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#4ade80">2. getByLabelText</text>
+  <text x="75" y="183" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Etiqueta de accesibilidad (accessibilityLabel). Ideal para formularios.</text>
+  <text x="630" y="165" font-family="monospace, Courier" font-size="11" fill="#86efac">getByLabelText('Correo electrónico')</text>
+
+  <!-- 3: getByPlaceholderText -->
+  <rect x="55" y="206" width="790" height="52" rx="6" fill="#1a2a20"/>
+  <rect x="55" y="206" width="5" height="52" rx="3" fill="#86efac"/>
+  <text x="75" y="227" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#86efac">3. getByPlaceholderText</text>
+  <text x="75" y="245" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Placeholder de TextInput. Útil cuando no hay label explícito.</text>
+  <text x="650" y="227" font-family="monospace, Courier" font-size="11" fill="#86efac">getByPlaceholderText('Buscar...')</text>
+
+  <!-- 4: getByText -->
+  <rect x="55" y="268" width="790" height="52" rx="6" fill="#2a2a18"/>
+  <rect x="55" y="268" width="5" height="52" rx="3" fill="#fbbf24"/>
+  <text x="75" y="289" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#fbbf24">4. getByText</text>
+  <text x="75" y="307" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Texto visible en pantalla. Frágil si el texto cambia con i18n.</text>
+  <text x="700" y="289" font-family="monospace, Courier" font-size="11" fill="#fef08a">getByText('Confirmar')</text>
+
+  <!-- 5: getByDisplayValue -->
+  <rect x="55" y="330" width="790" height="52" rx="6" fill="#2a2018"/>
+  <rect x="55" y="330" width="5" height="52" rx="3" fill="#f97316"/>
+  <text x="75" y="351" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#f97316">5. getByDisplayValue</text>
+  <text x="75" y="369" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Valor actual de un TextInput controlado. Útil para verificar estado del input.</text>
+  <text x="620" y="351" font-family="monospace, Courier" font-size="11" fill="#fed7aa">getByDisplayValue('usuario@test.com')</text>
+
+  <!-- 6: getByTestId -->
+  <rect x="55" y="392" width="790" height="52" rx="6" fill="#2a1a1a"/>
+  <rect x="55" y="392" width="5" height="52" rx="3" fill="#ef4444"/>
+  <text x="75" y="413" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#ef4444">6. getByTestId</text>
+  <text x="75" y="431" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#aaaaaa">Último recurso — prop testID. Acopla tests a detail de implementación.</text>
+  <text x="680" y="413" font-family="monospace, Courier" font-size="11" fill="#fca5a5">getByTestId('submit-button')</text>
+
+  <!-- Variants legend at bottom -->
+  <rect x="55" y="456" width="790" height="32" rx="6" fill="#2a2a2a"/>
+  <text x="75" y="477" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#888888">Variantes: </text>
+  <text x="145" y="477" font-family="monospace, Courier" font-size="11" fill="#22c55e">getBy*</text>
+  <text x="200" y="477" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#555555"> lanza error si falta  </text>
+  <text x="320" y="477" font-family="monospace, Courier" font-size="11" fill="#fbbf24">queryBy*</text>
+  <text x="395" y="477" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#555555"> retorna null si falta  </text>
+  <text x="515" y="477" font-family="monospace, Courier" font-size="11" fill="#61DAFB">findBy*</text>
+  <text x="565" y="477" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#555555"> async, espera que aparezca</text>
+</svg>
