@@ -20,12 +20,12 @@
 import { View, StyleSheet } from 'react-native';
 
 // View simple con estilo
-<View style={styles.tarjeta}>
+<View style={styles.card}>
   {/* Aquí van los elementos hijos */}
 </View>
 
 const styles = StyleSheet.create({
-  tarjeta: {
+  card: {
     backgroundColor: '#161b22',
     borderRadius: 12,
     padding: 16,
@@ -45,17 +45,17 @@ A diferencia de la web, **en React Native todo texto debe estar en un componente
 ```tsx
 import { Text, StyleSheet } from 'react-native';
 
-<Text style={styles.titulo}>Título de la app</Text>
-<Text style={styles.cuerpo}>
+<Text style={styles.title}>Título de la app</Text>
+<Text style={styles.body}>
   El texto puede tener múltiples líneas. Se puede anidar{' '}
-  <Text style={styles.negrita}>texto con estilos diferentes</Text>{' '}
+  <Text style={styles.bold}>texto con estilos diferentes</Text>{' '}
   dentro del mismo párrafo.
 </Text>
 
 const styles = StyleSheet.create({
-  titulo: { fontSize: 24, fontWeight: 'bold', color: '#ffffff' },
-  cuerpo: { fontSize: 16, color: '#8b949e', lineHeight: 24 },
-  negrita: { fontWeight: 'bold', color: '#61DAFB' },
+  title: { fontSize: 24, fontWeight: 'bold', color: '#ffffff' },
+  body: { fontSize: 16, color: '#8b949e', lineHeight: 24 },
+  bold: { fontWeight: 'bold', color: '#61DAFB' },
 });
 ```
 
@@ -144,19 +144,19 @@ import { Pressable, Text, StyleSheet } from 'react-native';
 
 <Pressable
   style={({ pressed }) => [
-    styles.boton,
-    pressed && styles.botonPresionado,  // Estilo cuando se presiona
+    styles.button,
+    pressed && styles.buttonPressed,  // Estilo cuando se presiona
   ]}
   onPress={() => console.log('presionado')}
   onLongPress={() => console.log('presión larga')}
 >
-  <Text style={styles.textoBoton}>Presióname</Text>
+  <Text style={styles.buttonText}>Presióname</Text>
 </Pressable>
 
 const styles = StyleSheet.create({
-  boton: { backgroundColor: '#61DAFB', padding: 12, borderRadius: 8 },
-  botonPresionado: { opacity: 0.7 },
-  textoBoton: { color: '#0d1117', fontWeight: 'bold', textAlign: 'center' },
+  button: { backgroundColor: '#61DAFB', padding: 12, borderRadius: 8 },
+  buttonPressed: { opacity: 0.7 },
+  buttonText: { color: '#0d1117', fontWeight: 'bold', textAlign: 'center' },
 });
 ```
 
@@ -185,12 +185,12 @@ React Native no usa CSS. En su lugar usa `StyleSheet`, que valida los estilos en
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  contenedor: {
+  container: {
     flex: 1,
     backgroundColor: '#0d1117',
     padding: 16,
   },
-  titulo: {
+  title: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
 });
 
 // Combinar estilos
-<View style={[styles.contenedor, { borderWidth: 1 }]} />
+<View style={[styles.container, { borderWidth: 1 }]} />
 ```
 
 ### Diferencias importantes con CSS

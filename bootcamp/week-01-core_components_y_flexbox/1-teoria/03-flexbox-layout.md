@@ -112,16 +112,16 @@ Controla cómo se posicionan los hijos **en el eje perpendicular** al principal.
 
 ```tsx
 // Patrón: imagen a la izquierda, texto a la derecha
-<View style={styles.tarjeta}>
+<View style={styles.card}>
   <Image style={styles.avatar} source={{ uri: '...' }} resizeMode="cover" />
   <View style={styles.info}>
-    <Text style={styles.nombre}>Ada Lovelace</Text>
-    <Text style={styles.subtitulo}>Ingeniera de Software</Text>
+    <Text style={styles.name}>Ada Lovelace</Text>
+    <Text style={styles.subtitle}>Ingeniera de Software</Text>
   </View>
 </View>
 
 const styles = StyleSheet.create({
-  tarjeta: {
+  card: {
     flexDirection: 'row',   // Imagen y texto en fila
     alignItems: 'center',   // Centrados verticalmente
     padding: 16,
@@ -129,8 +129,8 @@ const styles = StyleSheet.create({
   },
   avatar: { width: 56, height: 56, borderRadius: 28 },
   info: { flex: 1 },        // El bloque de texto ocupa el espacio restante
-  nombre: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
-  subtitulo: { fontSize: 14, color: '#8b949e' },
+  name: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+  subtitle: { fontSize: 14, color: '#8b949e' },
 });
 ```
 
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
 ```tsx
 // Patrón: título a la izquierda, botón a la derecha
 <View style={styles.header}>
-  <Text style={styles.tituloHeader}>Inicio</Text>
+  <Text style={styles.headerTitle}>Inicio</Text>
   <Pressable onPress={handleAdd}>
     <Text style={styles.btnAdd}>+ Nuevo</Text>
   </Pressable>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
   },
-  tituloHeader: { fontSize: 22, fontWeight: 'bold', color: '#fff' },
+  headerTitle: { fontSize: 22, fontWeight: 'bold', color: '#fff' },
   btnAdd: { fontSize: 14, color: '#61DAFB' },
 });
 ```
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
 
 ```tsx
 const styles = StyleSheet.create({
-  contenedor: {
+  container: {
     padding: 16,            // padding en todos los lados
     paddingHorizontal: 24,  // solo izquierda y derecha
     paddingVertical: 12,    // solo arriba y abajo
@@ -184,7 +184,7 @@ Un truco muy útil al construir layouts: añadir `borderWidth` y `borderColor` a
 
 ```tsx
 // Activar temporalmente para depurar
-<View style={[styles.contenedor, { borderWidth: 1, borderColor: 'red' }]}>
+<View style={[styles.container, { borderWidth: 1, borderColor: 'red' }]}>
   <View style={[styles.hijo, { borderWidth: 1, borderColor: 'blue' }]} />
 </View>
 ```

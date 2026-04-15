@@ -30,7 +30,7 @@ export default function App(): React.JSX.Element {
           ============================================ */}
       {/* Descomenta las siguientes líneas: */}
       {/* <View style={styles.card}>
-        <Text style={styles.titulo}>Mi Perfil</Text>
+        <Text style={styles.title}>Mi Perfil</Text>
       </View> */}
 
       {/* ============================================
@@ -44,7 +44,7 @@ export default function App(): React.JSX.Element {
           style={styles.avatar}
           resizeMode="cover"
         />
-        <Text style={styles.titulo}>Mi Perfil</Text>
+        <Text style={styles.title}>Mi Perfil</Text>
       </View> */}
 
       {/* ============================================
@@ -58,8 +58,8 @@ export default function App(): React.JSX.Element {
           style={styles.avatar}
           resizeMode="cover"
         />
-        <Text style={styles.nombre}>Ada Lovelace</Text>
-        <Text style={styles.cargo}>Ingeniera de Software</Text>
+        <Text style={styles.name}>Ada Lovelace</Text>
+        <Text style={styles.role}>Ingeniera de Software</Text>
         <Text style={styles.bio} numberOfLines={3}>
           Primera programadora de la historia. Escribió el primer algoritmo
           diseñado para ser procesado por una máquina.
@@ -73,15 +73,15 @@ export default function App(): React.JSX.Element {
       */}
       {/* <View style={styles.statsRow}>
         <View style={styles.stat}>
-          <Text style={styles.statNumero}>42</Text>
+          <Text style={styles.statNumber}>42</Text>
           <Text style={styles.statLabel}>Posts</Text>
         </View>
         <View style={styles.stat}>
-          <Text style={styles.statNumero}>1.2k</Text>
+          <Text style={styles.statNumber}>1.2k</Text>
           <Text style={styles.statLabel}>Seguidores</Text>
         </View>
         <View style={styles.stat}>
-          <Text style={styles.statNumero}>318</Text>
+          <Text style={styles.statNumber}>318</Text>
           <Text style={styles.statLabel}>Siguiendo</Text>
         </View>
       </View> */}
@@ -93,12 +93,12 @@ export default function App(): React.JSX.Element {
       */}
       {/* <Pressable
         style={({ pressed }) => [
-          styles.btnSeguir,
-          pressed && styles.btnSeguirPresionado,
+          styles.btnFollow,
+          pressed && styles.btnFollowPressed,
         ]}
         onPress={() => console.log('¡Siguiendo!')}
       >
-        <Text style={styles.btnTexto}>Seguir</Text>
+        <Text style={styles.btnText}>Seguir</Text>
       </Pressable> */}
     </ScrollView>
   );
@@ -139,19 +139,19 @@ const styles = StyleSheet.create({
   },
 
   // PASO 1 / 3 — Textos
-  titulo: {
+  title: {
     fontSize: 22,
     fontWeight: 'bold',
     color: '#ffffff',
     marginBottom: 4,
   },
-  nombre: {
+  name: {
     fontSize: 22,
     fontWeight: 'bold',
     color: '#ffffff',
     marginBottom: 4,
   },
-  cargo: {
+  role: {
     fontSize: 14,
     color: '#61DAFB',
     marginBottom: 12,
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   stat: {
     alignItems: 'center', // número y label centrados
   },
-  statNumero: {
+  statNumber: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
 
   // PASO 5 — Botón con estado presionado
-  btnSeguir: {
+  btnFollow: {
     backgroundColor: '#61DAFB',
     paddingHorizontal: 48,
     paddingVertical: 12,
@@ -197,10 +197,10 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
-  btnSeguirPresionado: {
+  btnFollowPressed: {
     opacity: 0.7, // feedback visual al presionar
   },
-  btnTexto: {
+  btnText: {
     color: '#0d1117',
     fontSize: 16,
     fontWeight: 'bold',

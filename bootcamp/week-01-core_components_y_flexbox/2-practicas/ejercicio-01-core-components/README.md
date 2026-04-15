@@ -32,7 +32,7 @@ Abre `starter/App.tsx` y descomenta la **sección PASO 1**.
 ```tsx
 // Lo que descomentarás:
 <View style={styles.container}>
-  <Text style={styles.titulo}>Mi Perfil</Text>
+  <Text style={styles.title}>Mi Perfil</Text>
 </View>
 ```
 
@@ -65,8 +65,8 @@ Descomenta la **sección PASO 3** en `starter/App.tsx`.
 
 ```tsx
 // Lo que descomentarás:
-<Text style={styles.nombre}>Ada Lovelace</Text>
-<Text style={styles.cargo}>Ingeniera de Software</Text>
+<Text style={styles.name}>Ada Lovelace</Text>
+<Text style={styles.role}>Ingeniera de Software</Text>
 <Text style={styles.bio}>
   Primera programadora de la historia. Escribió el primer algoritmo
   diseñado para ser procesado por una máquina.
@@ -85,15 +85,15 @@ Descomenta la **sección PASO 4** en `starter/App.tsx`.
 // Lo que descomentarás:
 <View style={styles.statsRow}>
   <View style={styles.stat}>
-    <Text style={styles.statNumero}>42</Text>
+    <Text style={styles.statNumber}>42</Text>
     <Text style={styles.statLabel}>Posts</Text>
   </View>
   <View style={styles.stat}>
-    <Text style={styles.statNumero}>1.2k</Text>
+    <Text style={styles.statNumber}>1.2k</Text>
     <Text style={styles.statLabel}>Seguidores</Text>
   </View>
   <View style={styles.stat}>
-    <Text style={styles.statNumero}>318</Text>
+    <Text style={styles.statNumber}>318</Text>
     <Text style={styles.statLabel}>Siguiendo</Text>
   </View>
 </View>
@@ -111,12 +111,12 @@ Descomenta la **sección PASO 5** en `starter/App.tsx`.
 // Lo que descomentarás:
 <Pressable
   style={({ pressed }) => [
-    styles.btnSeguir,
-    pressed && styles.btnSeguirPresionado,
+    styles.btnFollow,
+    pressed && styles.btnFollowPressed,
   ]}
   onPress={() => console.log('¡Siguiendo!')}
 >
-  <Text style={styles.btnTexto}>Seguir</Text>
+  <Text style={styles.btnText}>Seguir</Text>
 </Pressable>
 ```
 

@@ -17,11 +17,11 @@ import {
 } from 'react-native';
 
 // Label component to identify each layout on screen
-function LayoutLabel({ numero, titulo }: { numero: number; titulo: string }): React.JSX.Element {
+function LayoutLabel({ num, title }: { num: number; title: string }): React.JSX.Element {
   return (
     <View style={styles.label}>
-      <Text style={styles.labelNumero}>Layout {numero}</Text>
-      <Text style={styles.labelTitulo}>{titulo}</Text>
+      <Text style={styles.labelNumber}>Layout {num}</Text>
+      <Text style={styles.labelTitle}>{title}</Text>
     </View>
   );
 }
@@ -30,18 +30,18 @@ export default function App(): React.JSX.Element {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
       <StatusBar barStyle="light-content" backgroundColor="#0d1117" />
-      <Text style={styles.titulo}>Ejercicio 02 — Flexbox</Text>
+      <Text style={styles.title}>Ejercicio 02 — Flexbox</Text>
 
       {/* ============================================
           LAYOUT 1: Header con título y botón
           justifyContent: 'space-between' + flexDirection: 'row'
           ============================================ */}
       {/* Descomenta las siguientes líneas: */}
-      {/* <LayoutLabel numero={1} titulo="Header: space-between" />
+      {/* <LayoutLabel num={1} title="Header: space-between" />
       <View style={styles.layout1}>
-        <Text style={styles.headerTitulo}>Inicio</Text>
+        <Text style={styles.headerTitle}>Inicio</Text>
         <Pressable style={styles.headerBtn} onPress={() => {}}>
-          <Text style={styles.headerBtnTexto}>+ Nuevo</Text>
+          <Text style={styles.headerBtnText}>+ Nuevo</Text>
         </Pressable>
       </View> */}
 
@@ -50,7 +50,7 @@ export default function App(): React.JSX.Element {
           justifyContent: 'space-evenly' + flexDirection: 'row'
           ============================================ */}
       {/* Descomenta las siguientes líneas: */}
-      {/* <LayoutLabel numero={2} titulo="Tab Bar: space-evenly" />
+      {/* <LayoutLabel num={2} title="Tab Bar: space-evenly" />
       <View style={styles.layout2}>
         {['Inicio', 'Buscar', 'Perfil', 'Config'].map((tab) => (
           <View key={tab} style={styles.tabItem}>
@@ -65,7 +65,7 @@ export default function App(): React.JSX.Element {
           flexDirection: 'row' + alignItems: 'center' + flex: 1
           ============================================ */}
       {/* Descomenta las siguientes líneas: */}
-      {/* <LayoutLabel numero={3} titulo="Tarjeta: row + alignItems center" />
+      {/* <LayoutLabel num={3} title="Tarjeta: row + alignItems center" />
       <View style={styles.layout3}>
         <Image
           source={{ uri: 'https://i.pravatar.cc/56' }}
@@ -73,8 +73,8 @@ export default function App(): React.JSX.Element {
           resizeMode="cover"
         />
         <View style={styles.cardTextContainer}>
-          <Text style={styles.cardNombre}>Alan Turing</Text>
-          <Text style={styles.cardSubtitulo}>Padre de la computación</Text>
+          <Text style={styles.cardName}>Alan Turing</Text>
+          <Text style={styles.cardSubtitle}>Padre de la computación</Text>
         </View>
         <Text style={styles.cardTimestamp}>2h</Text>
       </View> */}
@@ -84,7 +84,7 @@ export default function App(): React.JSX.Element {
           flex: 1 vs flex: 2 — proporción 1/3 : 2/3
           ============================================ */}
       {/* Descomenta las siguientes líneas: */}
-      {/* <LayoutLabel numero={4} titulo="Proporciones: flex: 1 vs flex: 2" />
+      {/* <LayoutLabel num={4} title="Proporciones: flex: 1 vs flex: 2" />
       <View style={styles.layout4}>
         <View style={styles.panel1}>
           <Text style={styles.panelTexto}>1/3</Text>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     padding: 16,
     gap: 8,
   },
-  titulo: {
+  title: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
@@ -124,13 +124,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#30363d',
   },
-  labelNumero: {
+  labelNumber: {
     fontSize: 12,
     color: '#61DAFB',
     fontWeight: 'bold',
     textTransform: 'uppercase',
   },
-  labelTitulo: {
+  labelTitle: {
     fontSize: 14,
     color: '#8b949e',
     fontFamily: 'monospace',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#30363d',
   },
-  headerTitulo: {
+  headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#30363d',
   },
-  headerBtnTexto: {
+  headerBtnText: {
     color: '#61DAFB',
     fontSize: 14,
     fontWeight: '600',
@@ -209,12 +209,12 @@ const styles = StyleSheet.create({
   cardTextContainer: {
     flex: 1,  // ocupa todo el espacio entre el avatar y el timestamp
   },
-  cardNombre: {
+  cardName: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#ffffff',
   },
-  cardSubtitulo: {
+  cardSubtitle: {
     fontSize: 13,
     color: '#8b949e',
     marginTop: 2,

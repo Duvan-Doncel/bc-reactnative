@@ -110,7 +110,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function App(): React.JSX.Element {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>¡Hola, React Native!</Text>
+      <Text style={styles.title}>¡Hola, React Native!</Text>
     </View>
   );
 }
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#0d1117',
   },
-  titulo: {
+  title: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#61DAFB',
