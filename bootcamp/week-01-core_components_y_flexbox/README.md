@@ -61,10 +61,8 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ## 📌 Entregables
 
-- [ ] Ejercicio 01 completado (todos los pasos descomentados y funcionando)
-- [ ] Ejercicio 02 completado (los 4 layouts renderizando correctamente)
 - [ ] Proyecto: app corriendo en simulador con al menos 3 tarjetas de tu dominio
-- [ ] Código subido al repositorio asignado
+- [ ] Código subido al repositorio del aprendiz
 
 ## 🔗 Navegación
 

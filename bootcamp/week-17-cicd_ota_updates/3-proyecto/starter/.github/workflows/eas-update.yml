@@ -1,0 +1,52 @@
+# Workflow de OTA Updates — EAS Update
+# Archivo: .github/workflows/eas-update.yml
+#
+# Este workflow publica un nuevo JS bundle al canal staging
+# cada vez que hay un push a main.
+# Los dispositivos con builds de "preview" recibirán el update automáticamente.
+
+# TODO 1: Define el nombre del workflow
+# name: EAS Update (OTA)
+
+# TODO 2: Configura el trigger (solo push a main)
+# on:
+#   push:
+#     branches: [main]
+
+# TODO 3: Define el job
+# jobs:
+#   update:
+#     name: Publish OTA Update to Staging
+#     runs-on: ubuntu-latest
+#     steps:
+
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 22.x
+#           cache: 'npm'
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Setup Expo and EAS CLI
+#         uses: expo/expo-github-action@v8
+#         with:
+#           eas-version: latest
+#           token: ${{ secrets.EXPO_TOKEN }}
+
+#       # TODO 4: Completa el comando eas update
+#       # --branch: indica la rama de origen del update
+#       # --channel: destino del update (staging para validar antes de production)
+#       # --message: descripción del update (incluye el SHA del commit para trazabilidad)
+#       # --non-interactive: requerido en CI
+#       - name: Publish OTA Update
+#         run: |
+#           eas update \
+#             --branch ${{ github.ref_name }} \
+#             --channel staging \
+#             --message "CI auto-update — ${{ github.sha }}" \
+#             --non-interactive

@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Mi App Dominio",
+    "slug": "mi-app-dominio",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.placeholder.miapp"
+    },
+    "android": {
+      "package": "com.placeholder.miapp",
+      "adaptiveIcon": {
+        "backgroundColor": "#1a1a2e"
+      },
+      "versionCode": 1
+    }
+  }
+}

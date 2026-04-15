@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Mi App",
+    "slug": "mi-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "bundleIdentifier": "com.placeholder.miapp"
+    },
+    "android": {
+      "package": "com.placeholder.miapp",
+      "versionCode": 1
+    },
+    "__paso3_updates": "TODO: ejecutar eas update:configure o agregar manualmente la sección updates",
+    "__paso3_hint_1": "\"updates\": {",
+    "__paso3_hint_2": "  \"url\": \"https://u.expo.dev/TU-PROJECT-ID\",",
+    "__paso3_hint_3": "  \"enabled\": true,",
+    "__paso3_hint_4": "  \"fallbackToCacheTimeout\": 0,",
+    "__paso3_hint_5": "  \"runtimeVersion\": { \"policy\": \"sdkVersion\" }",
+    "__paso3_hint_6": "}"
+  }
+}

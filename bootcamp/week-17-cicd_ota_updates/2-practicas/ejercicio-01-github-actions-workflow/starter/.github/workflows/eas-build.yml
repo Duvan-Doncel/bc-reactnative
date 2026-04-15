@@ -1,0 +1,63 @@
+# Workflow de GitHub Actions — EAS Build
+# Archivo: .github/workflows/eas-build.yml
+#
+# Instrucciones:
+# Descomenta cada sección siguiendo los pasos del ejercicio.
+# Este archivo DEBE estar en .github/workflows/ relativo a la raíz del repositorio.
+
+# ============================================
+# PASO 1: Nombre y trigger del workflow
+# ============================================
+# Descomenta las siguientes líneas:
+# name: EAS Build CI/CD
+#
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+
+# ============================================
+# PASO 2: Definir el job
+# ============================================
+# Descomenta las siguientes líneas:
+# jobs:
+#   build:
+#     name: Build React Native App
+#     runs-on: ubuntu-latest
+#     steps:
+
+# ============================================
+# PASO 3: Pasos base (checkout + node + install)
+# ============================================
+# Descomenta dentro de steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#
+#       - name: Setup Node.js 22
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 22.x
+#           cache: 'npm'
+#
+#       - name: Install dependencies
+#         run: npm install
+
+# ============================================
+# PASO 4: TypeScript check
+# ============================================
+# Descomenta las siguientes líneas:
+#       - name: TypeScript check
+#         run: npx tsc --noEmit
+
+# ============================================
+# PASO 5: Autenticación con Expo + EAS Build
+# ============================================
+# Descomenta las siguientes líneas:
+#       - name: Setup Expo and EAS CLI
+#         uses: expo/expo-github-action@v8
+#         with:
+#           eas-version: latest
+#           token: ${{ secrets.EXPO_TOKEN }}
+#
+#       - name: Run EAS Build
+#         run: eas build --platform all --profile production --non-interactive --no-wait

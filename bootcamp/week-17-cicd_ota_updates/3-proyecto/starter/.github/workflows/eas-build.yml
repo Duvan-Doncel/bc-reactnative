@@ -1,0 +1,55 @@
+# Workflow de CI/CD — EAS Build
+# Archivo: .github/workflows/eas-build.yml
+#
+# Completa los TODOs para que el pipeline funcione:
+# 1. Trigger con push a main y workflow_dispatch
+# 2. Job en ubuntu-latest con steps completos
+# 3. EXPO_TOKEN referenciado desde secrets (NUNCA hardcodeado)
+
+# TODO 1: Define el nombre del workflow
+# name: EAS Build CI/CD
+
+# TODO 2: Configura los triggers
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+
+# TODO 3: Define el job y los steps
+# jobs:
+#   build:
+#     name: Build React Native App
+#     runs-on: ubuntu-latest
+#     steps:
+
+#       # Step 1: Clonar el repo
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       # Step 2: Node 22 con caché
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 22.x
+#           cache: 'npm'
+
+#       # Step 3: Instalar dependencias
+#       - name: Install dependencies
+#         run: npm install
+
+#       # Step 4: TypeScript check (falla si hay errores de tipos)
+#       - name: TypeScript check
+#         run: npx tsc --noEmit
+
+#       # Step 5: Autenticar con Expo usando el secret EXPO_TOKEN
+#       - name: Setup Expo and EAS CLI
+#         uses: expo/expo-github-action@v8
+#         with:
+#           eas-version: latest
+#           token: ${{ secrets.EXPO_TOKEN }}
+
+#       # Step 6: Ejecutar EAS Build
+#       # --non-interactive: obligatorio en CI (no espera input del usuario)
+#       # --no-wait: encola el build y retorna (no bloquea el runner)
+#       - name: Run EAS Build
+#         run: eas build --platform all --profile production --non-interactive --no-wait
