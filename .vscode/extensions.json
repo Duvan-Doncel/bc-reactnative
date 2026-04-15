@@ -1,0 +1,64 @@
+{
+  // Extensiones recomendadas para el Bootcamp React Native Zero to Hero
+  // Criterios: cuenta verificada en VS Code Marketplace + más de 1.000.000 de installs
+  // CVE: todas open-source y auditables en GitHub. Ejecutar pnpm audit en cada proyecto.
+  "recommendations": [
+    // ─── React Native / Expo ─────────────────────────────────────────────────
+    // Publisher: Microsoft ✓ | 6M+ installs
+    // Debug, comandos y soporte Expo integrado
+    "msjsdiag.vscode-react-native",
+
+    // ─── TypeScript & Linting ────────────────────────────────────────────────
+    // Publisher: Microsoft ✓ | 30M+ installs
+    "dbaeumer.vscode-eslint",
+
+    // Publisher: Prettier ✓ | 48M+ installs
+    "esbenp.prettier-vscode",
+
+    // ─── Git & Colaboración ──────────────────────────────────────────────────
+    // Publisher: GitKraken ✓ | 22M+ installs
+    "eamodio.gitlens",
+
+    // ─── Productividad / DX ──────────────────────────────────────────────────
+    // Publisher: usernamehw | 5M+ installs
+    // Muestra errores de TypeScript/ESLint inline en el editor
+    "usernamehw.errorlens",
+
+    // Publisher: Jun Han (formulahendry) | 14M+ installs
+    // Renombra automáticamente etiquetas JSX de apertura/cierre
+    "formulahendry.auto-rename-tag",
+
+    // Publisher: Christian Kohler | 9M+ installs
+    // Autocompletado de rutas de archivos en imports
+    "christian-kohler.path-intellisense",
+
+    // ─── Iconos / UI ─────────────────────────────────────────────────────────
+    // Publisher: Philipp Kief (PKief) ✓ | 17M+ installs
+    "PKief.material-icon-theme",
+
+    // ─── Markdown (contenido del bootcamp) ───────────────────────────────────
+    // Publisher: Yu Zhang | 5M+ installs
+    // Tabla de contenidos, shortcuts, preview enriquecido
+    "yzhang.markdown-all-in-one",
+
+    // Publisher: David Anson (Microsoft) ✓ | 4M+ installs
+    // Linting de archivos .md según commonmark/markdownlint
+    "DavidAnson.vscode-markdownlint",
+
+    // ─── YAML (GitHub Actions CI/CD + EAS Workflows) ─────────────────────────
+    // Publisher: Red Hat ✓ | 26M+ installs
+    // IntelliSense y validación para .github/workflows/*.yml y .eas/workflows/*.yml
+    "redhat.vscode-yaml",
+
+    // ─── Calidad de código ───────────────────────────────────────────────────
+    // Publisher: Street Side Software ✓ | 7M+ installs
+    // Spell checker con soporte para código (camelCase, snake_case)
+    "streetsidesoftware.code-spell-checker"
+  ],
+
+  // Extensión oficial de Expo — publisher verificado (expo.dev) ✓
+  // 684K installs (bajo el umbral de 1M), se lista aparte para transparencia.
+  // Recomendada igualmente: IntelliSense para app.json / eas.json y debug directo.
+  // Para instalar: ext install expo.vscode-expo-tools
+  "unwantedRecommendations": []
+}
