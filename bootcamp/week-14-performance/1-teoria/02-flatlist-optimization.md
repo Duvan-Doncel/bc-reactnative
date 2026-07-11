@@ -158,7 +158,7 @@ Solución: aplicar `React.memo` al componente de fila y revisar cálculos en ren
 // app.json — verificar que Hermes esté habilitado
 {
   "expo": {
-    "jsEngine": "hermes"  // valor por defecto en Expo SDK 53
+    "jsEngine": "hermes"  // valor por defecto en Expo SDK 57
   }
 }
 ```

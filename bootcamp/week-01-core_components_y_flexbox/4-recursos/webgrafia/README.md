@@ -14,7 +14,7 @@
 | React Native — Pressable | https://reactnative.dev/docs/pressable | Uso y estados de Pressable |
 | React Native — StyleSheet | https://reactnative.dev/docs/stylesheet | API de StyleSheet y flattening |
 | React Native — Flexbox | https://reactnative.dev/docs/flexbox | Guía oficial de Flexbox en RN |
-| Expo SDK 53 — Release Notes | https://expo.dev/changelog/sdk-53 | Novedades del SDK 53 |
+| Expo SDK 57 — Release Notes | https://expo.dev/changelog/sdk-57 | Novedades del SDK 57 |
 | Expo — Get Started | https://docs.expo.dev/get-started/introduction/ | Guía de instalación y configuración |
 
 ## 🛠️ Herramientas

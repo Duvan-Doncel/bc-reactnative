@@ -18,7 +18,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 - Semana 05 — Networking y TanStack Query (Axios, interceptores)
 - Semana 06 — Formularios con React Hook Form + Zod
 - Semana 07 — Persistencia local con SecureStore y MMKV
-- Build nativo disponible para ejercicio-02 y el proyecto (`npx expo run:ios / run:android`)
+- Build nativo disponible para ejercicio-02 y el proyecto (`pnpm expo run:ios / run:android`)
 
 ## 🗂️ Estructura de la semana
 

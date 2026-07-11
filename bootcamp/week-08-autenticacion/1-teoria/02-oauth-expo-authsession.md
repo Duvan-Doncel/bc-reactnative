@@ -136,7 +136,7 @@ const discovery = AuthSession.useAutoDiscovery('https://accounts.google.com');
 
 - [Expo Authentication Guide](https://docs.expo.dev/develop/authentication)
 - [RFC 7636 — PKCE spec](https://tools.ietf.org/html/rfc7636)
-- [expo-auth-session docs SDK 53](https://docs.expo.dev/versions/v53.0.0/sdk/auth-session/)
+- [expo-auth-session docs SDK 57](https://docs.expo.dev/versions/v57.0.0/sdk/auth-session/)
 - Diagrama PKCE: ![OAuth PKCE Flow](../0-assets/02-oauth-pkce-flow.svg)
 
 ## ✅ Checklist de Verificación

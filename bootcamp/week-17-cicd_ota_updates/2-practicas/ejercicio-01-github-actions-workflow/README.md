@@ -90,7 +90,7 @@ Descomenta el bloque `jobs.build` en el starter.
 
       # Paso 3: Instalar las dependencias del proyecto
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 ```
 
 Descomenta estos tres pasos en el archivo starter.
@@ -105,7 +105,7 @@ Antes de buildear, verificar que no hay errores de tipos:
       # Paso 4: Verificar tipos con TypeScript
       # Si hay errores, el pipeline falla aquí (antes de gastar tiempo en el build)
       - name: TypeScript check
-        run: npx tsc --noEmit
+        run: pnpm exec tsc --noEmit
 ```
 
 ---
@@ -171,7 +171,7 @@ Después de hacer push con el archivo `.github/workflows/eas-build.yml`:
 - [ ] Nombre del workflow descriptivo
 - [ ] Trigger: `push.branches: [main]` + `workflow_dispatch`
 - [ ] Job corre en `ubuntu-latest`
-- [ ] Pasos: checkout → setup-node → npm install → tsc → expo-action → eas build
+- [ ] Pasos: checkout → setup-node → pnpm install → tsc → expo-action → eas build
 - [ ] `EXPO_TOKEN` referenciado como `${{ secrets.EXPO_TOKEN }}` (nunca hardcodeado)
 - [ ] `--non-interactive` en el comando de EAS
 - [ ] Secret `EXPO_TOKEN` creado en GitHub Settings

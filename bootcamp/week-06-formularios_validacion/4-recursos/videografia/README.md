@@ -100,7 +100,7 @@ Antes de seguir un tutorial, verifica:
 | **Academind** | TypeScript + React en profundidad |
 | **ByteGrad** | Next.js y React con buenas prácticas |
 
-> ⚠️ Siempre verifica la fecha del video. React Hook Form v7 y Zod v3 son los estándares actuales.
+> ⚠️ Siempre verifica la fecha del video. React Hook Form v7 y Zod v4 son los estándares actuales.
 
 ---
 

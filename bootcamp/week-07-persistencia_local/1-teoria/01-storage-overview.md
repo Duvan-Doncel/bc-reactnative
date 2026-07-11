@@ -56,7 +56,7 @@ await AsyncStorage.removeItem('theme');
 Motor de almacenamiento de WeChat, exponencialmente más rápido que AsyncStorage. Opera de forma **sincrónica** gracias a JSI/Nitro — no requiere `await`.
 
 > ⚠️ **Requiere build nativo** — no funciona en Expo Go.
-> Ejecuta `npx expo run:ios` o `npx expo run:android` para un dev build.
+> Ejecuta `pnpm expo run:ios` o `pnpm expo run:android` para un dev build.
 
 ```tsx
 import { MMKV } from 'react-native-mmkv';

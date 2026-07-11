@@ -80,7 +80,7 @@ steps:
       cache: 'npm'
 
   - name: Install EAS CLI
-    run: npm install -g eas-cli@latest
+    run: pnpm add -g eas-cli@latest
 
   - name: Build with EAS
     run: eas build --platform all --profile production --non-interactive
@@ -147,10 +147,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Run TypeScript check
-        run: npx tsc --noEmit
+        run: pnpm exec tsc --noEmit
 
       - name: Setup Expo + EAS CLI
         uses: expo/expo-github-action@v8
@@ -184,8 +184,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22.x, cache: 'npm' }
-      - run: npm install
-      - run: npx tsc --noEmit
+      - run: pnpm install
+      - run: pnpm exec tsc --noEmit
 
   build:
     name: EAS Build
@@ -196,7 +196,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: expo/expo-github-action@v8
         with: { eas-version: latest, token: '${{ secrets.EXPO_TOKEN }}' }
-      - run: npm install
+      - run: pnpm install
       - run: eas build --platform all --profile production --non-interactive
 ```
 

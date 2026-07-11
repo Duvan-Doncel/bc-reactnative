@@ -1,12 +1,12 @@
-# Webgrafía — Semana 10: Reanimated 3 y Gesture Handler
+# Webgrafía — Semana 10: Reanimated 4 y Gesture Handler
 
 ## 📚 Documentación Oficial
 
 | Recurso | URL | Descripción |
 |---------|-----|-------------|
-| Reanimated 3 Docs | https://docs.swmansion.com/react-native-reanimated/ | Documentación principal — API, ejemplos, migraciones |
+| Reanimated 4 Docs | https://docs.swmansion.com/react-native-reanimated/ | Documentación principal — API, ejemplos, migraciones |
 | React Native Gesture Handler | https://docs.swmansion.com/react-native-gesture-handler/ | Gestos declarativos para iOS y Android |
-| Reanimated — Core concepts | https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/your-first-animation | Primer animación con Reanimated 3 |
+| Reanimated — Core concepts | https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/your-first-animation | Primer animación con Reanimated 4 |
 | Gesture Handler — Gestures | https://docs.swmansion.com/react-native-gesture-handler/docs/gestures/pan-gesture | Referencia de Gesture.Pan |
 
 ## 🧪 APIs Clave
@@ -31,7 +31,7 @@
 
 | Título | URL | Nivel |
 |--------|-----|-------|
-| Reanimated 3 — What's New | https://blog.swmansion.com/bringing-the-animated-api-to-its-limits-introducing-reanimated-3 | Intermedio |
+| Reanimated 4 — What's New | https://blog.swmansion.com/bringing-the-animated-api-to-its-limits-introducing-reanimated-3 | Intermedio |
 | Building Swipeable Cards | https://docs.swmansion.com/react-native-gesture-handler/docs/guides/swipeable | Intermedio |
 | Worklets — How They Work | https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/worklets | Avanzado |
 | Migration v2 → v3 | https://docs.swmansion.com/react-native-reanimated/docs/guides/migration-from-reanimated-2 | Referencia |

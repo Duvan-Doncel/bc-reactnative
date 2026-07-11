@@ -18,4 +18,4 @@
 | Simon Grimm | Guías de Expo avanzadas incluyendo push notifications |
 
 > 💡 Busca los títulos anteriores en YouTube para encontrar los videos más actualizados
-> correspondientes a Expo SDK 53.
+> correspondientes a Expo SDK 57.

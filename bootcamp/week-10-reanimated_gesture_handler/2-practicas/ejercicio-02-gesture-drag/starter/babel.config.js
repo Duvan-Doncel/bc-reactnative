@@ -3,9 +3,9 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      // IMPORTANTE: 'react-native-reanimated/plugin' debe ser siempre el ÚLTIMO plugin.
+      // IMPORTANTE: 'react-native-worklets/plugin' debe ser siempre el ÚLTIMO plugin.
       // Sin este plugin, useSharedValue y useAnimatedStyle no funcionarán.
-      'react-native-reanimated/plugin',
+      'react-native-worklets/plugin',
     ],
   };
 };

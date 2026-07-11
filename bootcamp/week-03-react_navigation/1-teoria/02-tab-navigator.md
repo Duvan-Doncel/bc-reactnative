@@ -15,7 +15,7 @@
 pnpm add @react-navigation/bottom-tabs@7.3.10
 ```
 
-`@expo/vector-icons` ya está incluido en Expo SDK 53 — no requiere instalación aparte.
+`@expo/vector-icons` ya está incluido en Expo SDK 57 — no requiere instalación aparte.
 
 ---
 

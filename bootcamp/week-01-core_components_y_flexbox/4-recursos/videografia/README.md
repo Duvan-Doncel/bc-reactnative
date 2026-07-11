@@ -9,7 +9,7 @@
 | Video | Canal | Descripción | Duración aprox. |
 | ----- | ----- | ----------- | --------------- |
 | React Native Crash Course | Traversy Media / YouTube | Introducción rápida a los conceptos base | 60 min |
-| Expo SDK 53 — What's New | Expo / YouTube | Novedades del SDK que usamos en el bootcamp | 20 min |
+| Expo SDK 57 — What's New | Expo / YouTube | Novedades del SDK que usamos en el bootcamp | 20 min |
 | React Native in 100 Seconds | Fireship / YouTube | Overview visual y rápido de RN | 2 min |
 
 ### Core Components

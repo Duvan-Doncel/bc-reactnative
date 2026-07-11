@@ -76,5 +76,5 @@
 
   <!-- Nota footer -->
   <rect x="40" y="516" width="720" height="30" rx="6" fill="#161b22"/>
-  <text x="400" y="535" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e">Semana 01 — Fundamentos RN  |  React Native 0.79+  |  Expo SDK 53+</text>
+  <text x="400" y="535" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8b949e">Semana 01 — Fundamentos RN  |  React Native 0.86+  |  Expo SDK 57+</text>
 </svg>

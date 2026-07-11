@@ -3,7 +3,7 @@
 Videos y tutoriales complementarios para reforzar AsyncStorage, MMKV y SecureStore.
 
 > 💡 Los videos recomendados son punto de partida. Usa los términos de búsqueda para
-> encontrar contenido actualizado para Expo SDK 53+ y React Native 0.79+.
+> encontrar contenido actualizado para Expo SDK 57+ y React Native 0.86+.
 
 ---
 
@@ -66,7 +66,7 @@ react native storage comparison benchmark
 
 ### 2. MMKV — Rendimiento Sincrónico
 - Por qué MMKV es más rápido que AsyncStorage (JSI, sin bridge)
-- Instalación con `npx expo run:ios` / `npx expo run:android`
+- Instalación con `pnpm expo run:ios` / `pnpm expo run:android`
 - `useMMKVString`, `useMMKVBoolean`, `useMMKVNumber` — reactive hooks
 - Migración desde AsyncStorage a MMKV
 

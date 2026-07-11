@@ -1,5 +1,5 @@
 // Ejercicio 02 — MMKV y Expo SecureStore
-// 🔧 Requiere build nativo: npx expo run:ios | npx expo run:android
+// 🔧 Requiere build nativo: pnpm expo run:ios | pnpm expo run:android
 
 import React, { useEffect, useState } from 'react';
 import {

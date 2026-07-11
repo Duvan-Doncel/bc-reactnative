@@ -4,7 +4,7 @@
 
 Crear una tarjeta arrastrable con `Gesture.Pan` que sigue el dedo y vuelve a su posición original al soltar, con rotación dinámica y feedback de estado vía `runOnJS`.
 
-✅ Compatible con **Expo Go** (Expo SDK 53)
+✅ Compatible con **Expo Go** (Expo SDK 57)
 
 ---
 
@@ -13,7 +13,7 @@ Crear una tarjeta arrastrable con `Gesture.Pan` que sigue el dedo y vuelve a su 
 ```bash
 cd starter
 pnpm install
-npx expo start
+pnpm expo start
 ```
 
 ---

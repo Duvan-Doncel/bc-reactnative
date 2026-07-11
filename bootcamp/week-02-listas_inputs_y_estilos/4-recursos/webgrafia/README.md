@@ -48,6 +48,6 @@
 
 | Recurso | URL |
 |---------|-----|
-| Expo SDK 53 Release Notes | https://expo.dev/changelog/sdk-53 |
+| Expo SDK 57 Release Notes | https://expo.dev/changelog/sdk-57 |
 | Expo Go — Guía de inicio | https://docs.expo.dev/get-started/expo-go/ |
 | expo-status-bar | https://docs.expo.dev/versions/latest/sdk/status-bar/ |

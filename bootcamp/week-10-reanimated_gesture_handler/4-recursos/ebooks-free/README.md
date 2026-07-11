@@ -1,4 +1,4 @@
-# Ebooks Gratuitos — Semana 10: Reanimated 3 y Gesture Handler
+# Ebooks Gratuitos — Semana 10: Reanimated 4 y Gesture Handler
 
 ## 📗 Recursos en Formato Libro
 
@@ -12,7 +12,7 @@
 
 | Título | URL | Descripción |
 |--------|-----|-------------|
-| Reanimated 3 Cheat Sheet | https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary | Glosario oficial de la API |
+| Reanimated 4 Cheat Sheet | https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary | Glosario oficial de la API |
 | Gesture Handler API Reference | https://docs.swmansion.com/react-native-gesture-handler/docs/api | Referencia completa de gestos |
 
 ## 📎 Nota

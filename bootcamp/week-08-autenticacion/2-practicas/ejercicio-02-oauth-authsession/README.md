@@ -2,7 +2,7 @@
 
 > 🔧 **Requiere build nativo** — No funciona con Expo Go (los deep links con scheme personalizado requieren build)
 >
-> Usa `npx expo run:ios` o `npx expo run:android` después de configurar tus credenciales.
+> Usa `pnpm expo run:ios` o `pnpm expo run:android` después de configurar tus credenciales.
 
 ## 🎯 Objetivo
 
@@ -31,10 +31,10 @@ pnpm install
 
 ```bash
 # Build para iOS (simulador)
-npx expo run:ios
+pnpm expo run:ios
 
 # Build para Android (emulador)
-npx expo run:android
+pnpm expo run:android
 ```
 
 ## 📌 Nota sobre seguridad

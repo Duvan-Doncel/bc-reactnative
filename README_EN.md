@@ -41,7 +41,7 @@ Upon completion of the bootcamp, students will be able to:
 
 > **Modern React Native from day 1** — No legacy code, only current best practices.
 
-React Native with Expo is the most productive stack for building cross-platform mobile apps with JavaScript. This bootcamp focuses exclusively on Expo SDK 53+ and React Native 0.79+, with TypeScript from day one. Students learn directly the tools and techniques they will use in the professional world.
+React Native with Expo is the most productive stack for building cross-platform mobile apps with JavaScript. This bootcamp focuses exclusively on Expo SDK 57+ and React Native 0.86+ (New Architecture), with TypeScript from day one. Students learn directly the tools and techniques they will use in the professional world.
 
 ---
 
@@ -88,23 +88,23 @@ bootcamp/week-XX-tema_principal/
 
 ## 🛠️ Tech Stack
 
-| Technology         | Version     | Usage                        |
-| ------------------ | ----------- | ---------------------------- |
-| React Native       | **0.79+**   | Mobile framework             |
-| Expo SDK           | **53+**     | Development platform         |
-| TypeScript         | **5.x**     | Main language                |
-| React Navigation   | **7**       | Navigation                   |
-| Zustand            | **5.x**     | Global state                 |
-| TanStack Query     | **v5**      | Server state / cache         |
-| React Hook Form    | **7.x**     | Forms                        |
-| Zod                | **3.x**     | Schema validation            |
-| Expo SecureStore   | **14.x**    | Secure storage               |
-| Reanimated         | **3.x**     | Advanced animations          |
-| Gesture Handler    | **2.x**     | Touch gestures               |
-| EAS Build / Update | **latest**  | Build and OTA in production  |
-| Jest + RNTL        | **29 / 12** | Unit testing                 |
-| Maestro            | **1.x**     | E2E testing                  |
-| pnpm               | **10.x**    | Package management           |
+| Technology         | Version       | Usage                        |
+| ------------------ | ------------- | ---------------------------- |
+| React Native       | **0.86**      | Mobile framework (New Architecture) |
+| Expo SDK           | **57**        | Development platform         |
+| TypeScript         | **6.0**       | Main language                |
+| React Navigation   | **7.3**       | Navigation                   |
+| Zustand            | **5.x**       | Global state                 |
+| TanStack Query     | **v5**        | Server state / cache         |
+| React Hook Form    | **7.x**       | Forms                        |
+| Zod                | **4.x**       | Schema validation            |
+| Expo SecureStore   | **57.x**      | Secure storage               |
+| Reanimated         | **4.x**       | Advanced animations (New Architecture required) |
+| Gesture Handler    | **2.32**      | Touch gestures               |
+| EAS Build / Update | **latest**    | Build and OTA in production  |
+| Jest + RNTL        | **29 / 13**   | Unit testing                 |
+| Maestro            | **1.x**       | E2E testing                  |
+| pnpm               | **10.x**      | Package management           |
 
 **Development environment**: Expo Go + iOS/Android simulators  
 **Publishing**: App Store Connect + Google Play Console via EAS
@@ -115,7 +115,7 @@ bootcamp/week-XX-tema_principal/
 ### Prerequisites
 
 - **Node.js 22+** installed
-- **pnpm** as package manager (`npm install -g pnpm`)
+- **pnpm** as package manager (`corepack enable && corepack prepare pnpm@latest --activate`)
 - **Expo Go** on your physical device ([iOS](https://apps.apple.com/app/expo-go/id982107779) / [Android](https://play.google.com/store/apps/details?id=host.exp.exponent))
 - **Git** for version control
 - **VS Code** (recommended) with included extensions

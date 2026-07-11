@@ -1,12 +1,19 @@
-# Reanimated 3 — Fundamentos
+# Reanimated 4 — Fundamentos
 
-![Arquitectura Reanimated 3](../0-assets/01-reanimated-architecture.svg)
+![Arquitectura Reanimated 4](../0-assets/01-reanimated-architecture.svg)
 
 ## 🎯 Objetivos
 
-- Entender por qué Reanimated 3 es más eficiente que el Animated API clásico
+- Entender por qué Reanimated 4 es más eficiente que el Animated API clásico
 - Usar `useSharedValue` y `useAnimatedStyle` correctamente
 - Aplicar `withTiming`, `withSpring`, `withRepeat` y `withSequence`
+
+> ⚙️ **New Architecture requerida**: Reanimated 4 solo soporta la New Architecture
+> (Fabric + TurboModules) de React Native — eliminó el soporte para la arquitectura
+> legacy. Expo SDK 55+ ya la usa por defecto en todo proyecto nuevo, así que en la
+> práctica no necesitas configurar nada extra, pero si ves errores de "Reanimated 4
+> requires New Architecture" en un proyecto migrado desde una app antigua, revisa
+> `newArchEnabled` en `app.json`.
 
 ---
 
@@ -28,11 +35,11 @@ Semana 09 — Animated con useNativeDriver: true
   ⚠️ Si el JS está ocupado → drops
 ```
 
-**Reanimated 3** resuelve esto: toda la lógica de animación se ejecuta en un **worklet**
+**Reanimated 4** resuelve esto: toda la lógica de animación se ejecuta en un **worklet**
 que corre directamente en el **hilo UI**, sin pasar por el bridge.
 
 ```
-Semana 10 — Reanimated 3
+Semana 10 — Reanimated 4
 ┌──────────────┐                       ┌──────────────┐
 │  JS Thread   │   SharedValue sync    │  UI Thread   │
 │  (estado)    │  ◄──────────────────► │  (anima)     │
@@ -49,7 +56,7 @@ Semana 10 — Reanimated 3
 ```tsx
 import { useSharedValue } from 'react-native-reanimated';
 
-// ✅ Reanimated 3 — se accede con .value, sin .current
+// ✅ Reanimated 4 — se accede con .value, sin .current
 const opacity = useSharedValue(0);
 opacity.value = 1; // cambio instantáneo
 
@@ -111,7 +118,7 @@ opacity.value = withTiming(0, { duration: 300 }, (finished) => {
 
 ## 5. withSpring — física de resorte
 
-En Reanimated 3 los parámetros son diferentes: `damping` y `stiffness` en lugar de `friction` y `tension`.
+En Reanimated 4 los parámetros son diferentes: `damping` y `stiffness` en lugar de `friction` y `tension`.
 
 ```tsx
 import { withSpring } from 'react-native-reanimated';
@@ -182,7 +189,7 @@ const animatedStyle = useAnimatedStyle(() => {
 
 ## ✅ Checklist de Verificación
 
-- [ ] `babel.config.js` incluye `'react-native-reanimated/plugin'`
+- [ ] `babel.config.js` incluye `'react-native-worklets/plugin'` (Reanimated 4 movió el plugin de babel a `react-native-worklets`)
 - [ ] `GestureHandlerRootView` envuelve la app en `App.tsx`
 - [ ] `Animated` importado de `react-native-reanimated`, no de `react-native`
 - [ ] `useAnimatedStyle` siempre retorna un objeto plano (solo estilo, sin lógica compleja)

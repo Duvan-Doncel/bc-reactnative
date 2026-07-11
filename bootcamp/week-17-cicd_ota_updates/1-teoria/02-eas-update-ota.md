@@ -128,7 +128,7 @@ El `url` se obtiene con `eas update:configure` o en expo.dev → Project → Upd
 
 ```bash
 # Instalar el paquete
-npx expo install expo-updates
+pnpm expo install expo-updates
 
 # Configurar automáticamente (actualiza app.json y eas.json)
 eas update:configure
@@ -238,7 +238,7 @@ jobs:
           node-version: 22.x
           cache: 'npm'
 
-      - run: npm install
+      - run: pnpm install
 
       - uses: expo/expo-github-action@v8
         with:

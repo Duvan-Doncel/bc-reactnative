@@ -2,7 +2,7 @@
   <rect width="900" height="480" fill="#0f172a"/>
 
   <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#61DAFB">APIs Nativas — Expo SDK 53 — Semana 11</text>
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#61DAFB">APIs Nativas — Expo SDK 57 — Semana 11</text>
 
   <!-- ==================== CAMERA ==================== -->
   <rect x="30" y="58" width="256" height="186" rx="10" fill="#0c1f38" stroke="#3b82f6" stroke-width="1.8"/>

@@ -44,7 +44,7 @@ Expo (managed workflow)  →  más rápido de empezar, todo configurado
 React Native CLI         →  más control, requiere Xcode/Android Studio
 ```
 
-En este bootcamp usamos **Expo SDK 53+** con managed workflow. Si en algún momento necesitas una librería nativa que Expo no soporte de forma gestionada, puedes hacer "bare ejection", pero rara vez es necesario.
+En este bootcamp usamos **Expo SDK 57+** con managed workflow. Si en algún momento necesitas una librería nativa que Expo no soporte de forma gestionada, puedes hacer "bare ejection", pero rara vez es necesario.
 
 ---
 
@@ -148,7 +148,7 @@ Editas código  →  Metro bundler detecta el cambio  →  Hot Reload en el disp
 
 - [Expo Docs — Get Started](https://docs.expo.dev/get-started/introduction/)
 - [React Native — Intro](https://reactnative.dev/docs/getting-started)
-- [Expo SDK 53 Changelog](https://expo.dev/changelog/sdk-53)
+- [Expo SDK 57 Changelog](https://expo.dev/changelog/sdk-57)
 
 ## ✅ Checklist
 

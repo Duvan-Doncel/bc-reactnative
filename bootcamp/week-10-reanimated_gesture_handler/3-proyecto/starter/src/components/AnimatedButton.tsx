@@ -25,7 +25,7 @@ interface AnimatedButtonProps {
 // - Al soltar, vuelve a scale: 1 con spring
 // - Llama onPress al finalizar el gesto
 //
-// Parámetros de withSpring en Reanimated 3:
+// Parámetros de withSpring en Reanimated 4:
 // - damping: qué tan rápido se detiene la oscilación (similar a friction en w09)
 // - stiffness: qué tan "rígida" es la animación (similar a tension en w09)
 

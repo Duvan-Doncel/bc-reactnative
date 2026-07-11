@@ -183,7 +183,7 @@ return (
 
 ## 7. Comparativa: w09 vs w10
 
-| Concepto | Animated API (w09) | Reanimated 3 + GH (w10) |
+| Concepto | Animated API (w09) | Reanimated 4 + GH (w10) |
 |----------|-------------------|--------------------------|
 | Valor animado | `useRef(new Animated.Value(0)).current` | `useSharedValue(0)` |
 | Aplicar estilo | `style={{ opacity: anim }}` | `useAnimatedStyle(() => ({ opacity: sv.value }))` |

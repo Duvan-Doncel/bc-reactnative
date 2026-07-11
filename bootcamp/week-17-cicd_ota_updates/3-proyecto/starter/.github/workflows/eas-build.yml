@@ -26,20 +26,25 @@
 #       - name: Checkout repository
 #         uses: actions/checkout@v4
 
-#       # Step 2: Node 22 con caché
+#       # Step 2: pnpm + Node 22 con caché
+#       - name: Setup pnpm
+#         uses: pnpm/action-setup@v4
+#         with:
+#           version: latest
+
 #       - name: Setup Node.js
 #         uses: actions/setup-node@v4
 #         with:
 #           node-version: 22.x
-#           cache: 'npm'
+#           cache: 'pnpm'
 
 #       # Step 3: Instalar dependencias
 #       - name: Install dependencies
-#         run: npm install
+#         run: pnpm install --frozen-lockfile
 
 #       # Step 4: TypeScript check (falla si hay errores de tipos)
 #       - name: TypeScript check
-#         run: npx tsc --noEmit
+#         run: pnpm exec tsc --noEmit
 
 #       # Step 5: Autenticar con Expo usando el secret EXPO_TOKEN
 #       - name: Setup Expo and EAS CLI

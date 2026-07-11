@@ -13,7 +13,7 @@ Solicitar el permiso de ubicación, obtener la posición GPS puntual, seguirla e
 ```bash
 cd starter
 pnpm install
-npx expo start
+pnpm expo start
 ```
 
 ---

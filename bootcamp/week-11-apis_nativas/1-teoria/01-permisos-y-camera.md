@@ -1,9 +1,9 @@
-# Permisos y Cámara en Expo SDK 53
+# Permisos y Cámara en Expo SDK 57
 
 ## 🎯 Objetivos
 
 - Entender el ciclo de vida de permisos en iOS y Android
-- Solicitar permisos con el patrón moderno de Expo SDK 53
+- Solicitar permisos con el patrón moderno de Expo SDK 57
 - Usar `CameraView` para capturar fotos
 - Seleccionar imágenes desde la galería con `expo-image-picker`
 
@@ -50,7 +50,7 @@ Sin esta configuración, la app crashea en producción (EAS Build) o no solicita
 
 ## 2. expo-camera — CameraView y useCameraPermissions
 
-### Patrón moderno con hook (Expo SDK 53)
+### Patrón moderno con hook (Expo SDK 57)
 
 ```tsx
 import { CameraView, useCameraPermissions } from 'expo-camera';

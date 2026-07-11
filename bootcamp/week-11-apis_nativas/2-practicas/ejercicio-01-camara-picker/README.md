@@ -13,7 +13,7 @@ Capturar fotos con `CameraView` de `expo-camera` y seleccionar imágenes de la g
 ```bash
 cd starter
 pnpm install
-npx expo start
+pnpm expo start
 ```
 
 ---
@@ -22,7 +22,7 @@ npx expo start
 
 ### Paso 1 — Solicitar permiso de cámara con useCameraPermissions
 
-`useCameraPermissions()` es el patrón moderno de Expo SDK 53. Devuelve `[permissionObject, requestFn]` similar a `useState`.
+`useCameraPermissions()` es el patrón moderno de Expo SDK 57. Devuelve `[permissionObject, requestFn]` similar a `useState`.
 
 ```tsx
 import { CameraView, useCameraPermissions } from 'expo-camera';

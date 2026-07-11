@@ -32,8 +32,12 @@ type FormData = z.infer<typeof schema>;  // ← tipo generado gratis
 ### 2. Instalación
 
 ```bash
-pnpm add zod@3.25.76 @hookform/resolvers@5.2.2
+pnpm add zod@4.4.3 @hookform/resolvers@5.4.0
 ```
+
+> Zod 4 cambió cómo se personalizan mensajes de error: `required_error`/`invalid_type_error`
+> (Zod 3) se reemplazan por un único parámetro `message` (o `error` para casos avanzados).
+> Ver ejemplo del enum más abajo.
 
 ### 3. Tipos de campos comunes
 
@@ -51,7 +55,7 @@ const itemSchema = z.object({
   quantity: z.coerce.number().int('Debe ser entero').min(0, 'No puede ser negativo'),
 
   // Enums
-  status: z.enum(['active', 'inactive'], { required_error: 'Selecciona un estado' }),
+  status: z.enum(['active', 'inactive'], { message: 'Selecciona un estado' }),
 
   // Campos opcionales
   notes: z.string().optional(),

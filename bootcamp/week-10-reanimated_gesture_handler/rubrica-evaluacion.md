@@ -1,4 +1,4 @@
-# Rúbrica de Evaluación — Semana 10: Reanimated 3 y Gesture Handler
+# Rúbrica de Evaluación — Semana 10: Reanimated 4 y Gesture Handler
 
 ## Distribución de Puntaje
 
@@ -14,7 +14,7 @@
 
 ## 🧠 Conocimiento (30 pts)
 
-### Reanimated 3 — arquitectura (10 pts)
+### Reanimated 4 — arquitectura (10 pts)
 
 | Criterio | Pts |
 |----------|-----|
@@ -79,7 +79,7 @@
 
 | Infracción | Descuento |
 |------------|-----------|
-| Usar `Animated` de React Native en lugar de Reanimated 3 | -5 pts |
+| Usar `Animated` de React Native en lugar de Reanimated 4 | -5 pts |
 | Usar `useNativeDriver` (innecesario con Reanimated) | -3 pts |
 | `GestureHandlerRootView` ausente (crash en Android) | -5 pts |
 | No añadir `'react-native-reanimated/plugin'` a `babel.config.js` | -5 pts |

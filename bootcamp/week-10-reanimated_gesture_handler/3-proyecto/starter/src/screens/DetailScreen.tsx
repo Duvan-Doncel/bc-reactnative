@@ -16,7 +16,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Detail'>;
 // ============================================
 // DetailScreen — Semana 10
 // ============================================
-// Pantalla de detalle con animación de entrada en Reanimated 3.
+// Pantalla de detalle con animación de entrada en Reanimated 4.
 //
 // Migración respecto a w09:
 // - useRef(new Animated.Value) → useSharedValue

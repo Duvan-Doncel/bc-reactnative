@@ -14,12 +14,12 @@
 El Drawer muestra un menú lateral que se abre deslizando desde el borde o presionando un botón.
 
 ```bash
-pnpm add @react-navigation/drawer@7.3.9
-pnpm add react-native-gesture-handler@2.21.2
-pnpm add react-native-reanimated@3.17.4
+pnpm add @react-navigation/drawer@7.12.8
+pnpm add react-native-gesture-handler@2.32.0
+pnpm add react-native-reanimated@4.5.0 react-native-worklets@0.10.2
 ```
 
-> En Expo SDK 53, `react-native-reanimated` y `react-native-gesture-handler` ya están incluidos. Solo necesitas añadirlos si estás fuera de Expo Managed.
+> En Expo SDK 57, `react-native-reanimated` y `react-native-gesture-handler` ya están incluidos. Solo necesitas añadirlos si estás fuera de Expo Managed.
 
 ```tsx
 // src/navigation/DrawerNavigator.tsx

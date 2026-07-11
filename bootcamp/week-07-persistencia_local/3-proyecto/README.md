@@ -55,8 +55,8 @@ cd starter
 pnpm install
 
 # Requiere build nativo (MMKV)
-npx expo run:ios       # o
-npx expo run:android
+pnpm expo run:ios       # o
+pnpm expo run:android
 ```
 
 ## ✅ Requisitos Funcionales

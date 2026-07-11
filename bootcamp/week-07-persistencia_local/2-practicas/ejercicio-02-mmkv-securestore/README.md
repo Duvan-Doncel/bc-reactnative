@@ -3,8 +3,8 @@
 > 🔧 **Requiere build nativo** — no funciona en Expo Go
 >
 > ```bash
-> npx expo run:ios    # o
-> npx expo run:android
+> pnpm expo run:ios    # o
+> pnpm expo run:android
 > ```
 
 ## 🎯 Objetivo
@@ -16,7 +16,7 @@ Practicar MMKV para almacenamiento **sincrónico** de preferencias y Expo Secure
 ```bash
 cd starter
 pnpm install
-npx expo run:ios      # primera vez — instala módulos nativos
+pnpm expo run:ios      # primera vez — instala módulos nativos
 pnpm start            # siguientes veces
 ```
 

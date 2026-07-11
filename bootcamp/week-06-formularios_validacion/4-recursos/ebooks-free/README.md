@@ -9,7 +9,7 @@ Formularios con React Hook Form y Zod
 ### 1. Instalación
 
 ```bash
-pnpm add react-hook-form@7.72.1 zod@3.25.76 @hookform/resolvers@5.2.2
+pnpm add react-hook-form@7.81.0 zod@4.4.3 @hookform/resolvers@5.4.0
 ```
 
 ---

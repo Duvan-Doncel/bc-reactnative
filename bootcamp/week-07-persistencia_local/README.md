@@ -18,7 +18,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 - Semanas 01-06 completadas
 - React Navigation, Zustand y TanStack Query dominados (semanas 03-05)
 - React Hook Form + Zod conocidos (semana 06)
-- Para MMKV: build nativo (`npx expo run:ios` o `npx expo run:android`) — **no compatible con Expo Go**
+- Para MMKV: build nativo (`pnpm expo run:ios` o `pnpm expo run:android`) — **no compatible con Expo Go**
 
 ## 🗂️ Estructura de la semana
 

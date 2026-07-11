@@ -13,10 +13,10 @@
 
 | Recurso | URL | Descripción |
 |---------|-----|-------------|
-| **Expo AuthSession docs** | https://docs.expo.dev/versions/v53.0.0/sdk/auth-session/ | Documentación oficial `expo-auth-session` v6.2.1 |
-| **Expo SecureStore docs** | https://docs.expo.dev/versions/v53.0.0/sdk/securestore/ | Almacenamiento seguro de tokens |
+| **Expo AuthSession docs** | https://docs.expo.dev/versions/v57.0.0/sdk/auth-session/ | Documentación oficial `expo-auth-session` v6.2.1 |
+| **Expo SecureStore docs** | https://docs.expo.dev/versions/v57.0.0/sdk/securestore/ | Almacenamiento seguro de tokens |
 | **Authentication - Expo guide** | https://docs.expo.dev/guides/authentication/ | Guía de autenticación con múltiples proveedores |
-| **Expo WebBrowser docs** | https://docs.expo.dev/versions/v53.0.0/sdk/webbrowser/ | Control del navegador para flujos OAuth |
+| **Expo WebBrowser docs** | https://docs.expo.dev/versions/v57.0.0/sdk/webbrowser/ | Control del navegador para flujos OAuth |
 
 ## PKCE y OAuth 2.0
 

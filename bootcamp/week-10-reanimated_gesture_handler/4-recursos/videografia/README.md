@@ -1,12 +1,12 @@
-# Videografía — Semana 10: Reanimated 3 y Gesture Handler
+# Videografía — Semana 10: Reanimated 4 y Gesture Handler
 
-## 🎥 Fundamentos de Reanimated 3
+## 🎥 Fundamentos de Reanimated 4
 
 | Título | Canal | URL | Duración | Nivel |
 |--------|-------|-----|----------|-------|
-| React Native Reanimated 3 — Full Tutorial | William Candillon | https://youtu.be/00jTMXx7bSA | ~45 min | Intermedio |
+| React Native Reanimated 4 — Full Tutorial | William Candillon | https://youtu.be/00jTMXx7bSA | ~45 min | Intermedio |
 | useSharedValue & useAnimatedStyle Deep Dive | Catalin Miron | https://youtu.be/k2h7ph8qEjs | ~25 min | Principiante |
-| Reanimated 3 — withSpring, withTiming, withRepeat | Notjust Dev | https://youtu.be/kDLkR3fIVNA | ~20 min | Principiante |
+| Reanimated 4 — withSpring, withTiming, withRepeat | Notjust Dev | https://youtu.be/kDLkR3fIVNA | ~20 min | Principiante |
 
 ## 🤙 Gesture Handler
 

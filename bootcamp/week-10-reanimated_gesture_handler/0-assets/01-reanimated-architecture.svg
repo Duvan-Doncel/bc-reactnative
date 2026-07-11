@@ -2,7 +2,7 @@
   <rect width="900" height="480" fill="#0f172a"/>
 
   <!-- Title -->
-  <text x="450" y="34" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f1f5f9" text-anchor="middle">Arquitectura Reanimated 3 — Hilo JS vs Hilo UI</text>
+  <text x="450" y="34" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f1f5f9" text-anchor="middle">Arquitectura Reanimated 4 — Hilo JS vs Hilo UI</text>
 
   <!-- ─── LEFT: Old Animated API ─── -->
   <rect x="20" y="52" width="400" height="200" rx="10" fill="#1e293b"/>
@@ -32,9 +32,9 @@
   <text x="310" y="175" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">del JS cuando llegan)</text>
   <text x="310" y="215" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#ef4444" text-anchor="middle">No decide, solo ejecuta</text>
 
-  <!-- ─── RIGHT: Reanimated 3 ─── -->
+  <!-- ─── RIGHT: Reanimated 4 ─── -->
   <rect x="460" y="52" width="420" height="200" rx="10" fill="#1e293b"/>
-  <text x="670" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#4ade80" text-anchor="middle">Reanimated 3 (semana 10)</text>
+  <text x="670" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#4ade80" text-anchor="middle">Reanimated 4 (semana 10)</text>
 
   <!-- JS Thread box (green) -->
   <rect x="476" y="90" width="140" height="148" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
@@ -71,7 +71,7 @@
   <rect x="20" y="288" width="260" height="22" rx="4" fill="#1e3a5f"/>
   <text x="150" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#61DAFB" text-anchor="middle">Animated API (w09)</text>
   <rect x="286" y="288" width="320" height="22" rx="4" fill="#052e16"/>
-  <text x="446" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#4ade80" text-anchor="middle">Reanimated 3 (w10)</text>
+  <text x="446" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#4ade80" text-anchor="middle">Reanimated 4 (w10)</text>
   <rect x="612" y="288" width="268" height="22" rx="4" fill="#1e293b"/>
   <text x="746" y="303" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">Notas</text>
 

@@ -1,4 +1,4 @@
-# Semana 10 — Reanimated 3 y Gesture Handler
+# Semana 10 — Reanimated 4 y Gesture Handler
 
 > **Fase 3 — Avanzado** | Semana 10 de 18 | ⏱️ 8 horas
 
@@ -12,7 +12,7 @@ pan, tap y pinch.
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-- Explicar la diferencia entre el hilo JS y el hilo UI, y por qué Reanimated 3 es más eficiente que el Animated API clásico
+- Explicar la diferencia entre el hilo JS y el hilo UI, y por qué Reanimated 4 es más eficiente que el Animated API clásico
 - Usar `useSharedValue` y `useAnimatedStyle` para crear animaciones que corren en el hilo nativo
 - Aplicar `withTiming`, `withSpring`, `withRepeat` y `withSequence` de forma declarativa
 - Conectar gestos con animaciones usando `GestureDetector` + `Gesture.Pan()` / `Gesture.Tap()`
@@ -33,7 +33,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 | Carpeta | Contenido | Tiempo |
 |---------|-----------|--------|
-| [1-teoria/](1-teoria/) | Reanimated 3 fundamentos + Gesture Handler | 2h |
+| [1-teoria/](1-teoria/) | Reanimated 4 fundamentos + Gesture Handler | 2h |
 | [2-practicas/](2-practicas/) | 2 ejercicios guiados (Expo Go) | 3h |
 | [3-proyecto/](3-proyecto/) | Proyecto integrador con dominio único | 3h |
 
@@ -68,7 +68,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 | Actividad | Tiempo | Descripción |
 |-----------|--------|-------------|
-| Teoría 01 | 1h | Reanimated 3: SharedValue, AnimatedStyle, combinadores |
+| Teoría 01 | 1h | Reanimated 4: SharedValue, AnimatedStyle, combinadores |
 | Teoría 02 | 1h | Gesture Handler: Pan, Tap, Pinch, runOnJS |
 | Ejercicio 01 | 1.5h | Reanimated básico comentado → descomentar |
 | Ejercicio 02 | 1.5h | Card arrastrable con pan gesture |

@@ -15,7 +15,7 @@ Implementar un flujo completo de autenticación JWT:
 ```bash
 cd starter
 pnpm install
-npx expo start
+pnpm expo start
 ```
 
 ## 📋 Credenciales de prueba

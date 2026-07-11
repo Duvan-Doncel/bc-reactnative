@@ -33,13 +33,13 @@ La pirámide de testing define tres niveles según costo, velocidad y cobertura:
 ### Instalación
 
 ```bash
-pnpm add -D jest@29.7.0 jest-expo@53.0.0 @types/jest@29.5.14
+pnpm add -D jest@29.7.0 jest-expo@57.0.1 @types/jest@29.5.14
 ```
 
 ### `jest.config.js`
 
 ```js
-// jest.config.js — configuración mínima para Expo SDK 53
+// jest.config.js — configuración mínima para Expo SDK 57
 module.exports = {
   preset: 'jest-expo',
   // Transforma módulos ESM que Jest no entiende por defecto

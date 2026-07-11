@@ -19,8 +19,8 @@ Sin él instalado, `eas update` no tiene efecto en la app.
 ## Paso 1: Instalar expo-updates
 
 ```bash
-# Usar npx expo install para garantizar la versión compatible con tu SDK
-npx expo install expo-updates
+# Usar pnpm expo install para garantizar la versión compatible con tu SDK
+pnpm expo install expo-updates
 
 # Verificar que aparece en package.json
 cat package.json | grep expo-updates

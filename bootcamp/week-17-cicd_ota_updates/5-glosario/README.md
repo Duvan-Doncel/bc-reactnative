@@ -2,7 +2,6 @@
 
 Términos técnicos clave introducidos esta semana, ordenados alfabéticamente.
 
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)
 
 ---
 
@@ -46,7 +45,7 @@ En GitHub Actions, se almacena como Secret y se referencia con
 
 ### expo-updates
 Paquete de Expo que habilita la recepción de OTA updates en runtime.
-Instalar con: `npx expo install expo-updates`.
+Instalar con: `pnpm expo install expo-updates`.
 Sin este paquete, `eas update` no tiene efecto en la app.
 
 ### expo/expo-github-action
@@ -113,7 +112,7 @@ Policy recomendada para el bootcamp: `{ "policy": "sdkVersion" }`.
 
 ### `sdkVersion` (policy)
 Policy de `runtimeVersion` que usa la versión del Expo SDK como identificador
-de compatibilidad. Ejemplo: SDK 53 → runtimeVersion `"53.0.0"`.
+de compatibilidad. Ejemplo: SDK 57 → runtimeVersion `"57.0.0"`.
 Recomendada para proyectos que siguen el ciclo de actualizaciones de Expo.
 
 ### Secrets (GitHub)

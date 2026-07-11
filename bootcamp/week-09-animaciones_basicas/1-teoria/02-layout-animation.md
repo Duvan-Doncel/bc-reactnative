@@ -157,7 +157,7 @@ LayoutAnimation.configureNext({
 | Barra de progreso con color | `Animated` + `interpolate` + `useNativeDriver: false` |
 | Lista que agrega/elimina items | `LayoutAnimation` |
 | Card que se expande/colapsa | `LayoutAnimation` |
-| Animaciones complejas con física | `Reanimated 3` (semana 10) |
+| Animaciones complejas con física | `Reanimated 4` (semana 10) |
 
 ## ✅ Checklist de Verificación
 

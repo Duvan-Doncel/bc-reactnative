@@ -47,7 +47,7 @@ function FadeInCard(): React.JSX.Element {
 // ============================================
 // PASO 2: Tap feedback con Gesture.Tap + withSpring
 // ============================================
-// Parámetros de spring en Reanimated 3: damping y stiffness
+// Parámetros de spring en Reanimated 4: damping y stiffness
 // (no friction y tension como en el Animated API clásico)
 
 function SpringTapButton(): React.JSX.Element {

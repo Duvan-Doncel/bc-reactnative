@@ -1,13 +1,13 @@
-# Ejercicio 01 — Reanimated 3 básico
+# Ejercicio 01 — Reanimated 4 básico
 
 ✅ Compatible con Expo Go — no requiere build nativo.
 
 ## 🎯 Objetivo
 
-Reemplazar el Animated API clásico por Reanimated 3:
+Reemplazar el Animated API clásico por Reanimated 4:
 `useSharedValue`, `useAnimatedStyle`, `withTiming`, `withSpring`, `withRepeat`, `withSequence`.
 
-> ⚠️ Diferencia clave respecto a la semana 09: en Reanimated 3 **no existe `useNativeDriver`**
+> ⚠️ Diferencia clave respecto a la semana 09: en Reanimated 4 **no existe `useNativeDriver`**
 > porque todo corre en el hilo nativo por defecto.
 
 ---
@@ -16,7 +16,7 @@ Reemplazar el Animated API clásico por Reanimated 3:
 
 ### Paso 1: Fade in con `withTiming`
 
-`withTiming` en Reanimated 3 es conceptualmente igual que `Animated.timing`,
+`withTiming` en Reanimated 4 es conceptualmente igual que `Animated.timing`,
 pero se asigna directamente al `.value` del SharedValue en lugar de llamar `.start()`.
 
 ```tsx
@@ -34,7 +34,7 @@ const animStyle = useAnimatedStyle(() => ({
 
 // Render:
 <Animated.View style={[styles.card, animStyle]}>
-  <Text>Fade in con Reanimated 3</Text>
+  <Text>Fade in con Reanimated 4</Text>
 </Animated.View>
 ```
 
@@ -47,7 +47,7 @@ const animStyle = useAnimatedStyle(() => ({
 
 ### Paso 2: Tap feedback con `withSpring` y `Gesture.Tap`
 
-En Reanimated 3 los gestos táctiles se manejan con `GestureDetector` en lugar de
+En Reanimated 4 los gestos táctiles se manejan con `GestureDetector` en lugar de
 `TouchableOpacity` o `Pressable`. Los parámetros del spring son `damping`/`stiffness`
 en lugar de `friction`/`tension`.
 

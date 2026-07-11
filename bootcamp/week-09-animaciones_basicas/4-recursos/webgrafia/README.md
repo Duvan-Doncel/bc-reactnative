@@ -27,7 +27,7 @@
 
 ## 📐 Próxima Semana
 
-La semana 10 introduce **Reanimated 3** y **Gesture Handler**, que permiten animaciones
+La semana 10 introduce **Reanimated 4** y **Gesture Handler**, que permiten animaciones
 más complejas declaradas enteramente en el hilo nativo:
 
 - https://docs.swmansion.com/react-native-reanimated/

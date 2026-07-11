@@ -50,7 +50,7 @@ starter/
 Completar `.github/workflows/eas-build.yml` con:
 - Trigger: push a `main` + `workflow_dispatch`
 - Job en `ubuntu-latest`
-- Pasos: checkout → setup-node → npm install → tsc → expo-github-action → eas build
+- Pasos: checkout → setup-node → pnpm install → tsc → expo-github-action → eas build
 - `EXPO_TOKEN` desde secrets
 
 ### 2. Workflow de OTA Updates (eas-update.yml)
@@ -97,11 +97,11 @@ Completar `docs/cicd-decisions.md`:
 
 ```bash
 cd starter
-npm install
-npm start
+pnpm install
+pnpm start
 ```
 
-Para iOS: `npm run ios` | Para Android: `npm run android`
+Para iOS: `pnpm run ios` | Para Android: `pnpm run android`
 
 ---
 
@@ -119,4 +119,4 @@ Para iOS: `npm run ios` | Para Android: `npm run android`
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)
