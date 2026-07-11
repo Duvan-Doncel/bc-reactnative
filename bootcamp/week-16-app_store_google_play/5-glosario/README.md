@@ -215,5 +215,3 @@ Estado en App Store Connect que indica que la versión fue enviada y está en co
 esperando ser asignada a un revisor de Apple.
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

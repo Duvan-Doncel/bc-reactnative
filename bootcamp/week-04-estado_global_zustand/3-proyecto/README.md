@@ -92,7 +92,7 @@ pnpm start
 
 ## 📊 Criterios de Evaluación
 
-Ver [rubrica-evaluacion.md](../../rubrica-evaluacion.md) — sección **Producto 📦 (30%)**
+Ver [rubrica-evaluacion.md](../rubrica-evaluacion.md) — sección **Producto 📦 (30%)**
 pnpm start
 ```
 
@@ -104,4 +104,4 @@ pnpm start
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)

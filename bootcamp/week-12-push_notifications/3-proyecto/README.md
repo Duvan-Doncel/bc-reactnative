@@ -70,7 +70,7 @@ Para push reales (Paso avanzado): necesitas dispositivo físico y EAS project ID
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)
 
 ## 🛠️ Entregables
 

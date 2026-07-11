@@ -14,5 +14,3 @@
 | ------- | --- | ----------- |
 | RNTL Cheat Sheet | https://callstack.github.io/react-native-testing-library/docs/api/queries | Referencia rápida de queries |
 | Jest Expect Cheat Sheet | https://jestjs.io/docs/expect | Todos los matchers de Jest |
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

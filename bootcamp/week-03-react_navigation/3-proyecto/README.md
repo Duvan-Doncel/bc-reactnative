@@ -92,7 +92,7 @@ Seleccionar simulador iOS (`i`) o Android (`a`) en el menú de Expo CLI.
 
 ## 📊 Criterios de Evaluación
 
-Ver [rubrica-evaluacion.md](../../rubrica-evaluacion.md) — sección **Producto 📦 (30%)**
+Ver [rubrica-evaluacion.md](../rubrica-evaluacion.md) — sección **Producto 📦 (30%)**
 
 ### Penalizaciones Importantes
 

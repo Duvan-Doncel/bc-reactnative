@@ -1,8 +1,8 @@
-# Proyecto Semana 10 — Animaciones Avanzadas con Reanimated 3 y Gesture Handler
+# Proyecto Semana 10 — Animaciones Avanzadas con Reanimated 4 y Gesture Handler
 
 ## 🎯 Objetivo
 
-Migrar la semana anterior de `Animated API` a **Reanimated 3** e integrar **React Native Gesture Handler** con gestos Pan, Tap y (opcionalmente) Pinch aplicados a tu dominio asignado.
+Migrar la semana anterior de `Animated API` a **Reanimated 4** e integrar **React Native Gesture Handler** con gestos Pan, Tap y (opcionalmente) Pinch aplicados a tu dominio asignado.
 
 ---
 
@@ -33,7 +33,7 @@ Migrar la semana anterior de `Animated API` a **Reanimated 3** e integrar **Reac
    - Usa `useSharedValue` y `useAnimatedStyle` (NO Animated API de `react-native`)
 
 4. **DetailScreen** — transición de entrada
-   - Fade in + slide-up usando Reanimated 3
+   - Fade in + slide-up usando Reanimated 4
 
 ### Opcionales (bonus)
 
@@ -111,4 +111,4 @@ pnpm start
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)

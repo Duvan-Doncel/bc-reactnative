@@ -71,15 +71,7 @@
 | Mock no restaurado entre tests (sin `jest.clearAllMocks()`)      | −3 pts       |
 | Copia de test suite de otro aprendiz                             | −10 pts      |
 
-> Criterios específicos de *Testing — Jest, RNTL y Maestro* — por definir.
-
-## 💪 Desempeño (40%)
-
-> Criterios de ejercicios prácticos — por definir.
-
-## 📦 Producto (30%)
-
-> Criterios del proyecto adaptado al dominio — por definir.
+---
 
 ### Criterios transversales
 

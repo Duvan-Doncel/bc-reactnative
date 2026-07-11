@@ -1,4 +1,4 @@
-# Glosario — Semana 10: Reanimated 3 y Gesture Handler
+# Glosario — Semana 10: Reanimated 4 y Gesture Handler
 
 Términos técnicos clave ordenados alfabéticamente.
 
@@ -7,7 +7,7 @@ Términos técnicos clave ordenados alfabéticamente.
 ## B
 
 **babel plugin (reanimated)**  
-Plugin de Babel requerido para que Reanimated 3 funcione. Se declara como último en `babel.config.js`:  
+Plugin de Babel requerido para que Reanimated 4 funcione. Se declara como último en `babel.config.js`:  
 ```js
 plugins: ['react-native-reanimated/plugin']
 ```
@@ -201,5 +201,3 @@ Función marcada para correr en el hilo UI. Los callbacks de Gesture y `useAnima
 Para llamar código JS normal desde worklet → `runOnJS`.
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

@@ -214,5 +214,3 @@ await waitFor(() => {
 ```
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

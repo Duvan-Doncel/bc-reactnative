@@ -138,5 +138,3 @@ Librería de desarrollo (`@welldone-software/why-did-you-render`) que detecta au
 re-renders innecesarios y los reporta en consola con la causa.
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

@@ -138,4 +138,4 @@ Escanea el QR con **Expo Go** en tu dispositivo o abre en simulador con `i` (iOS
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)

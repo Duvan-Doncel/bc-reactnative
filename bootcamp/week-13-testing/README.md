@@ -70,31 +70,3 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ← [Semana 12 — Push Notifications](../week-12-push_notifications/README.md) |
 [Semana 14 — Performance](../week-14-performance/README.md) →
-
-> 🚧 Por generar — usa el prompt `nueva-teoria`
-
-### Prácticas
-
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
-
-### Proyecto
-
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
-
-## ⏱️ Distribución del tiempo (8 horas)
-
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
-
-## 📌 Entregables
-
-- [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
-- [ ] App corriendo en simulador iOS y/o Android
-
-## 🔗 Navegación
-
-[← Semana 12 — Push Notifications](../week-12-push_notifications/README.md) | [Semana 14 — Performance y Optimización →](../week-14-performance/README.md)

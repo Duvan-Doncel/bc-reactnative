@@ -83,7 +83,7 @@ starter/
 
 ## 📊 Criterios de Evaluación
 
-Ver [rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [rubrica-evaluacion.md](../rubrica-evaluacion.md)
 
 
 Implementar los conceptos de **Networking y TanStack Query v5** aplicados a tu dominio asignado.
@@ -111,4 +111,4 @@ pnpm start
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)

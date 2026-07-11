@@ -76,11 +76,7 @@
 | App con errores en consola al entregar | −3 pts |
 | Copia de implementación de otro aprendiz | −10 pts |
 
-> Criterios de ejercicios prácticos — por definir.
-
-## 📦 Producto (30%)
-
-> Criterios del proyecto adaptado al dominio — por definir.
+---
 
 ### Criterios transversales
 

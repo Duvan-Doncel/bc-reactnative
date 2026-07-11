@@ -176,5 +176,3 @@ Booleano en la configuración de animaciones.
 - `false` → corre en el hilo JS (permite `width`, `height`, `backgroundColor`, etc.)
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

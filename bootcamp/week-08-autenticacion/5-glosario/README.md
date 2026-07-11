@@ -112,5 +112,3 @@ Proceso de intercambiar un refresh token por un nuevo access token cuando el ant
 
 **useAuthRequest**
 Hook de `expo-auth-session` que prepara la solicitud OAuth con PKCE automático. Retorna `[request, response, promptAsync]`.
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

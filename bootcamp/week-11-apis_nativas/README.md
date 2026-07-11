@@ -6,7 +6,7 @@
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-- ✅ Solicitar y gestionar permisos nativos con el patrón moderno de Expo SDK 53
+- ✅ Solicitar y gestionar permisos nativos con el patrón moderno de Expo SDK 57
 - ✅ Capturar fotos con `CameraView` de `expo-camera` y el hook `useCameraPermissions`
 - ✅ Seleccionar imágenes desde la galería con `expo-image-picker`
 - ✅ Obtener la ubicación del dispositivo con `expo-location` (puntual y continua)
@@ -17,7 +17,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ## 📚 Requisitos previos
 
-- Semana 10 completada (Reanimated 3 y Gesture Handler)
+- Semana 10 completada (Reanimated 4 y Gesture Handler)
 - Conocimiento de hooks de React (`useEffect`, `useRef`, `useState`)
 - Familiaridad con `async/await` y manejo de errores
 - **Dispositivo físico o simulador con Expo Go** instalado
@@ -36,7 +36,7 @@ week-11-apis_nativas/
 ├── rubrica-evaluacion.md
 ├── 0-assets/
 │   ├── 01-permission-flow.svg        ← Flujo de solicitud de permisos
-│   └── 02-apis-nativas-overview.svg  ← Mapa de APIs nativas Expo SDK 53
+│   └── 02-apis-nativas-overview.svg  ← Mapa de APIs nativas Expo SDK 57
 ├── 1-teoria/
 │   ├── 01-permisos-y-camera.md       ← Sistema de permisos + expo-camera
 │   └── 02-location.md                ← expo-location y geocodificación
@@ -92,54 +92,5 @@ week-11-apis_nativas/
 
 ## 🔗 Navegación
 
-← [Semana 10 — Reanimated 3 y Gesture Handler](../week-10-reanimated_gesture_handler/README.md)  
+← [Semana 10 — Reanimated 4 y Gesture Handler](../week-10-reanimated_gesture_handler/README.md)  
 → [Semana 12 — Push Notifications](../week-12-push_notifications/README.md)
-
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
-
-## 📚 Requisitos previos
-
-- Semana anterior completada
-- Expo Go instalado y simulador configurado
-
-## 🗂️ Estructura de la semana
-
-| Carpeta           | Contenido                    | Tiempo |
-| ----------------- | ---------------------------- | ------ |
-| `1-teoria/`       | Material teórico             | 2h     |
-| `2-practicas/`    | Ejercicios guiados           | 4h     |
-| `3-proyecto/`     | Proyecto integrador          | 2h     |
-
-## 📝 Contenidos
-
-### Teoría
-
-> 🚧 Por generar — usa el prompt `nueva-teoria`
-
-### Prácticas
-
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
-
-### Proyecto
-
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
-
-## ⏱️ Distribución del tiempo (8 horas)
-
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
-
-## 📌 Entregables
-
-- [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
-- [ ] App corriendo en simulador iOS y/o Android
-
-## 🔗 Navegación
-
-[← Semana 10 — Reanimated 3 y Gesture Handler](../week-10-reanimated_gesture_handler/README.md) | [Semana 12 — Push Notifications →](../week-12-push_notifications/README.md)

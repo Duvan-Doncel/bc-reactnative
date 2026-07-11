@@ -130,4 +130,4 @@ Para iOS simulator: `pnpm run ios` | Para Android emulator: `pnpm run android`
 
 ## 📊 Criterios de Evaluación
 
-Ver [../../rubrica-evaluacion.md](../../rubrica-evaluacion.md)
+Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)

@@ -138,5 +138,3 @@ Campo entero en `app.json` (`android.versionCode`) que identifica la versión in
 Estrategia de versionado en React Native: `version` (string semver, visible al usuario) + `buildNumber` (iOS, string numérico) + `versionCode` (Android, entero). Los tres campos deben gestionarse consistentemente.
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

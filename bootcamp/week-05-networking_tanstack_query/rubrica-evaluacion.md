@@ -106,23 +106,8 @@ const { data, isLoading, isError } = useQuery({
 | Llamadas fetch/Axios directas en `useEffect` sin TanStack Query | −8 pts |
 | App no inicia o tiene error de runtime al abrir | −10 pts |
 | Copia de implementación de otro aprendiz | −15 pts |
-| Conocimiento 🧠      | 30%  | Cuestionario teórico    |
-| Desempeño 💪         | 40%  | Ejercicios en clase     |
-| Producto 📦          | 30%  | Proyecto entregable     |
 
-**Mínimo aprobatorio**: 70% en cada tipo de evidencia.
-
-## 🧠 Conocimiento (30%)
-
-> Criterios específicos de *Networking y TanStack Query v5* — por definir.
-
-## 💪 Desempeño (40%)
-
-> Criterios de ejercicios prácticos — por definir.
-
-## 📦 Producto (30%)
-
-> Criterios del proyecto adaptado al dominio — por definir.
+---
 
 ### Criterios transversales
 

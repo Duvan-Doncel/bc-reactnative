@@ -31,10 +31,10 @@ Parámetro de `watchPositionAsync`. Define el desplazamiento mínimo en metros p
 ## E
 
 **expo-camera**
-Módulo de Expo (v16 para SDK 53) que proporciona acceso a la cámara del dispositivo. Incluye el componente `CameraView` y el hook `useCameraPermissions`.
+Módulo de Expo (57.0.1 para SDK 57) que proporciona acceso a la cámara del dispositivo. Incluye el componente `CameraView` y el hook `useCameraPermissions`.
 
 **expo-image-picker**
-Módulo de Expo (v16) que abre el selector nativo de fotos/videos del SO. Más sencillo que `expo-camera` para el flujo "elige de galería o toma foto con UI del sistema".
+Módulo de Expo (57.0.2) que abre el selector nativo de fotos/videos del SO. Más sencillo que `expo-camera` para el flujo "elige de galería o toma foto con UI del sistema".
 
 **expo-location**
 Módulo de Expo (v18) para acceder al GPS y servicios de localización. Provee permisos, posición puntual, seguimiento continuo y geocodificación.
@@ -126,7 +126,7 @@ Parámetro de `watchPositionAsync`. Intervalo mínimo en milisegundos entre actu
 Estado inicial de cualquier permiso. Indica que aún no se ha preguntado al usuario. En este estado se debe mostrar rationale antes de solicitar el permiso.
 
 **useCameraPermissions**
-Hook de `expo-camera` que devuelve `[permissionObject, requestPermissionFn]`. Es el patrón moderno de Expo SDK 53+. Contrasta con el deprecated `Camera.requestCameraPermissionsAsync()`.
+Hook de `expo-camera` que devuelve `[permissionObject, requestPermissionFn]`. Es el patrón moderno de Expo SDK 57+. Contrasta con el deprecated `Camera.requestCameraPermissionsAsync()`.
 
 ## W
 
@@ -134,6 +134,4 @@ Hook de `expo-camera` que devuelve `[permissionObject, requestPermissionFn]`. Es
 Función de `expo-location` que activa el seguimiento GPS continuo. Llama al callback cada vez que el dispositivo se mueve (según `timeInterval` y `distanceInterval`). Devuelve una `LocationSubscription` que debe limpiarse con `.remove()`.
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)
 

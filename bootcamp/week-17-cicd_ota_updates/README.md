@@ -18,7 +18,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 - Semana 15 completa (EAS Build configurado, perfiles `development`, `preview`, `production`)
 - Semana 16 completa (app publicada en tiendas o lista para publicar)
 - Cuenta en GitHub con acceso al repositorio del proyecto
-- EAS CLI instalado: `npm install -g eas-cli` → verificar con `eas --version`
+- EAS CLI instalado: `pnpm add -g eas-cli` → verificar con `eas --version`
 - `expo-updates` instalado en el proyecto
 
 ## 🗂️ Estructura de la semana
@@ -66,31 +66,3 @@ Al finalizar esta semana, el estudiante será capaz de:
 ## 🔗 Navegación
 
 ← [Semana 16 — App Store y Google Play](../week-16-app_store_google_play/README.md) | [Semana 18 — Proyecto Final →](../week-18-proyecto_final/README.md)
-
-> 🚧 Por generar — usa el prompt `nueva-teoria`
-
-### Prácticas
-
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
-
-### Proyecto
-
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
-
-## ⏱️ Distribución del tiempo (8 horas)
-
-| Actividad  | Tiempo | Descripción                |
-| ---------- | ------ | -------------------------- |
-| Teoría     | 2h     | Lectura y ejemplos         |
-| Prácticas  | 4h     | Ejercicios guiados         |
-| Proyecto   | 2h     | Implementación propia      |
-
-## 📌 Entregables
-
-- [ ] Ejercicios completados (prácticas descomentadas y funcionando)
-- [ ] Proyecto adaptado al dominio asignado
-- [ ] App corriendo en simulador iOS y/o Android
-
-## 🔗 Navegación
-
-[← Semana 16 — App Store y Google Play Console](../week-16-app_store_google_play/README.md) | [Semana 18 — Proyecto Final Integrador →](../week-18-proyecto_final/README.md)

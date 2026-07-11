@@ -83,7 +83,7 @@ Paquete Expo que expone metadatos del dispositivo: `isDevice`, `modelName`,
 
 **expo-notifications**
 Paquete oficial de Expo para gestionar notificaciones locales y push.
-Versión para Expo SDK 53: `0.29.14`.
+Versión para Expo SDK 57: `57.0.3`.
 
 ## F
 
@@ -186,5 +186,3 @@ Objeto que define cuándo disparar una notificación local:
 - `{ type: DAILY, hour: 9, minute: 0 }` → cada día a las 9:00
 
 ---
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)

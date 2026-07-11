@@ -10,5 +10,3 @@
 | Expo Notifications Docs (completo) | https://docs.expo.dev/push-notifications/overview/ | Documentación oficial Expo |
 | MDN — Push API Concepts | https://developer.mozilla.org/en-US/docs/Web/API/Push_API | Contexto web → compara con mobile |
 | Google — Firebase Cloud Messaging Guide | https://firebase.google.com/docs/cloud-messaging/concept-options | Arquitectura FCM |
-
-> 📚 Glosario global del bootcamp: [docs/glosario-global.md](../../docs/glosario-global.md)
