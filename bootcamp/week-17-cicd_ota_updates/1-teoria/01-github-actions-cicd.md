@@ -73,11 +73,16 @@ steps:
   - name: Checkout code
     uses: actions/checkout@v4
 
+  - name: Setup pnpm
+    uses: pnpm/action-setup@v4
+    with:
+      version: 9
+
   - name: Setup Node.js
     uses: actions/setup-node@v4
     with:
       node-version: 22.x
-      cache: 'npm'
+      cache: 'pnpm'
 
   - name: Install EAS CLI
     run: pnpm add -g eas-cli@latest
@@ -140,11 +145,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
@@ -182,8 +192,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
       - uses: actions/setup-node@v4
-        with: { node-version: 22.x, cache: 'npm' }
+        with: { node-version: 22.x, cache: 'pnpm' }
       - run: pnpm install
       - run: pnpm exec tsc --noEmit
 
@@ -228,7 +240,7 @@ Para esperar el resultado del build en el workflow: usar `--wait` (pero aumenta 
 - Nunca hardcodear el `EXPO_TOKEN` en el YAML
 - Usar `--non-interactive` en todos los comandos de EAS en CI
 - Agregar `--no-wait` para builds rápidos (el build ocurre en background en Expo)
-- Cachear `node_modules` con `cache: 'npm'` en `setup-node`
+- Cachear `node_modules` con `pnpm/action-setup` + `cache: 'pnpm'` en `setup-node`
 
 ---
 

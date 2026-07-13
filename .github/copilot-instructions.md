@@ -12,7 +12,7 @@ Este es un **Bootcamp de React Native Zero to Hero** estructurado para llevar a 
 - **Nivel de entrada**: Desarrollador con experiencia en JS/TS moderno y React
 - **Nivel de salida**: Desarrollador Mobile Junior (React Native)
 - **Enfoque**: React Native moderno con Expo SDK, TypeScript y mejores prácticas de 2026
-- **Stack**: React Native 0.79+, Expo SDK 53+, TypeScript 5.x, React Navigation 7, Zustand, TanStack Query v5, EAS
+- **Stack**: React Native 0.86, Expo SDK 57, TypeScript 6.0, React Navigation 7, Zustand, TanStack Query v5, EAS
 
 ---
 
@@ -27,7 +27,7 @@ Al finalizar el bootcamp, los estudiantes serán capaces de:
 - ✅ Consumir APIs REST de forma robusta y tipada
 - ✅ Manejar formularios con React Hook Form + Zod
 - ✅ Implementar persistencia local y autenticación completa
-- ✅ Crear animaciones fluidas con Reanimated 3 y Gesture Handler
+- ✅ Crear animaciones fluidas con Reanimated 4 y Gesture Handler
 - ✅ Acceder a APIs nativas (cámara, geolocalización, notificaciones)
 - ✅ Escribir tests automatizados con Jest, RNTL y Maestro
 - ✅ Optimizar performance de apps React Native
@@ -61,7 +61,7 @@ Al finalizar el bootcamp, los estudiantes serán capaces de:
 #### **Avanzado (Semanas 9-14)** - 48 horas
 
 - Animaciones básicas con Animated API y LayoutAnimation
-- Animaciones avanzadas con Reanimated 3 y Gesture Handler
+- Animaciones avanzadas con Reanimated 4 y Gesture Handler
 - APIs nativas: Expo Camera, Expo Location, permisos con Expo Permissions
 - Push Notifications con Expo Notifications (FCM + APNs)
 - Testing: Jest, React Native Testing Library y Maestro E2E
@@ -103,7 +103,6 @@ bootcamp/week-XX-tema_principal/
 ### 📁 Carpetas Raíz
 
 - **`assets/`**: Recursos visuales globales (logos, headers, etc.)
-- **`docs/`**: Documentación general que aplica a todo el bootcamp
 - **`scripts/`**: Scripts de automatización y utilidades
 - **`bootcamp/`**: Contenido semanal del bootcamp
 
@@ -691,7 +690,7 @@ Cuando trabajes en este proyecto:
 
 3. **Enfoque moderno**
    - No mencionar características obsoletas (no `class components`, no `createBottomTabNavigator` v5 legacy)
-   - Enfocarse en mejores prácticas de Expo SDK 53+ y RN 0.79+
+   - Enfocarse en mejores prácticas de Expo SDK 57+ y RN 0.86+
 
 ### Respuestas y Ayuda
 
@@ -725,7 +724,7 @@ Cuando trabajes en este proyecto:
 ## 🔗 Enlaces Importantes
 
 - **Repositorio**: https://github.com/ergrato-dev/bc-reactnative
-- **Documentación general**: [docs/README.md](docs/README.md)
+- **Documentación general**: [README.md](../README.md)
 - **Primera semana**: [bootcamp/week-01-core_components_y_flexbox/README.md](bootcamp/week-01-core_components_y_flexbox/README.md)
 
 ---
@@ -757,5 +756,5 @@ Cuando crees contenido para una nueva semana:
 
 ---
 
-_Última actualización: Abril 2026_
+_Última actualización: Julio 2026_
 _Versión: 1.0_

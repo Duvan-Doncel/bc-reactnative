@@ -259,7 +259,6 @@ See the [LICENSE](LICENSE) file for the full text.
 
 <p align="center">
   <a href="bootcamp/week-01-core_components_y_flexbox">Start Week 1</a> •
-  <a href="docs">View Docs</a> •
   <a href="https://github.com/ergrato-dev/bc-reactnative/issues">Report Issue</a>
 </p>
 

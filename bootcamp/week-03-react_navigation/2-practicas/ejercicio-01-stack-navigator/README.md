@@ -121,4 +121,4 @@ Cuando todos los pasos estén descomentados deberías ver:
 - `navigate` con params vs `goBack`
 - `screenOptions` para estilos globales del header
 
-![Stack Navigator Flow](../../../0-assets/01-navigation-stack-flow.svg)
+![Stack Navigator Flow](../../0-assets/01-navigation-stack-flow.svg)

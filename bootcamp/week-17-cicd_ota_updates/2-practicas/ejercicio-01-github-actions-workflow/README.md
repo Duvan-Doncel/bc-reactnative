@@ -81,19 +81,25 @@ Descomenta el bloque `jobs.build` en el starter.
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Paso 2: Instalar Node.js 22 con caché de npm
+      # Paso 2: Instalar pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      # Paso 3: Instalar Node.js 22 con caché de pnpm
       - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'npm'
+          cache: 'pnpm'
 
-      # Paso 3: Instalar las dependencias del proyecto
+      # Paso 4: Instalar las dependencias del proyecto
       - name: Install dependencies
         run: pnpm install
 ```
 
-Descomenta estos tres pasos en el archivo starter.
+Descomenta estos cuatro pasos en el archivo starter.
 
 ---
 
@@ -171,7 +177,7 @@ Después de hacer push con el archivo `.github/workflows/eas-build.yml`:
 - [ ] Nombre del workflow descriptivo
 - [ ] Trigger: `push.branches: [main]` + `workflow_dispatch`
 - [ ] Job corre en `ubuntu-latest`
-- [ ] Pasos: checkout → setup-node → pnpm install → tsc → expo-action → eas build
+- [ ] Pasos: checkout → pnpm/action-setup → setup-node (cache pnpm) → pnpm install → tsc → expo-action → eas build
 - [ ] `EXPO_TOKEN` referenciado como `${{ secrets.EXPO_TOKEN }}` (nunca hardcodeado)
 - [ ] `--non-interactive` en el comando de EAS
 - [ ] Secret `EXPO_TOKEN` creado en GitHub Settings
