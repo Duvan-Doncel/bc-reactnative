@@ -2,6 +2,8 @@
 // Pantalla principal: lista de ítems con navegación al detalle.
 // El estudiante debe adaptar el diseño y los campos a su dominio.
 
+// src/screens/HomeScreen.tsx
+
 import React from 'react';
 import {
   FlatList,
@@ -21,12 +23,6 @@ import type { HomeStackParamList } from '../navigation/types';
 
 type HomeScreenNavProp = NativeStackNavigationProp<HomeStackParamList, 'HomeList'>;
 
-// ============================================================
-// SUB-COMPONENTE: ItemCard
-// ============================================================
-// TODO: adaptar la tarjeta a las propiedades específicas de tu dominio.
-//   Mostrar, por ejemplo, price (Farmacia), author (Biblioteca), etc.
-
 interface ItemCardProps {
   item: Item;
   onPress: () => void;
@@ -39,9 +35,7 @@ function ItemCard({ item, onPress }: ItemCardProps): React.JSX.Element {
       onPress={onPress}
       testID={`item-card-${item.id}`}
     >
-      {/* Placeholder del thumbnail */}
       <View style={styles.thumbnail}>
-        {/* TODO: reemplazar con imagen real usando expo-image o Image */}
         <Text style={styles.thumbnailText}>{item.name.charAt(0)}</Text>
       </View>
 
@@ -52,7 +46,9 @@ function ItemCard({ item, onPress }: ItemCardProps): React.JSX.Element {
         <Text style={styles.cardDescription} numberOfLines={2}>
           {item.description}
         </Text>
-        {/* TODO: agregar campos específicos de tu dominio aquí */}
+        <Text style={styles.cardMeta}>
+          {item.productCategory} · {item.location}
+        </Text>
       </View>
 
       <Text style={styles.chevron}>›</Text>
@@ -60,15 +56,9 @@ function ItemCard({ item, onPress }: ItemCardProps): React.JSX.Element {
   );
 }
 
-// ============================================================
-// PANTALLA: HomeScreen
-// ============================================================
-
 export function HomeScreen(): React.JSX.Element {
   const navigation = useNavigation<HomeScreenNavProp>();
 
-  // TODO: leer los ítems desde un Zustand store (opcional bonus)
-  // o desde la API real de tu dominio (semana 5 — TanStack Query)
   const items = ITEMS;
 
   const renderItem: ListRenderItem<Item> = ({ item }) => (
@@ -88,7 +78,6 @@ export function HomeScreen(): React.JSX.Element {
         renderItem={renderItem}
         contentContainerStyle={styles.list}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
-        // TODO: agregar un header con estadísticas (total de ítems, etc.)
         ListHeaderComponent={
           <Text style={styles.sectionLabel}>
             {items.length} ítem{items.length !== 1 ? 's' : ''}
@@ -101,10 +90,6 @@ export function HomeScreen(): React.JSX.Element {
     </View>
   );
 }
-
-// ============================================================
-// ESTILOS
-// ============================================================
 
 const styles = StyleSheet.create({
   container: {
@@ -159,6 +144,10 @@ const styles = StyleSheet.create({
   },
   cardDescription: {
     ...TYPOGRAPHY.caption,
+  },
+  cardMeta: {
+    ...TYPOGRAPHY.label,
+    color: COLORS.accent,
   },
   chevron: {
     ...TYPOGRAPHY.h2,

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "week04-zustand",
-    "slug": "week04-zustand",
+    "name": "mercado-campesino",
+    "slug": "mercado-campesino",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,16 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#0d1117"
     },
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "dev.bootcamp.week04zustand"
-    },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "dev.bootcamp.mercadocampesino" },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0d1117"
-      },
-      "package": "dev.bootcamp.week04zustand"
+      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0d1117" },
+      "package": "dev.bootcamp.mercadocampesino"
     },
     "newArchEnabled": true
   }

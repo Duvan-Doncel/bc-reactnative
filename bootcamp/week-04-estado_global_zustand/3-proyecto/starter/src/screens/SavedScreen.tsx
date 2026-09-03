@@ -13,6 +13,7 @@ import {
   type ListRenderItem,
 } from 'react-native';
 
+import { useSavedStore } from '../stores/savedStore';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../theme';
 import type { Item } from '../types';
 
@@ -60,15 +61,9 @@ function SavedItem({ item, onRemove }: SavedItemProps): React.JSX.Element {
 // ============================================================
 
 export function SavedScreen(): React.JSX.Element {
-  // TODO: conectar con el savedStore
-  // const items     = useSavedStore((state) => state.items);
-  // const removeItem = useSavedStore((state) => state.removeItem);
-  // const clearAll  = useSavedStore((state) => state.clearAll);
-
-  // Placeholder hasta que el store esté implementado
-  const items: Item[] = [];
-  const removeItem = (_id: string): void => {};
-  const clearAll = (): void => {};
+  const items = useSavedStore((state) => state.items);
+  const removeItem = useSavedStore((state) => state.removeItem);
+  const clearAll = useSavedStore((state) => state.clearAll);
 
   const renderItem: ListRenderItem<Item> = ({ item }) => (
     <SavedItem item={item} onRemove={() => removeItem(item.id)} />
