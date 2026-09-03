@@ -2,6 +2,8 @@
 // Formulario para crear un nuevo ítem.
 // TODO: conectar useForm + zodResolver + useCreateItem mutation.
 
+// src/screens/CreateScreen.tsx
+
 import React from 'react';
 import {
   ActivityIndicator,
@@ -15,59 +17,39 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../theme';
 import type { RootStackParamList } from '../navigation/types';
 import { FormField } from '../components/FormField';
-
-// TODO: importar useForm y zodResolver
-// import { useForm } from 'react-hook-form';
-// import { zodResolver } from '@hookform/resolvers/zod';
-// import { itemSchema, type ItemFormData } from '../schemas/itemSchema';
-
-// TODO: importar el hook de mutación
-// import { useCreateItem } from '../hooks/useItems';
+import { itemSchema, type ItemFormData } from '../schemas/itemSchema';
+import { useCreateItem } from '../hooks/useItems';
 
 type CreateNavProp = NativeStackNavigationProp<RootStackParamList, 'Create'>;
-
-// ──────────────────────────────────────────────
-// PANTALLA
-// ──────────────────────────────────────────────
 
 export function CreateScreen(): React.JSX.Element {
   const navigation = useNavigation<CreateNavProp>();
 
-  // TODO: inicializar useForm con zodResolver
-  // ─────────────────────────────────────────────
-  // const {
-  //   control,
-  //   handleSubmit,
-  //   formState: { errors, isSubmitting },
-  // } = useForm<ItemFormData>({
-  //   resolver: zodResolver(itemSchema),
-  //   defaultValues: { title: '', body: '' },
-  // });
+  const {
+    control,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<ItemFormData>({
+    resolver: zodResolver(itemSchema),
+    defaultValues: { title: '', body: '' },
+  });
 
-  // TODO: inicializar la mutation
-  // const { mutate: createItem } = useCreateItem();
+  const { mutate: createItem } = useCreateItem();
 
-  // Placeholder hasta que implementes el TODO
-  const isSubmitting = false;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const errors: any = {};
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const control: any = undefined;
-
-  // TODO: implementar la función onSubmit
-  // ─────────────────────────────────────────────
-  // function onSubmit(data: ItemFormData): void {
-  //   createItem(
-  //     { title: data.title, body: data.body ?? '', userId: 1 },
-  //     {
-  //       onSuccess: () => navigation.goBack(),
-  //     },
-  //   );
-  // }
+  function onSubmit(data: ItemFormData): void {
+    createItem(
+      { title: data.title, body: data.body ?? '', userId: 1 },
+      {
+        onSuccess: () => navigation.goBack(),
+      }
+    );
+  }
 
   const canSubmit = !isSubmitting;
 
@@ -81,17 +63,13 @@ export function CreateScreen(): React.JSX.Element {
         contentContainerStyle={styles.content}
         keyboardShouldPersistTaps="handled"
       >
-        <Text style={styles.hint}>
-          Adapta los campos de este formulario a tu dominio asignado.
-        </Text>
-
-        {/* TODO: reemplaza los FormField con los campos de tu dominio */}
+        <Text style={styles.hint}>Registra un nuevo vendedor del mercado campesino.</Text>
 
         <FormField
           control={control}
           name="title"
           label="Nombre *"
-          placeholder="Nombre del ítem…"
+          placeholder="Nombre del vendedor…"
           returnKeyType="next"
           errorMessage={errors.title?.message}
         />
@@ -107,26 +85,15 @@ export function CreateScreen(): React.JSX.Element {
           errorMessage={errors.body?.message}
         />
 
-        {/* TODO: agrega campos adicionales de tu dominio aquí */}
-        {/* Ejemplo para Farmacia:
-        <FormField
-          control={control}
-          name="price"
-          label="Precio *"
-          placeholder="0.00"
-          keyboardType="numeric"
-          errorMessage={errors.price?.message}
-        /> */}
-
         <View style={styles.actions}>
           <Pressable
             style={[styles.button, !canSubmit && styles.buttonDisabled]}
-            // onPress={handleSubmit(onSubmit)}   ← descomentar al implementar
+            onPress={handleSubmit(onSubmit)}
             disabled={!canSubmit}
           >
             {isSubmitting
               ? <ActivityIndicator size="small" color={COLORS.background} />
-              : <Text style={styles.buttonText}>Crear ítem</Text>
+              : <Text style={styles.buttonText}>Crear vendedor</Text>
             }
           </Pressable>
 
@@ -134,15 +101,10 @@ export function CreateScreen(): React.JSX.Element {
             <Text style={styles.cancelText}>Cancelar</Text>
           </Pressable>
         </View>
-
       </ScrollView>
     </KeyboardAvoidingView>
   );
 }
-
-// ──────────────────────────────────────────────
-// ESTILOS
-// ──────────────────────────────────────────────
 
 const styles = StyleSheet.create({
   flex: { flex: 1, backgroundColor: COLORS.background },

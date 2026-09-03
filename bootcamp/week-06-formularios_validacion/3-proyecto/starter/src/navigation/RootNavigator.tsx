@@ -24,7 +24,7 @@ export function RootNavigator(): React.JSX.Element {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
-        options={{ title: 'Ítems', headerRight: () => <AddButton /> }}
+        options={{ title: 'Vendedores', headerRight: () => <AddButton /> }}
       />
       <Stack.Screen
         name="Create"
