@@ -1,4 +1,4 @@
-// src/screens/HomeScreen.tsx
+﻿// src/screens/HomeScreen.tsx
 // Lista de ítems con soporte offline (caché AsyncStorage) y
 // respeto de las preferencias del usuario (orden, modo compacto).
 // Esta pantalla está COMPLETAMENTE IMPLEMENTADA — es el punto de partida.
@@ -33,11 +33,11 @@ function ItemRow({ item, compact }: ItemRowProps): React.JSX.Element {
       </View>
       <View style={styles.rowContent}>
         <Text style={styles.rowTitle} numberOfLines={compact ? 1 : 2}>
-          {item.title}
+          {item.title}{item.price ? ` · $${item.price}` : ''}
         </Text>
         {!compact && (
           <Text style={styles.rowBody} numberOfLines={2}>
-            {item.body}
+            {item.category ? `${item.category} · ` : ''}{item.body}
           </Text>
         )}
       </View>
@@ -168,3 +168,4 @@ const styles = StyleSheet.create({
   rowTitle: { ...TYPOGRAPHY.body, fontWeight: '600' },
   rowBody: { ...TYPOGRAPHY.caption },
 });
+

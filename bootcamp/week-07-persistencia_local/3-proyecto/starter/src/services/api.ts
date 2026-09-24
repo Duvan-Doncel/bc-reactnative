@@ -1,4 +1,4 @@
-// src/services/api.ts
+﻿// src/services/api.ts
 import axios from 'axios';
 import type { Item } from '../types';
 
@@ -10,7 +10,14 @@ const api = axios.create({
 });
 
 export async function fetchItems(): Promise<Item[]> {
-  const { data } = await api.get<Item[]>('/posts', { params: { _limit: 15 } });
+  const { data: posts } = await api.get<Item[]>('/posts', { params: { _limit: 15 } });
+  // Datos de práctica: la API de prueba no trae precio ni categoría, los simulamos por id
+  const categories = ['Verduras', 'Frutas', 'Lácteos', 'Tubérculos'];
+  const data = posts.map((p) => ({
+    ...p,
+    category: categories[p.id % categories.length],
+    price: 1500 + (p.id % 10) * 500,
+  }));
   return data;
 }
 
@@ -33,3 +40,4 @@ export async function updateItem(
   const { data } = await api.put<Item>(`/posts/${id}`, payload);
   return data;
 }
+

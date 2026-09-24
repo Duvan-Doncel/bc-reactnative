@@ -1,6 +1,5 @@
-// src/screens/CreateScreen.tsx
-// Formulario para crear un nuevo ítem.
-// Reutilizado de semana 06 — ya implementado con RHF + Zod.
+﻿// src/screens/CreateScreen.tsx
+// Formulario para registrar un producto del mercado campesino (RHF + Zod).
 
 import React from 'react';
 import {
@@ -35,14 +34,20 @@ export function CreateScreen(): React.JSX.Element {
     formState: { errors, isSubmitting },
   } = useForm<ItemFormData>({
     resolver: zodResolver(itemSchema),
-    defaultValues: { title: '', body: '' },
+    defaultValues: { title: '', body: '', price: '', category: '' },
   });
 
   const { mutate: createItem, isPending } = useCreateItem();
 
   function onSubmit(data: ItemFormData): void {
     createItem(
-      { title: data.title, body: data.body ?? '', userId: 1 },
+      {
+        title: data.title,
+        body: data.body ?? '',
+        userId: 1,
+        price: data.price ? Number(data.price) : undefined,
+        category: data.category || undefined,
+      },
       { onSuccess: () => navigation.goBack() },
     );
   }
@@ -59,31 +64,46 @@ export function CreateScreen(): React.JSX.Element {
         contentContainerStyle={styles.content}
         keyboardShouldPersistTaps="handled"
       >
-        <Text style={styles.hint}>
-          Adapta los campos a tu dominio asignado.
-        </Text>
+        <Text style={styles.hint}>Registra un producto de tu puesto en el mercado.</Text>
 
         <FormField
           control={control}
           name="title"
-          label="Nombre *"
-          placeholder="Nombre del ítem…"
+          label="Nombre del producto *"
+          placeholder="Ej: Papa criolla, Mora, Queso campesino…"
           returnKeyType="next"
           errorMessage={errors.title?.message}
         />
 
         <FormField
           control={control}
+          name="category"
+          label="Categoría"
+          placeholder="Ej: Verduras, Frutas, Lácteos…"
+          returnKeyType="next"
+          errorMessage={errors.category?.message}
+        />
+
+        <FormField
+          control={control}
+          name="price"
+          label="Precio (COP)"
+          placeholder="Ej: 4500"
+          keyboardType="numeric"
+          returnKeyType="next"
+          errorMessage={errors.price?.message}
+        />
+
+        <FormField
+          control={control}
           name="body"
           label="Descripción"
-          placeholder="Descripción opcional…"
+          placeholder="Origen, presentación, si es orgánico…"
           multiline
           numberOfLines={4}
           textAlignVertical="top"
           errorMessage={errors.body?.message}
         />
-
-        {/* TODO: agrega campos adicionales de tu dominio */}
 
         <View style={styles.actions}>
           <Pressable
@@ -93,7 +113,7 @@ export function CreateScreen(): React.JSX.Element {
           >
             {isSubmitting || isPending
               ? <ActivityIndicator size="small" color={COLORS.background} />
-              : <Text style={styles.buttonText}>Crear ítem</Text>
+              : <Text style={styles.buttonText}>Crear producto</Text>
             }
           </Pressable>
 

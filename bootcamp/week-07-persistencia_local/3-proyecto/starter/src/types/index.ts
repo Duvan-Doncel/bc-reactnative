@@ -1,15 +1,13 @@
-// src/types/index.ts
-// Tipos globales del proyecto.
-// TODO: adaptar 'Item' a los campos de tu dominio asignado.
+﻿// src/types/index.ts
+// Tipos globales del proyecto (dominio: mercado campesino).
 
 export interface Item {
   id: number;
-  title: string;
-  body: string;
+  title: string;      // nombre del producto
+  body: string;       // descripción
   userId: number;
-  // TODO: agrega propiedades específicas de tu dominio
-  // Ejemplo (Farmacia): price: number; stock: number; category: string;
-  // Ejemplo (Biblioteca): author: string; isbn: string; available: boolean;
+  price?: number;     // precio en COP
+  category?: string;  // frutas, verduras, lácteos...
 }
 
 // Tipo para el estado offline de la lista
