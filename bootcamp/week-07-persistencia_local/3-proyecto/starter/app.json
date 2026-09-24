@@ -20,6 +20,11 @@
       },
       "package": "dev.ergrato.bootcamp.week07"
     },
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "extra": {
+      "eas": {
+        "projectId": "cc4b4676-370c-4b9b-b4cd-7d880797a691"
+      }
+    }
   }
 }
