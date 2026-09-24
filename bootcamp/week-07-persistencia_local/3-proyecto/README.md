@@ -1,4 +1,4 @@
-# Proyecto Semana 07 — Persistencia Local
+﻿# Proyecto Semana 07 — Persistencia Local
 
 ## 🎯 Objetivo
 
@@ -106,3 +106,38 @@ pnpm expo run:android
 ## 📊 Criterios de Evaluación
 
 Ver [rubrica-evaluacion.md](../rubrica-evaluacion.md)
+
+---
+
+## Mi implementación: Mercado Campesino
+
+### Dominio
+
+App para gestionar los productos de un puesto en un mercado campesino. Cada producto tiene nombre, categoría (verduras, frutas, lácteos, tubérculos), precio en COP y descripción.
+
+Los datos de la lista vienen de JSONPlaceholder como API de práctica. Como esa API no trae precio ni categoría, se simulan por id en `src/services/api.ts`.
+
+### Persistencia
+
+| Storage | Qué guarda en mi app | Archivo |
+|---------|----------------------|---------|
+| MMKV | Orden de la lista, modo compacto e ítems por página | `src/hooks/usePreferences.ts` |
+| AsyncStorage | Caché de la lista de productos para verla sin red | `src/hooks/useItems.ts` |
+| SecureStore | Código de acceso del vendedor (cifrado, nunca se muestra en pantalla) | `src/screens/SettingsScreen.tsx` |
+
+- `usePreferences` centraliza las claves de MMKV y usa `useMMKVString`, `useMMKVBoolean` y `useMMKVNumber`, así las pantallas no tocan el storage directamente.
+- `useItems` guarda la lista en AsyncStorage cuando hay red y la lee de ahí cuando la petición falla. `HomeScreen` muestra un banner de "Sin red" cuando los datos vienen de la caché.
+- En Ajustes, el código del vendedor se escribe en un campo oculto, se guarda con `setItemAsync` y solo se confirma si existe (`getItemAsync`), sin mostrar su valor.
+
+### Cómo ejecutar
+
+MMKV necesita módulos nativos, así que no funciona en Expo Go. Se usa un build de desarrollo con EAS:
+
+```bash
+pnpm install
+eas build --profile development --platform android
+pnpm start --dev-client
+```
+
+Después de instalar el APK en el celular, se abre y se conecta al servidor de `pnpm start`.
+
