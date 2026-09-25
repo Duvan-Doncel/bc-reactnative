@@ -15,68 +15,58 @@ import type { RootStackParamList } from '../navigation/types';
 type Props = NativeStackScreenProps<RootStackParamList, 'Detail'>;
 
 export function DetailScreen({ route }: Props): React.JSX.Element {
-  const { itemId } = route.params;
+  const { item } = route.params;
 
-  // TODO: Create Animated.Values for the entrance animation.
-  // Two values needed:
-  //   opacityAnim = useRef(new Animated.Value(0)).current
-  //   translateYAnim = useRef(new Animated.Value(30)).current
+  const opacityAnim = useRef(new Animated.Value(0)).current;
+  const translateYAnim = useRef(new Animated.Value(30)).current;
 
   useEffect(() => {
-    // TODO: Use Animated.parallel to run fade in + slide up simultaneously.
-    //
-    // Animated.parallel([
-    //   Animated.timing(opacityAnim, {
-    //     toValue: 1,
-    //     duration: 500,
-    //     useNativeDriver: true,
-    //   }),
-    //   Animated.timing(translateYAnim, {
-    //     toValue: 0,
-    //     duration: 500,
-    //     useNativeDriver: true,
-    //   }),
-    // ]).start();
-  }, []);
-
-  // Simulated item data — replace with useQuery in a real implementation.
-  const item = {
-    id: itemId,
-    name: `Item ${itemId}`,
-    description:
-      'Esta es la descripción detallada del item. Adapta esta pantalla a tu dominio mostrando la información relevante de cada elemento.',
-    progress: 0.72,
-    // TODO: Add domain-specific fields
-  };
+    Animated.parallel([
+      Animated.timing(opacityAnim, {
+        toValue: 1,
+        duration: 500,
+        useNativeDriver: true,
+      }),
+      Animated.timing(translateYAnim, {
+        toValue: 0,
+        duration: 500,
+        useNativeDriver: true,
+      }),
+    ]).start();
+  }, [opacityAnim, translateYAnim]);
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        {/* TODO: Wrap this View in an Animated.View and apply the entrance animation.
-            animated style:
-              opacity: opacityAnim,
-              transform: [{ translateY: translateYAnim }]
-        */}
-        <View>
+        <Animated.View
+          style={{ opacity: opacityAnim, transform: [{ translateY: translateYAnim }] }}
+        >
           <View style={styles.card}>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.description}>{item.description}</Text>
           </View>
 
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>Progreso</Text>
-            <ProgressBar progress={item.progress} label="Completado" />
+            <Text style={styles.sectionTitle}>Stock disponible</Text>
+            <ProgressBar progress={item.progress ?? 0} label="Completado" />
           </View>
 
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>Detalles técnicos</Text>
+            <Text style={styles.sectionTitle}>Detalles del producto</Text>
             <Text style={styles.detailRow}>
               <Text style={styles.detailLabel}>ID: </Text>
               <Text style={styles.detailValue}>{item.id}</Text>
             </Text>
-            {/* TODO: Add domain-specific detail rows */}
+            <Text style={styles.detailRow}>
+              <Text style={styles.detailLabel}>Categoría: </Text>
+              <Text style={styles.detailValue}>{item.category}</Text>
+            </Text>
+            <Text style={styles.detailRow}>
+              <Text style={styles.detailLabel}>Precio: </Text>
+              <Text style={styles.detailValue}>${item.price.toLocaleString('es-CO')} COP</Text>
+            </Text>
           </View>
-        </View>
+        </Animated.View>
       </ScrollView>
     </SafeAreaView>
   );

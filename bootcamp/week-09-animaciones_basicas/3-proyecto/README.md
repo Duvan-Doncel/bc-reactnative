@@ -13,7 +13,7 @@ Las animaciones deben mejorar la experiencia del usuario, no solo existir como d
 
 ## 📋 Tu Dominio Asignado
 
-**Dominio**: [El instructor te asignará tu dominio único al inicio del bootcamp]
+**Dominio**: Mercado Campesino
 
 > 📌 Tu implementación debe ser coherente con tu dominio. No copies de otros aprendices.
 
@@ -139,3 +139,31 @@ Escanea el QR con **Expo Go** en tu dispositivo o abre en simulador con `i` (iOS
 ## 📊 Criterios de Evaluación
 
 Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)
+
+---
+
+## Mi implementación: Mercado Campesino
+
+### Dominio
+
+App para el puesto de un vendedor del mercado campesino. La lista principal (`HomeScreen`) muestra los productos publicados (verduras, frutas, lácteos, tubérculos) con su precio en COP y el % de stock disponible; al tocar un producto se abre su detalle (`DetailScreen`).
+
+### Animaciones implementadas
+
+| # | Dónde | Qué hace |
+|---|-------|----------|
+| 1 | `DetailScreen.tsx` | Entrada con `Animated.parallel`: fade in (opacity 0→1) + slide up (translateY 30→0) en 500ms al montar |
+| 2 | `AnimatedCard.tsx` | Feedback táctil con `Animated.spring`: la card se comprime a 0.95 en `onPressIn` y rebota a 1 en `onPressOut` |
+| 3 | `AnimatedButton.tsx` | `Animated.timing` (80ms) al presionar + `Animated.spring` (tension 400, friction 12) al soltar |
+| 4 | `ProgressBar.tsx` | `interpolate` sobre un solo `Animated.Value`: anima `width` (0%→100%) y `backgroundColor` (rojo → amarillo → verde) según el stock disponible del producto |
+| 5 | `HomeScreen.tsx` | Entrada en cascada de los productos con `Animated.stagger(80, ...)` al cargar; `LayoutAnimation.configureNext` al agregar o eliminar un producto de la lista |
+
+Todas las animaciones de transform/opacity usan `useNativeDriver: true`; solo `ProgressBar` usa `false` porque anima `width`/`backgroundColor`, que no son propiedades nativas soportadas por el driver nativo.
+
+### Cómo ejecutar
+
+```bash
+cd starter
+pnpm install
+pnpm start
+```

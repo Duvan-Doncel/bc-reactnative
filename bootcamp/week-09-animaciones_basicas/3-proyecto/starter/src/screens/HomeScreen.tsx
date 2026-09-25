@@ -24,89 +24,101 @@ if (Platform.OS === 'android') {
   UIManager.setLayoutAnimationEnabledExperimental?.(true);
 }
 
-// Sample data — replace with your domain's real data or useQuery call.
+// Productos de ejemplo del puesto en el mercado campesino.
 const SAMPLE_ITEMS: Item[] = [
-  { id: '1', name: 'Item 1', description: 'Descripción del item 1', progress: 0.8 },
-  { id: '2', name: 'Item 2', description: 'Descripción del item 2', progress: 0.45 },
-  { id: '3', name: 'Item 3', description: 'Descripción del item 3', progress: 0.2 },
-  { id: '4', name: 'Item 4', description: 'Descripción del item 4', progress: 0.65 },
+  { id: '1', name: 'Tomate chonto', description: 'Tomate fresco de cosecha semanal', category: 'Verduras', price: 2500, progress: 0.8 },
+  { id: '2', name: 'Papa criolla', description: 'Papa criolla seleccionada, ideal para sancocho', category: 'Tubérculos', price: 3200, progress: 0.45 },
+  { id: '3', name: 'Leche entera', description: 'Leche de finca, entrega diaria', category: 'Lácteos', price: 4000, progress: 0.2 },
+  { id: '4', name: 'Mango tommy', description: 'Mango dulce de temporada', category: 'Frutas', price: 2800, progress: 0.65 },
 ];
+
+const CATEGORY_POOL = ['Verduras', 'Frutas', 'Lácteos', 'Tubérculos'];
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export function HomeScreen({ navigation }: Props): React.JSX.Element {
   const [items, setItems] = useState<Item[]>(SAMPLE_ITEMS);
 
-  // TODO: Create one Animated.Value per item for stagger entrance.
-  // Use useRef to avoid re-creating on each render.
-  // const itemAnims = useRef(SAMPLE_ITEMS.map(() => new Animated.Value(0))).current;
-  //
-  // Note: if items come from a remote query, initialize anims when data arrives.
+  // Un Animated.Value por producto, creado de forma perezosa.
+  // Los productos presentes al montar arrancan en 0 (se animan en cascada);
+  // los que se agregan después arrancan en 1 (LayoutAnimation ya anima su entrada).
+  const initialIds = useRef(new Set(SAMPLE_ITEMS.map(item => item.id))).current;
+  const itemAnims = useRef<Map<string, Animated.Value>>(new Map()).current;
+
+  const getItemAnim = (id: string): Animated.Value => {
+    let anim = itemAnims.get(id);
+    if (!anim) {
+      anim = new Animated.Value(initialIds.has(id) ? 0 : 1);
+      itemAnims.set(id, anim);
+    }
+    return anim;
+  };
 
   useEffect(() => {
-    // TODO: Trigger Animated.stagger to animate each item in with 80ms delay.
-    // Stagger:
-    //   delay: 80
-    //   each anim: Animated.timing → { toValue: 1, duration: 400, useNativeDriver: true }
-    //
-    // Animated.stagger(
-    //   80,
-    //   itemAnims.map(anim =>
-    //     Animated.timing(anim, {
-    //       toValue: 1,
-    //       duration: 400,
-    //       useNativeDriver: true,
-    //     })
-    //   )
-    // ).start();
+    Animated.stagger(
+      80,
+      SAMPLE_ITEMS.map(item =>
+        Animated.timing(getItemAnim(item.id), {
+          toValue: 1,
+          duration: 400,
+          useNativeDriver: true,
+        }),
+      ),
+    ).start();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleRemoveItem = (id: string) => {
-    // TODO: Call LayoutAnimation.configureNext BEFORE setState.
-    // This will animate the layout change when the item is removed.
-    //
-    // LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    itemAnims.delete(id);
     setItems(prev => prev.filter(item => item.id !== id));
   };
 
   const handleAddItem = () => {
     const newItem: Item = {
       id: Date.now().toString(),
-      name: `Item ${items.length + 1}`,
-      description: 'Nuevo item añadido dinámicamente',
+      name: `Producto ${items.length + 1}`,
+      description: 'Nuevo producto añadido al puesto',
+      category: CATEGORY_POOL[Math.floor(Math.random() * CATEGORY_POOL.length)],
+      price: Math.round((Math.random() * 4000 + 1000) / 100) * 100,
       progress: Math.random(),
     };
-    // TODO: Call LayoutAnimation.configureNext BEFORE setState.
-    //
-    // LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     setItems(prev => [...prev, newItem]);
   };
 
-  const renderItem = ({ item, index }: { item: Item; index: number }) => {
-    // TODO: Wrap the inner content in an Animated.View using itemAnims[index].
-    // Animated style:
-    //   opacity: itemAnims[index]
-    //   transform: [{ translateY: itemAnims[index].interpolate({ inputRange:[0,1], outputRange:[20,0] }) }]
+  const renderItem = ({ item }: { item: Item }) => {
+    const anim = getItemAnim(item.id);
 
     return (
-      <AnimatedCard
-        onPress={() => navigation.navigate('Detail', { itemId: item.id })}
-        style={styles.card}
+      <Animated.View
+        style={{
+          opacity: anim,
+          transform: [{ translateY: anim.interpolate({ inputRange: [0, 1], outputRange: [20, 0] }) }],
+        }}
       >
-        <Text style={styles.itemName}>{item.name}</Text>
-        <Text style={styles.itemDescription}>{item.description}</Text>
-        {item.progress !== undefined && (
-          <ProgressBar
-            progress={item.progress}
-            label="Progreso"
+        <AnimatedCard
+          onPress={() => navigation.navigate('Detail', { item })}
+          style={styles.card}
+        >
+          <Text style={styles.itemName}>{item.name}</Text>
+          <Text style={styles.itemMeta}>
+            {item.category} · ${item.price.toLocaleString('es-CO')} COP
+          </Text>
+          <Text style={styles.itemDescription}>{item.description}</Text>
+          {item.progress !== undefined && (
+            <ProgressBar
+              progress={item.progress}
+              label="Stock disponible"
+            />
+          )}
+          <AnimatedButton
+            label="Eliminar"
+            variant="success"
+            onPress={() => handleRemoveItem(item.id)}
           />
-        )}
-        <AnimatedButton
-          label="Eliminar"
-          variant="success"
-          onPress={() => handleRemoveItem(item.id)}
-        />
-      </AnimatedCard>
+        </AnimatedCard>
+      </Animated.View>
     );
   };
 
@@ -120,11 +132,8 @@ export function HomeScreen({ navigation }: Props): React.JSX.Element {
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         ListHeaderComponent={
           <View style={styles.header}>
-            <Text style={styles.title}>
-              {/* TODO: Replace with your domain name */}
-              Mi Dominio
-            </Text>
-            <Text style={styles.subtitle}>{items.length} items</Text>
+            <Text style={styles.title}>Mercado Campesino</Text>
+            <Text style={styles.subtitle}>{items.length} productos en tu puesto</Text>
           </View>
         }
         ListFooterComponent={
@@ -165,6 +174,11 @@ const styles = StyleSheet.create({
   itemName: {
     color: COLORS.text,
     fontSize: 16,
+    fontWeight: '600',
+  },
+  itemMeta: {
+    color: COLORS.accent,
+    fontSize: 12,
     fontWeight: '600',
   },
   itemDescription: {

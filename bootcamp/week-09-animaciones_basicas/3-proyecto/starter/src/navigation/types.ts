@@ -1,7 +1,8 @@
 // Navigation parameter types for the app.
-// Update according to your domain's needs.
+
+import type { Item } from '../types';
 
 export type RootStackParamList = {
   Home: undefined;
-  Detail: { itemId: string };
+  Detail: { item: Item };
 };

@@ -1,17 +1,13 @@
-// Domain types — adapt to your assigned domain.
+// Domain types — Mercado Campesino.
+// Cada Item representa un producto publicado en el puesto del vendedor.
 
-// Base item for the domain list.
-// Add specific fields for your domain.
-// Examples:
-//   Biblioteca: author: string; isbn: string; isAvailable: boolean;
-//   Farmacia: price: number; stock: number; category: string;
-//   Gimnasio: membershipType: string; daysActive: number;
 export interface Item {
   id: string;
   name: string;
   description: string;
-  // TODO: Add domain-specific fields here
-  progress?: number; // 0-1, used for ProgressBar
+  category: string; // Verduras, Frutas, Lácteos, Tubérculos...
+  price: number; // precio en COP
+  progress?: number; // 0-1, % de stock disponible — usado en ProgressBar
 }
 
 // Response shape from the API
