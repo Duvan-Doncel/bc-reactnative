@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   View,
   Text,
@@ -32,28 +32,13 @@ export function LoginScreen({ navigation }: LoginScreenProps): React.JSX.Element
     },
   });
 
-  /**
-   * TODO: Implementar onSubmit.
-   *
-   * Pasos:
-   * 1. Llamar a login(values) del authStore
-   * 2. Si hay error (catch), mostrar Alert con el mensaje
-   * 3. Si tiene éxito, el RootNavigator navegará automáticamente a AppNavigator
-   *    (no necesitas navegar manualmente — Zustand + RootNavigator lo hacen)
-   *
-   * Pista:
-   * const onSubmit = async (values: LoginFormValues) => {
-   *   try {
-   *     await login(values);
-   *     // ✅ RootNavigator detecta isAuthenticated === true y cambia a AppNavigator
-   *   } catch {
-   *     Alert.alert('Error', 'Credenciales incorrectas');
-   *   }
-   * };
-   */
-  const onSubmit = async (_values: LoginFormValues) => {
-    // TODO: Implementar
-    Alert.alert('TODO', 'Implementa onSubmit en LoginScreen.tsx');
+  const onSubmit = async (values: LoginFormValues) => {
+    try {
+      await login(values);
+      // RootNavigator detecta isAuthenticated === true y cambia a AppNavigator
+    } catch {
+      Alert.alert('Error', 'Credenciales incorrectas');
+    }
   };
 
   return (
