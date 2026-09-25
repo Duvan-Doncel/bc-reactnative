@@ -12,7 +12,7 @@ Construir una app con autenticación JWT completa:
 
 ## 📋 Tu Dominio Asignado
 
-**Dominio**: [El instructor te asignará tu dominio único al inicio del bootcamp]
+**Dominio**: Mercado Campesino
 
 > 📌 Recuerda: tu implementación debe ser coherente con tu dominio.
 > No copies implementaciones de otros aprendices.
@@ -114,3 +114,33 @@ pnpm start
 ## 📊 Criterios de Evaluación
 
 Ver [../rubrica-evaluacion.md](../rubrica-evaluacion.md)
+
+---
+
+## Mi implementación: Mercado Campesino
+
+### Dominio
+
+App para un vendedor del mercado campesino que administra su puesto. Al autenticarse ve el catálogo de productos frescos disponibles (verduras, frutas, lácteos, huevos, etc. — categoría `groceries` de dummyjson.com como catálogo de referencia) y en su perfil consulta los datos de su puesto: nombre del puesto, productos publicados y antigüedad como vendedor.
+
+Como `dummyjson.com/auth` no conoce este dominio, esos tres datos del puesto (`stallName`, `productsPublished`, `memberSince`) se derivan de forma determinística a partir del `id` del usuario en `authStore.ts` (mismo usuario → mismos datos siempre).
+
+### Autenticación
+
+| Pieza | Implementación |
+|-------|-----------------|
+| Login / Registro | `authService.ts` — login contra `dummyjson.com/auth/login`; registro simulado (dummyjson no tiene endpoint real) con tokens mock |
+| Tokens | `tokenService.ts` guarda `accessToken` y `refreshToken` en `expo-secure-store`, nunca en AsyncStorage |
+| Estado global | `authStore.ts` (Zustand + `persist`) — `partialize` solo persiste `user` e `isAuthenticated` en AsyncStorage; los tokens viven exclusivamente en SecureStore |
+| Navegación condicional | `RootNavigator.tsx` alterna `AuthNavigator` / `AppNavigator` según `isAuthenticated` |
+| Auto-refresh 401 | Interceptor de respuesta en `api.ts`: detecta 401, pide un access token nuevo con el refresh token guardado y reintenta la petición original |
+
+### Cómo ejecutar
+
+```bash
+cd starter
+pnpm install
+pnpm start
+```
+
+Credenciales de prueba: `username: emilys` / `password: emilyspass`.

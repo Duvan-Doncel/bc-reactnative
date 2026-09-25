@@ -8,7 +8,7 @@ export interface AuthTokens {
   refreshToken: string;
 }
 
-/** Datos del usuario autenticado */
+/** Datos del usuario autenticado (dominio: mercado campesino) */
 export interface AuthUser {
   id: number;
   username: string;
@@ -16,10 +16,12 @@ export interface AuthUser {
   firstName: string;
   lastName: string;
   image?: string;
-  // TODO: Agrega propiedades específicas de tu dominio
-  // Ejemplo (Biblioteca): borrowedBooksCount?: number
-  // Ejemplo (Gimnasio): membershipType?: 'basic' | 'premium'
-  // Ejemplo (Farmacia): accountBalance?: number
+  /** Puesto asignado al vendedor dentro del mercado */
+  stallName: string;
+  /** Cantidad de productos publicados por el vendedor */
+  productsPublished: number;
+  /** Fecha en la que el vendedor se unió al mercado (YYYY-MM-DD) */
+  memberSince: string;
 }
 
 /** Payload decodificado del JWT */

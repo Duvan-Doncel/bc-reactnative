@@ -12,37 +12,29 @@ import { useAuthStore } from '../stores/authStore';
 import { theme } from '../theme';
 
 // ============================================
-// ADAPTA ESTA PANTALLA A TU DOMINIO
+// DOMINIO: Mercado Campesino
 // ============================================
-// Ejemplos de qué mostrar aquí:
-// - Biblioteca: lista de libros disponibles
-// - Farmacia: catálogo de medicamentos
-// - Gimnasio: clases disponibles de la semana
-// - Restaurante: menú del día
-// - Hotel: habitaciones disponibles
+// Cada vendedor tiene un puesto con productos frescos (verduras, frutas,
+// lácteos, etc.). Usamos la categoría "groceries" de dummyjson, que trae
+// justamente ese tipo de productos, como catálogo de referencia del mercado.
 
-// TODO: Cambia el tipo Item para que represente entidades de tu dominio
-interface Item {
+interface Product {
   id: number;
   title: string;
-  // Agrega campos relevantes a tu dominio
-  // Ejemplo (Biblioteca): author: string; available: boolean
-  // Ejemplo (Gymansio): time: string; instructor: string; capacity: number
-  [key: string]: unknown;
+  price: number;
+  category: string;
+  thumbnail?: string;
 }
 
-// TODO: Cambia la URL por el endpoint relevante a tu dominio
-// dummyjson.com tiene muchos recursos disponibles:
-// /products, /recipes, /todos, /posts, /quotes, /users, etc.
-const ITEMS_URL = 'https://dummyjson.com/products?limit=20';
+const PRODUCTS_URL = 'https://dummyjson.com/products/category/groceries?limit=20';
 
 export function HomeScreen(): React.JSX.Element {
   const user = useAuthStore((state) => state.user);
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['home-items'],
+    queryKey: ['market-products'],
     queryFn: async () => {
-      const response = await axios.get<{ products: Item[] }>(ITEMS_URL);
+      const response = await axios.get<{ products: Product[] }>(PRODUCTS_URL);
       return response.data.products;
     },
   });
@@ -58,20 +50,20 @@ export function HomeScreen(): React.JSX.Element {
   if (isError) {
     return (
       <View style={styles.center}>
-        <Text style={styles.errorText}>No se pudo cargar el contenido</Text>
+        <Text style={styles.errorText}>No se pudo cargar el catálogo del mercado</Text>
       </View>
     );
   }
 
   return (
     <View style={styles.container}>
-      {/* Saludo personalizado — adapta al dominio */}
       <View style={styles.header}>
         <Text style={styles.greeting}>
           Hola, {user?.firstName ?? user?.username} 👋
         </Text>
-        {/* TODO: Cambia el subtítulo según tu dominio */}
-        <Text style={styles.subtitle}>Aquí está el contenido de tu dominio</Text>
+        <Text style={styles.subtitle}>
+          Productos disponibles hoy en {user?.stallName ?? 'tu puesto'}
+        </Text>
       </View>
 
       <FlatList
@@ -80,13 +72,14 @@ export function HomeScreen(): React.JSX.Element {
         contentContainerStyle={styles.list}
         renderItem={({ item }) => (
           <View style={styles.card}>
-            {/* TODO: Adapta el renderizado a los campos de tu dominio */}
-            <Text style={styles.itemTitle}>{String(item.title)}</Text>
-            <Text style={styles.itemSubtitle}>ID: {item.id}</Text>
+            <Text style={styles.itemTitle}>{item.title}</Text>
+            <Text style={styles.itemSubtitle}>
+              {item.category} · ${item.price.toFixed(2)}
+            </Text>
           </View>
         )}
         ListEmptyComponent={
-          <Text style={styles.emptyText}>No hay elementos para mostrar</Text>
+          <Text style={styles.emptyText}>No hay productos para mostrar</Text>
         }
       />
     </View>

@@ -5,9 +5,44 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { AuthUser, LoginCredentials, RegisterData } from '../types';
+import type { AuthResponse, AuthUser, LoginCredentials, RegisterData } from '../types';
 import { saveTokens, clearTokens, getRefreshToken } from '../services/tokenService';
 import * as authService from '../services/authService';
+
+// ─── Perfil de dominio (mercado campesino) ────────────────
+// dummyjson no conoce el dominio de la app, así que el puesto asignado,
+// el número de productos publicados y la antigüedad del vendedor se derivan
+// de forma determinística a partir del id de usuario (mismo id → mismos datos).
+const STALL_NAMES = [
+  'Puesto La Cosecha',
+  'Puesto El Trigal',
+  'Puesto Doña Rosa',
+  'Puesto Los Andes',
+  'Puesto Tierra Fértil',
+  'Puesto Buen Sabor',
+];
+
+function buildDomainProfile(userId: number): Pick<AuthUser, 'stallName' | 'productsPublished' | 'memberSince'> {
+  const year = 2020 + (userId % 5);
+  const month = String((userId % 12) + 1).padStart(2, '0');
+  return {
+    stallName: STALL_NAMES[userId % STALL_NAMES.length],
+    productsPublished: (userId * 3) % 30 + 4,
+    memberSince: `${year}-${month}-15`,
+  };
+}
+
+function toAuthUser(response: AuthResponse): AuthUser {
+  return {
+    id: response.id,
+    username: response.username,
+    email: response.email,
+    firstName: response.firstName,
+    lastName: response.lastName,
+    image: response.image,
+    ...buildDomainProfile(response.id),
+  };
+}
 
 interface AuthState {
   // State
@@ -55,14 +90,7 @@ export const useAuthStore = create<AuthState>()(
             refreshToken: response.refreshToken,
           });
           set({
-            user: {
-              id: response.id,
-              username: response.username,
-              email: response.email,
-              firstName: response.firstName,
-              lastName: response.lastName,
-              image: response.image,
-            },
+            user: toAuthUser(response),
             isAuthenticated: true,
             isLoading: false,
           });
@@ -82,14 +110,7 @@ export const useAuthStore = create<AuthState>()(
             refreshToken: response.refreshToken,
           });
           set({
-            user: {
-              id: response.id,
-              username: response.username,
-              email: response.email,
-              firstName: response.firstName,
-              lastName: response.lastName,
-              image: response.image,
-            },
+            user: toAuthUser(response),
             isAuthenticated: true,
             isLoading: false,
           });
